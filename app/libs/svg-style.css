@@ -1,0 +1,720 @@
+#first .st0{fill:#4D4438;}
+#first .st1{fill:#473D34;}
+#first .st2{fill:#42382F;}
+#first .st3{fill:#3B332A;}
+#first .st4{fill:#504538;}
+#first .st5{fill:#594E3E;}
+#first .st6{fill:#625443;}
+#first .st7{fill:#65594C;}
+#first .st8{fill:#746551;}
+#first .st9{fill:#564B3D;}
+#first .st10{fill:#5B5141;}
+#first .st11{fill:#4F473A;}
+#first .st12{fill:#443B2F;}
+#first .st13{fill:#3E372C;}
+#first .st14{fill:#29221B;}
+#first .st15{fill:#282018;}
+#first .st16{fill:#2B2119;}
+#first .st17{fill:#291D15;}
+#first .st18{fill:#2B1F17;}
+#first .st19{fill:#382D22;}
+#first .st20{fill:#3A281E;}
+#first .st21{fill:#2A251F;}
+#first .st22{fill:#463B2E;}
+#first .st23{fill:#714D37;}
+#first .st24{fill:#7E5A41;}
+#first .st25{fill:#785841;}
+#first .st26{fill:#6E523D;}
+#first .st27{fill:#4C392B;}
+#first .st28{fill:#6E4F3B;}
+#first .st29{fill:#4A3D30;}
+#first .st30{fill:#3C3228;}
+#first .st31{fill:#302921;}
+#first .st32{fill:#28251F;}
+#first .st33{fill:#3A2F25;}
+#first .st34{fill:#563C30;}
+#first .st35{fill:#704E3F;}
+#first .st36{fill:#493021;}
+#first .st37{fill:#492D21;}
+#first .st38{fill:#60422F;}
+#first .st39{fill:#845D44;}
+#first .st40{fill:#6E4E33;}
+#first .st41{fill:#986C4A;}
+#first .st42{fill:#92694A;}
+#first .st43{fill:#C39365;}
+#first .st44{fill:#BD8F69;}
+#first .st45{fill:#A37348;}
+#first .st46{fill:#674632;}
+#first .st47{fill:#2E1D15;}
+#first .st48{fill:#241610;}
+#first .st49{fill:#291712;}
+#first .st50{fill:#44261C;}
+#first .st51{fill:#5F392A;}
+#first .st52{fill:#A7785B;}
+#first .st53{fill:#A17157;}
+#first .st54{fill:#CE9E7E;}
+#first .st55{fill:#DFAF8A;}
+#first .st56{fill:#543A27;}
+#first .st57{fill:#6A4B3A;}
+#first .st58{fill:#53362D;}
+#first .st59{fill:#3D241C;}
+#first .st60{fill:#53372D;}
+#first .st61{fill:#6B4637;}
+#first .st62{fill:#B38561;}
+#first .st63{fill:#E2AA85;}
+#first .st64{fill:#E2AD87;}
+#first .st65{fill:#D19E75;}
+#first .st66{fill:#E3A880;}
+#first .st67{fill:#D29876;}
+#first .st68{fill:#D4A175;}
+#first .st69{fill:#543E2E;}
+#first .st70{fill:#75533E;}
+#first .st71{fill:#977055;}
+#first .st72{fill:#593B2E;}
+#first .st73{fill:#562920;}
+#first .st74{fill:#623C30;}
+#first .st75{fill:#B77D60;}
+#first .st76{fill:#73513C;}
+#first .st77{fill:#9E5A48;}
+#first .st78{fill:#D68B6F;}
+#first .st79{fill:#EAB093;}
+#first .st80{fill:#EDBB99;}
+#first .st81{fill:#362D24;}
+#first .st82{fill:#201E19;}
+#first .st83{fill:#333129;}
+#first .st84{fill:#554033;}
+#first .st85{fill:#37251A;}
+#first .st86{fill:#2B241C;}
+#first .st87{fill:#52453A;}
+#first .st88{fill:#211E19;}
+#first .st89{fill:#1E1A16;}
+#first .st90{fill:#1C1C11;}
+#first .st91{fill:#68594D;}
+#first .st92{fill:#5D4D41;}
+#first .st93{fill:#32291D;}
+#first .st94{fill:#21180F;}
+#first .st95{fill:#1F1711;}
+#first .st96{fill:#1C120E;}
+#first .st97{fill:#503425;}
+#first .st98{fill:#2D1D16;}
+#first .st99{fill:#2F241A;}
+#first .st100{fill:#433426;}
+#first .st101{fill:#1A120D;}
+#first .st102{fill:#221611;}
+#first .st103{fill:#1A1610;}
+#first .st104{fill:#120E09;}
+#first .st105{fill:#1B120C;}
+#first .st106{fill:#31211A;}
+#first .st107{fill:#3E2D21;}
+#first .st108{fill:#433126;}
+#first .st109{fill:#645246;}
+#first .st110{fill:#846253;}
+#first .st111{fill:#986F5C;}
+#first .st112{fill:#AB7961;}
+#first .st113{fill:#DAA086;}
+#first .st114{fill:#E9B99C;}
+#first .st115{fill:#DB9F7E;}
+#first .st116{fill:#CC9376;}
+#first .st117{fill:#A27759;}
+#first .st118{fill:#83614E;}
+#first .st119{fill:#7E5943;}
+#first .st120{fill:#A8745F;}
+#first .st121{fill:#E69F86;}
+#first .st122{fill:#C58166;}
+#first .st123{fill:#CC8971;}
+#first .st124{fill:#C48D6D;}
+#first .st125{fill:#AA7C5E;}
+#first .st126{fill:#B28668;}
+#first .st127{fill:#CD9977;}
+#first .st128{fill:#C38F6F;}
+#first .st129{fill:#976F58;}
+#first .st130{fill:#5D3D36;}
+#first .st131{fill:#493125;}
+#first .st132{fill:#7F4935;}
+#first .st133{fill:#4F231C;}
+#first .st134{fill:#5A3F33;}
+#first .st135{fill:#5E4537;}
+#first .st136{fill:#644636;}
+#first .st137{fill:#544134;}
+#first .st138{fill:#6D523F;}
+#first .st139{fill:#6D523F;}
+#first .st140{fill:#39241C;}
+#first .st141{fill:#43302A;}
+#first .st142{fill:#48392F;}
+#first .st143{fill:#584935;}
+#first .st144{fill:#895A4B;}
+#first .st145{fill:#7E5848;}
+#first .st146{fill:#D09B73;}
+#first .st147{fill:#866751;}
+#first .st148{fill:#BE936B;}
+#first .st149{fill:#BB926D;}
+#first .st150{fill:#B28862;}
+#first .st151{fill:#BD926C;}
+#first .st152{fill:#B28E6C;}
+#first .st153{fill:#AF8965;}
+#first .st154{fill:#8B6B57;}
+#first .st155{fill:#5F4538;}
+#first .st156{fill:#CD996F;}
+#first .st157{fill:#E3A885;}
+#first .st158{fill:#F5C29F;}
+#first .st159{fill:#35231D;}
+#first .st160{fill:#2E241E;}
+#first .st161{fill:#352D27;}
+#first .st162{fill:#433224;}
+#first .st163{fill:#E2B199;}
+#first .st164{fill:#F4BA99;}
+#first .st165{fill:#E4A780;}
+#first .st166{fill:#DA976B;}
+#first .st167{fill:#854532;}
+#first .st168{fill:#F2B895;}
+#first .st169{fill:#B26F4F;}
+#first .st170{fill:#BB8C66;}
+#first .st171{fill:#A0704E;}
+#first .st172{fill:#623224;}
+#first .st173{fill:#B06F57;}
+#first .st174{fill:#B9875D;}
+#first .st175{fill:#763B2F;}
+#first .st176{fill:#AB6C53;}
+#first .st177{fill:#5A2421;}
+#first .st178{fill:#B9675A;}
+#first .st179{fill:#47201A;}
+#first .st180{fill:#432A23;}
+#first .st181{fill:#432D24;}
+#first .st182{fill:#854F46;}
+#first .st183{fill:#995445;}
+#first .st184{fill:#A7584A;}
+#first .st185{fill:#C16A58;}
+#first .st186{fill:#5D483B;}
+#first .st187{fill:#503F30;}
+#first .st188{fill:#483328;}
+#first .st189{fill:#2F1F18;}
+#first .st190{fill:#5C3C30;}
+#first .st191{fill:#986A53;}
+#first .st192{fill:#A37858;}
+#first .st193{fill:#614538;}
+#first .st194{fill:#554838;}
+#first .st195{fill:#5C4A38;}
+#first .st196{fill:#493A2E;}
+#first .st197{fill:#5B4535;}
+#first .st198{fill:#504033;}
+#first .st199{fill:#B58362;}
+#first .st200{fill:#C59268;}
+#first .st201{fill:#C7976C;}
+#first .st202{fill:#8B6F54;}
+#first .st203{fill:#BD8A62;}
+#first .st204{fill:#C09467;}
+#first .st205{fill:#B18964;}
+#first .st206{fill:#9F8064;}
+#first .st207{fill:#9A7C64;}
+#first .st208{fill:#76604F;}
+#first .st209{fill:#49372B;}
+#first .st210{fill:#49372D;}
+#first .st211{fill:#4E3C2F;}
+#first .st212{fill:#56483D;}
+#first .st213{fill:#797C86;}
+#first .st214{fill:#797D86;}
+#first .st215{fill:#7D8695;}
+#first .st216{fill:#6E737E;}
+#first .st217{fill:#5F5147;}
+#first .st218{fill:#6C7786;}
+#first .st219{fill:#625346;}
+#first .st220{fill:#87684D;}
+#first .st221{fill:#C49966;}
+#first .st222{fill:#C39A6B;}
+#first .st223{fill:#A28262;}
+#first .st224{fill:#D5AD79;}
+#first .st225{fill:#E3BA82;}
+#first .st226{fill:#D5D1CF;}
+#first .st227{fill:#F9F7F5;}
+#first .st228{fill:#FAFAFA;}
+#first .st229{fill:#E8E9EB;}
+#first .st230{fill:#F2F1EF;}
+#first .st231{fill:#EDECEC;}
+#first .st232{fill:#E9E9E7;}
+#first .st233{fill:#E9E9E9;}
+#first .st234{fill:#6F7886;}
+#first .st235{fill:#727F92;}
+#first .st236{fill:#737D8C;}
+#first .st237{fill:#757378;}
+#first .st238{fill:#8C949E;}
+#first .st239{fill:#57575A;}
+#first .st240{fill:#BEBEC0;}
+#first .st241{fill:#7F8997;}
+#first .st242{fill:#B6B7BB;}
+#first .st243{fill:#BCBEC1;}
+#first .st244{fill:#B0B1B4;}
+#first .st245{fill:#98999E;}
+#first .st246{fill:#898D93;}
+#first .st247{fill:#D2D5DB;}
+#first .st248{fill:#C3C2C6;}
+#first .st249{fill:#C8C9CC;}
+#first .st250{fill:#D0D0D1;}
+#first .st251{fill:#B7B7B9;}
+#first .st252{fill:#D8D6D7;}
+#first .st253{fill:#E2E4E8;}
+#first .st254{fill:#CFD0D3;}
+#first .st255{fill:#E2E3E7;}
+#first .st256{fill:#E3E6EB;}
+#first .st257{fill:#E5E7EB;}
+#first .st258{fill:#DEDDDE;}
+
+
+#second .st0{fill:#1D2B39;}
+	#second .st1{fill:#1C2736;}
+	#second .st2{fill:#1A2334;}
+	#second .st3{fill:#1C2635;}
+	#second .st4{fill:#1B2534;}
+	#second .st5{fill:#1E2A38;}
+	#second .st6{fill:#1E2938;}
+	#second .st7{fill:#1B2434;}
+	#second .st8{fill:#2A3D47;}
+	#second .st9{fill:#22313C;}
+	#second .st10{fill:#597678;}
+	#second .st11{fill:#24353F;}
+	#second .st12{fill:#212E3B;}
+	#second .st13{fill:#31464E;}
+	#second .st14{fill:#1C2837;}
+	#second .st15{fill:#23323E;}
+	#second .st16{fill:#202D3A;}
+	#second .st17{fill:#1D2838;}
+	#second .st18{fill:#1D2837;}
+	#second .st19{fill:#1C2737;}
+	#second .st20{fill:#1B2637;}
+	#second .st21{fill:#1E2838;}
+	#second .st22{fill:#1E2939;}
+	#second .st23{fill:#1D2635;}
+	#second .st24{fill:#1E2735;}
+	#second .st25{fill:#222B39;}
+	#second .st26{fill:#272E3A;}
+	#second .st27{fill:#282F3A;}
+	#second .st28{fill:#29313D;}
+	#second .st29{fill:#343B42;}
+	#second .st30{fill:#33363D;}
+	#second .st31{fill:#3C3A40;}
+	#second .st32{fill:#2B2D34;}
+	#second .st33{fill:#212831;}
+	#second .st34{fill:#202833;}
+	#second .st35{fill:#222A36;}
+	#second .st36{fill:#2B323A;}
+	#second .st37{fill:#1F2733;}
+	#second .st38{fill:#1B2432;}
+	#second .st39{fill:#1B2431;}
+	#second .st40{fill:#1C2430;}
+	#second .st41{fill:#17202D;}
+	#second .st42{fill:#181F2D;}
+	#second .st43{fill:#1E2735;}
+	#second .st44{fill:#171F2C;}
+	#second .st45{fill:#1E2530;}
+	#second .st46{fill:#1B212C;}
+	#second .st47{fill:#161E2B;}
+	#second .st48{fill:#272C34;}
+	#second .st49{fill:#20262F;}
+	#second .st50{fill:#1B222D;}
+	#second .st51{fill:#18202D;}
+	#second .st52{fill:#1F2531;}
+	#second .st53{fill:#1D232F;}
+	#second .st54{fill:#272B34;}
+	#second .st55{fill:#252A35;}
+	#second .st56{fill:#232834;}
+	#second .st57{fill:#232734;}
+	#second .st58{fill:#262935;}
+	#second .st59{fill:#292A36;}
+	#second .st60{fill:#514E50;}
+	#second .st61{fill:#555253;}
+	#second .st62{fill:#6C6662;}
+	#second .st63{fill:#34353B;}
+	#second .st64{fill:#484648;}
+	#second .st65{fill:#35363A;}
+	#second .st66{fill:#4A4949;}
+	#second .st67{fill:#5D5956;}
+	#second .st68{fill:#252730;}
+	#second .st69{fill:#625D5A;}
+	#second .st70{fill:#474545;}
+	#second .st71{fill:#2B2D33;}
+	#second .st72{fill:#272A31;}
+	#second .st73{fill:#282B34;}
+	#second .st74{fill:#4D4B4C;}
+	#second .st75{fill:#6B6562;}
+	#second .st76{fill:#716A67;}
+	#second .st77{fill:#333439;}
+	#second .st78{fill:#2A2C34;}
+	#second .st79{fill:#282B33;}
+	#second .st80{fill:#2E2E36;}
+	#second .st81{fill:#343339;}
+	#second .st82{fill:#2B2B33;}
+	#second .st83{fill:#39383C;}
+	#second .st84{fill:#313138;}
+	#second .st85{fill:#2A2B34;}
+	#second .st86{fill:#414145;}
+	#second .st87{fill:#3C3940;}
+	#second .st88{fill:#4B454B;}
+	#second .st89{fill:#323237;}
+	#second .st90{fill:#32363D;}
+	#second .st91{fill:#45484D;}
+	#second .st92{fill:#595456;}
+	#second .st93{fill:#65605F;}
+	#second .st94{fill:#68686A;}
+	#second .st95{fill:#333339;}
+	#second .st96{fill:#2F2F35;}
+	#second .st97{fill:#343439;}
+	#second .st98{fill:#3B393E;}
+	#second .st99{fill:#7C7975;}
+	#second .st100{fill:#6A6C68;}
+	#second .st101{fill:#606867;}
+	#second .st102{fill:#7E827B;}
+	#second .st103{fill:#839590;}
+	#second .st104{fill:#566B6D;}
+	#second .st105{fill:#66807E;}
+	#second .st106{fill:#89A5A0;}
+	#second .st107{fill:#7F9993;}
+	#second .st108{fill:#819790;}
+	#second .st109{fill:#8CA79E;}
+	#second .st110{fill:#84A39E;}
+	#second .st111{fill:#7BA39C;}
+	#second .st112{fill:#87ACA4;}
+	#second .st113{fill:#A7BBB1;}
+	#second .st114{fill:#A3BEB4;}
+	#second .st115{fill:#749C95;}
+	#second .st116{fill:#688D8B;}
+	#second .st117{fill:#466165;}
+	#second .st118{fill:#547375;}
+	#second .st119{fill:#263441;}
+	#second .st120{fill:#546A6F;}
+	#second .st121{fill:#2D3D49;}
+	#second .st122{fill:#283845;}
+	#second .st123{fill:#273743;}
+	#second .st124{fill:#99B4AB;}
+	#second .st125{fill:#88A79F;}
+	#second .st126{fill:#81958E;}
+	#second .st127{fill:#8B978F;}
+	#second .st128{fill:#929E95;}
+	#second .st129{fill:#696F6A;}
+	#second .st130{fill:#92A49A;}
+	#second .st131{fill:#597370;}
+	#second .st132{fill:#394E50;}
+	#second .st133{fill:#4A6366;}
+	#second .st134{fill:#496466;}
+	#second .st135{fill:#32464C;}
+	#second .st136{fill:#26383E;}
+	#second .st137{fill:#2C3E44;}
+	#second .st138{fill:#2E444A;}
+	#second .st139{fill:#697B7E;}
+	#second .st140{fill:#839593;}
+	#second .st141{fill:#576E71;}
+	#second .st142{fill:#3B575A;}
+	#second .st143{fill:#425D62;}
+	#second .st144{fill:#334B4F;}
+	#second .st145{fill:#3F5859;}
+	#second .st146{fill:#2B3F45;}
+	#second .st147{fill:#27373D;}
+	#second .st148{fill:#2F4449;}
+	#second .st149{fill:#2B393E;}
+	#second .st150{fill:#637C79;}
+	#second .st151{fill:#7E8C8E;}
+	#second .st152{fill:#46535D;}
+	#second .st153{fill:#636970;}
+	#second .st154{fill:#8A969A;}
+	#second .st155{fill:#3C5456;}
+	#second .st156{fill:#56716F;}
+	#second .st157{fill:#819792;}
+	#second .st158{fill:#899B96;}
+	#second .st159{fill:#819993;}
+	#second .st160{fill:#A1B1AA;}
+	#second .st161{fill:#506066;}
+	#second .st162{fill:#364650;}
+	#second .st163{fill:#495A61;}
+	#second .st164{fill:#A1AEA6;}
+	#second .st165{fill:#BDC8BB;}
+	#second .st166{fill:#B6C3B7;}
+	#second .st167{fill:#849D97;}
+	#second .st168{fill:#A9BBB1;}
+	#second .st169{fill:#91A69D;}
+	#second .st170{fill:#97ABA1;}
+	#second .st171{fill:#ABBCB2;}
+	#second .st172{fill:#829993;}
+	#second .st173{fill:#79918B;}
+	#second .st174{fill:#819A92;}
+	#second .st175{fill:#6E8681;}
+	#second .st176{fill:#5F7876;}
+	#second .st177{fill:#3E5B5A;}
+	#second .st178{fill:#3A5251;}
+	#second .st179{fill:#748A84;}
+	#second .st180{fill:#445A57;}
+	#second .st181{fill:#788D86;}
+	#second .st182{fill:#617671;}
+	#second .st183{fill:#97A5A0;}
+	#second .st184{fill:#A6B6AE;}
+	#second .st185{fill:#91A29C;}
+	#second .st186{fill:#819490;}
+	#second .st187{fill:#54676C;}
+	#second .st188{fill:#5D6F71;}
+	#second .st189{fill:#566869;}
+	#second .st190{fill:#5D7170;}
+	#second .st191{fill:#637874;}
+	#second .st192{fill:#788A84;}
+	#second .st193{fill:#475958;}
+	#second .st194{fill:#4F6362;}
+	#second .st195{fill:#526564;}
+	#second .st196{fill:#778882;}
+	#second .st197{fill:#394B4B;}
+	#second .st198{fill:#3B4B4B;}
+	#second .st199{fill:#4A5B5B;}
+	#second .st200{fill:#5D6D6D;}
+	#second .st201{fill:#5F6D6C;}
+	#second .st202{fill:#596768;}
+	#second .st203{fill:#374445;}
+	#second .st204{fill:#97A399;}
+	#second .st205{fill:#909E94;}
+	#second .st206{fill:#5A5B57;}
+	#second .st207{fill:#555754;}
+	#second .st208{fill:#464444;}
+	#second .st209{fill:#766E68;}
+	#second .st210{fill:#665E59;}
+	#second .st211{fill:#5F6964;}
+	#second .st212{fill:#5A615E;}
+	#second .st213{fill:#575C58;}
+	#second .st214{fill:#504E4B;}
+	#second .st215{fill:#434140;}
+	#second .st216{fill:#4A4442;}
+	#second .st217{fill:#4A4241;}
+	#second .st218{fill:#645855;}
+	#second .st219{fill:#343E40;}
+	#second .st220{fill:#2E3638;}
+	#second .st221{fill:#2C3235;}
+	#second .st222{fill:#282B2F;}
+	#second .st223{fill:#2D2E32;}
+	#second .st224{fill:#3B383A;}
+	#second .st225{fill:#3B383B;}
+	#second .st226{fill:#434E4F;}
+	#second .st227{fill:#424849;}
+	#second .st228{fill:#4F5859;}
+	#second .st229{fill:#474A4A;}
+	#second .st230{fill:#444344;}
+	#second .st231{fill:#574F4D;}
+	#second .st232{fill:#746A64;}
+	#second .st233{fill:#5F5957;}
+	#second .st234{fill:#35363C;}
+	#second .st235{fill:#37383D;}
+	#second .st236{fill:#514E4C;}
+	#second .st237{fill:#4D4A46;}
+	#second .st238{fill:#4F4F4E;}
+	#second .st239{fill:#696E68;}
+	#second .st240{fill:#828E85;}
+	#second .st241{fill:#7F8C84;}
+	#second .st242{fill:#85948B;}
+	#second .st243{fill:#798A82;}
+	#second .st244{fill:#7C8E85;}
+	#second .st245{fill:#5B685E;}
+	#second .st246{fill:#5F7166;}
+	#second .st247{fill:#5E6960;}
+	#second .st248{fill:#516054;}
+	#second .st249{fill:#4B4846;}
+	#second .st250{fill:#5D7870;}
+	#second .st251{fill:#556E6B;}
+	#second .st252{fill:#526B5E;}
+	#second .st253{fill:#565F56;}
+	#second .st254{fill:#4D4E49;}
+	#second .st255{fill:#323034;}
+	#second .st256{fill:#484343;}
+	#second .st257{fill:#56524E;}
+	#second .st258{fill:#6B6B61;}
+	#second .st259{fill:#5A5952;}
+	#second .st260{fill:#768172;}
+	#second .st261{fill:#788779;}
+	#second .st262{fill:#728575;}
+	#second .st263{fill:#7E8F82;}
+	#second .st264{fill:#7D9483;}
+	#second .st265{fill:#819B8C;}
+	#second .st266{fill:#4F5E5B;}
+	#second .st267{fill:#4C5E5C;}
+	#second .st268{fill:#586B66;}
+	#second .st269{fill:#525C57;}
+	#second .st270{fill:#506766;}
+	#second .st271{fill:#595751;}
+	#second .st272{fill:#4C4A47;}
+	#second .st273{fill:#393A3D;}
+	#second .st274{fill:#3D3E3F;}
+	#second .st275{fill:#595952;}
+	#second .st276{fill:#616962;}
+	#second .st277{fill:#63645C;}
+	#second .st278{fill:#6D8884;}
+	#second .st279{fill:#34383D;}
+	#second .st280{fill:#6D8B7F;}
+	#second .st281{fill:#6C8484;}
+	#second .st282{fill:#8CA49E;}
+	#second .st283{fill:#728A8A;}
+	#second .st284{fill:#64787B;}
+	#second .st285{fill:#5C7176;}
+	#second .st286{fill:#647B7F;}
+	#second .st287{fill:#D5D2CA;}
+	#second .st288{fill:#86A09C;}
+	#second .st289{fill:#617A7D;}
+	#second .st290{fill:#87A09B;}
+	#second .st291{fill:#89A29E;}
+	#second .st292{fill:#475D64;}
+	#second .st293{fill:#5F777B;}
+	#second .st294{fill:#839C9A;}
+	#second .st295{fill:#738B8D;}
+	#second .st296{fill:#97A0A1;}
+	#second .st297{fill:#DCD7CF;}
+	#second .st298{fill:#E0DBD2;}
+	#second .st299{fill:#ACA9A7;}
+	#second .st300{fill:#707178;}
+	#second .st301{fill:#50545F;}
+	#second .st302{fill:#A8A7A4;}
+	#second .st303{fill:#78797E;}
+	#second .st304{fill:#E5DED6;}
+	#second .st305{fill:#ADA7A6;}
+	#second .st306{fill:#ACABA7;}
+	#second .st307{fill:#BCB8B2;}
+	#second .st308{fill:#969695;}
+	#second .st309{fill:#ACAAA6;}
+	#second .st310{fill:#C7C3BB;}
+	#second .st311{fill:#ABA8A5;}
+	#second .st312{fill:#76797E;}
+	#second .st313{fill:#B3AFAA;}
+	#second .st314{fill:#9B9898;}
+	#second .st315{fill:#6C747C;}
+	#second .st316{fill:#DAD3CE;}
+	#second .st317{fill:#617276;}
+	#second .st318{fill:#7C9695;}
+	#second .st319{fill:#60676E;}
+	#second .st320{fill:#4A5860;}
+	#second .st321{fill:#DBD3CE;}
+	#second .st322{fill:#E1D8D2;}
+	#second .st323{fill:#ADA7A7;}
+	#second .st324{fill:#7D7D81;}
+	#second .st325{fill:#7A7B80;}
+	#second .st326{fill:#B1AAA8;}
+	#second .st327{fill:#E2D9D2;}
+	#second .st328{fill:#D7CFCA;}
+	#second .st329{fill:#4A525C;}
+	#second .st330{fill:#3B4951;}
+	#second .st331{fill:#7C9495;}
+	#second .st332{fill:#849E9D;}
+	#second .st333{fill:#465961;}
+	#second .st334{fill:#647A7E;}
+	#second .st335{fill:#6F8889;}
+	#second .st336{fill:#677C7F;}
+	#second .st337{fill:#61787B;}
+	#second .st338{fill:#3C5157;}
+	#second .st339{fill:#5F7477;}
+	#second .st340{fill:#48595F;}
+	#second .st341{fill:#5D7272;}
+	#second .st342{fill:#4A585B;}
+	#second .st343{fill:#637472;}
+	#second .st344{fill:#4C5555;}
+	#second .st345{fill:#59615D;}
+	#second .st346{fill:#444747;}
+	#second .st347{fill:#50514D;}
+	#second .st348{fill:#333638;}
+	#second .st349{fill:#3C3F45;}
+	#second .st350{fill:#3D4045;}
+	#second .st351{fill:#404144;}
+	#second .st352{fill:#46464A;}
+	#second .st353{fill:#424447;}
+	#second .st354{fill:#595A5A;}
+	#second .st355{fill:#5B6262;}
+	#second .st356{fill:#5D6D70;}
+	#second .st357{fill:#60696A;}
+	#second .st358{fill:#616361;}
+	#second .st359{fill:#5E6360;}
+	#second .st360{fill:#5C6B6C;}
+	#second .st361{fill:#455559;}
+	#second .st362{fill:#3D474D;}
+	#second .st363{fill:#37454C;}
+	#second .st364{fill:#404A51;}
+	#second .st365{fill:#C7C4BF;}
+	#second .st366{fill:#D8D1CA;}
+	#second .st367{fill:#68645F;}
+	#second .st368{fill:#545152;}
+	#second .st369{fill:#4D4B4D;}
+	#second .st370{fill:#6C6965;}
+	#second .st371{fill:#5C5D60;}
+	#second .st372{fill:#676A6E;}
+	#second .st373{fill:#96989A;}
+	#second .st374{fill:#494E58;}
+	#second .st375{fill:#787A80;}
+	#second .st376{fill:#A7A7A7;}
+	#second .st377{fill:#AAA9A6;}
+	#second .st378{fill:#3A414E;}
+	#second .st379{fill:#5B5F69;}
+	#second .st380{fill:#3B414F;}
+	#second .st381{fill:#7E7E83;}
+	#second .st382{fill:#858487;}
+	#second .st383{fill:#A29F9E;}
+	#second .st384{fill:#B0ACA9;}
+	#second .st385{fill:#B5B1AD;}
+	#second .st386{fill:#65676F;}
+	#second .st387{fill:#63656D;}
+	#second .st388{fill:#5A5C65;}
+	#second .st389{fill:#8A898D;}
+	#second .st390{fill:#AEAAA8;}
+	#second .st391{fill:#7B7A7F;}
+	#second .st392{fill:#75767B;}
+	#second .st393{fill:#8E8A8D;}
+	#second .st394{fill:#706F76;}
+	#second .st395{fill:#999495;}
+	#second .st396{fill:#959193;}
+	#second .st397{fill:#7F7D82;}
+	#second .st398{fill:#C2BCB6;}
+	#second .st399{fill:#C1BBB6;}
+	#second .st400{fill:#B6B1AC;}
+	#second .st401{fill:#BAB5B1;}
+	#second .st402{fill:#C9C5BF;}
+	#second .st403{fill:#AEA9A4;}
+	#second .st404{fill:#D7D3CA;}
+	#second .st405{fill:#4E5053;}
+	#second .st406{fill:#535153;}
+	#second .st407{fill:#474A4D;}
+	#second .st408{fill:#494A4D;}
+	#second .st409{fill:#AFADAA;}
+	#second .st410{fill:#BEBAB5;}
+	#second .st411{fill:#959293;}
+	#second .st412{fill:#8D8B8E;}
+	#second .st413{fill:#918F92;}
+	#second .st414{fill:#7C7D82;}
+	#second .st415{fill:#838387;}
+	#second .st416{fill:#9D999A;}
+	#second .st417{fill:#353942;}
+	#second .st418{fill:#323842;}
+	#second .st419{fill:#3B3F47;}
+	#second .st420{fill:#353C47;}
+	#second .st421{fill:#484A50;}
+	#second .st422{fill:#494A4F;}
+	#second .st423{fill:#494E57;}
+	#second .st424{fill:#5A5E63;}
+	#second .st425{fill:#8A8A8D;}
+	#second .st426{fill:#63625E;}
+	#second .st427{fill:#8E887F;}
+	#second .st428{fill:#79746E;}
+	#second .st429{fill:#868179;}
+	#second .st430{fill:#747270;}
+	#second .st431{fill:#68696B;}
+	#second .st432{fill:#A5A5A3;}
+	#second .st433{fill:#C8C9C4;}
+	#second .st434{fill:#CAC8C2;}
+	#second .st435{fill:#969597;}
+	#second .st436{fill:#858387;}
+	#second .st437{fill:#B7B1AD;}
+	#second .st438{fill:#B7B1AE;}
+	#second .st439{fill:#9C989A;}
+	#second .st440{fill:#949294;}
+	#second .st441{fill:#9D9B9A;}
+	#second .st442{fill:#181F2F;}
+	#second .st443{fill:#565B60;}
+	#second .st444{fill:#777671;}
+	#second .st445{fill:#8C8C8F;}
+	#second .st446{fill:#9C9C9D;}
+	#second .st447{fill:#777874;}
+	#second .st448{fill:#464848;}
+	#second .st449{fill:#5A5D5B;}
+	#second .st450{fill:#686970;}
+	#second .st451{fill:#88888C;}
+	#second .st452{fill:#393F48;}
+	#second .st453{fill:#A4A29F;}
+	#second .st454{fill:#BCB9B3;}
+	#second .st455{fill:#CBC7BF;}
+	#second .st456{fill:#C1BDB7;}
+	#second .st457{fill:#2B3A46;}
+	#second .st458{fill:#617170;}
