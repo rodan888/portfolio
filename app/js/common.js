@@ -110,7 +110,7 @@ function animTitle(el,effect,speed){
 				togBut: $('.toggle_but'),
 				lampWrap: $('.lamp_wrap'),		
 				rotateBlock: $('.img_wrap'),	
-				scrolIdItem: $('nav ul li,menu ul li,.foot_menu li'),
+				scrolIdItem: $('nav ul li,nav ul li,.foot_menu li'),
 				svgCircl: $('.circle-path'),
 				rotateBlock: $('.title_block'),
 				changeBg: $('.front_side'),
@@ -171,7 +171,7 @@ function animTitle(el,effect,speed){
 			},
 			toggleMnu: function(){
 				this.variables.togBut.on('click',function(){	
-					var menu = $('menu');
+					var menu = $('nav');
 					if($(this).hasClass('tog_mnu')){
 						menu.removeClass('z_menu');
 					}else{
