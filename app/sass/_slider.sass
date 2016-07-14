@@ -1,0 +1,110 @@
+//Slider viewing area start
+#sli-block 
+	overflow: hidden
+	position: relative
+	&:hover 
+		.sli-next 
+			right: 10px		
+		.sli-prew 
+			left: 10px
+	#sli-wrap 
+		padding: 0
+		margin: 0
+		font-size: 0	
+		@include transition(margin 0.5s)
+		.sli-item 
+			display: inline-block
+			vertical-align: top
+			min-height: 200px
+			font-size: 14px
+			text-align: center
+			img 
+				width: 100%	
+//Slider viewing area end
+
+// Slider buttons start
+.sli-prew 
+	position: absolute
+	top: 50%
+	left: -60px
+	width: 60px
+	height: 60px
+	cursor: pointer
+	font-size: 50px
+	line-height: 50px
+	margin-top: -30px
+	text-align: center	
+	color: $white
+	background-color: $black
+	z-index: 10
+	overflow: hidden
+	@include border-radius(50%)			
+	@include transition(left 0.3s)
+	&:hover:before 
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		@include transform(scale(2.0))
+	&:before 
+		position: absolute
+		content: ""
+		background-color: $main
+		width: 0
+		height: 0
+		top: 50%	
+		left: 50%
+		z-index: -1
+		@include transition(all 0.4s)		
+		@include border-radius(50%)				
+.sli-next 
+	position: absolute
+	top: 50%
+	right: -60px
+	width: 60px
+	height: 60px
+	cursor: pointer
+	color: $white
+	font-size: 50px
+	line-height: 50px
+	margin-top: -30px
+	background-color: $black
+	text-align: center	
+	overflow: hidden
+	z-index: 10
+	@include transition(right 0.3s)
+	@include border-radius(50%)			
+	&:hover:before 
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		@include transform(scale(2.0))
+	&:before 
+		position: absolute
+		content: ""
+		background-color: $main
+		width: 0
+		height: 0
+		top: 50%	
+		left: 50%
+		z-index: -1
+		@include transition(all 0.4s)		
+		@include border-radius(50%)				
+// Slider buttons end
+
+
+// Slider pagination start
+.sli-pagination 
+	text-align: center
+	span 
+		display: inline-block
+		width: 6px
+		height: 6px
+		margin: 3px 5px	
+		cursor: pointer
+		background-color: $black
+		@include border-radius(50%)
+		&.sli-active 
+			background-color: $main
+// Slider pagination end

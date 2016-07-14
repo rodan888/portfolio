@@ -51,15 +51,7 @@ $(document).ready(function() {
 			});
 		});
 
-
-
 		main.init();
-
-
-
-
-
-
 
 });
 window.onload = function(){
@@ -176,7 +168,6 @@ function animTitle(el,effect,speed){
 						menu.removeClass('z_menu');
 					}else{
 					setTimeout(function(){
-							console.log(menu);
 							menu.addClass('z_menu');
 					},1000);
 				};
@@ -318,8 +309,7 @@ function animTitle(el,effect,speed){
 	},
 	//scroll for section in menu
 	smoofScroll: function(){
-		this.variables.scrolIdItem.on('click',function(){
-			main.variables.togBut.click();
+		this.variables.scrolIdItem.on('click',function(){			
 			main.variables.smooffScroll = $(this).index();			
 			var pos = main.variables.position[main.variables.smooffScroll - 1];
 			main.variables.documentM.animate({scrollTop: pos}, 1200);
@@ -412,6 +402,10 @@ function animTitle(el,effect,speed){
 
 		$(document).scroll(function(){	
 			var scrl = $(document).scrollTop();
+
+			if (main.variables.togBut.hasClass('tog_mnu')) {
+				main.variables.togBut.click();
+			};
 			// portfolio item animated
 			for(var i = 0; i < main.variables.startAnimPort.length; i++){
 				if(scrl > main.variables.startAnimPort[i]){
