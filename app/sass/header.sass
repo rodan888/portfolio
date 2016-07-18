@@ -19,12 +19,12 @@
 	line-height: 1	
 
 body 
-	font-family: $font_0, $font_1, $font_2, $font_3
+	font-family: 'OpenSansLight', $font_1, $font_2, $font_3
 	font-weight: normal
 	font-size: 14px
 	min-width: 320px
 	position: relative
-	line-height: 1.42857
+	line-height: 1.62857
 	background-repeat: repeat-x
 	background-color: $white
 	overflow-x: hidden
@@ -214,6 +214,17 @@ header
 	width: 100%
 	padding-left: 40px
 	z-index: 10	
+	&.lamp_wrap_active 
+		svg 
+			-webkit-animation: lamp 3.8s
+			-moz-animation: lamp 3.8s
+			-o-animation: lamp 3.8s
+			animation: lamp 3.8s
+		.row .col-xs-4 
+			&:nth-child(1) svg 
+				-webkit-animation-delay: 0.2s
+			&:nth-child(2) svg
+				-webkit-animation-delay: 0.1s
 	svg 
 		width: 100%
 		height: 325px
@@ -225,3 +236,81 @@ header
 		ellipse 
 			display: none
 // Header lamp position end
+
+
+//Social button start
+.soc_wrap 
+	position: absolute
+	left: 0
+	bottom: 0
+	width: 100%
+	a 
+		display: block
+		margin: 10px auto
+		font-size: 25px
+		color: $main
+		text-align: center		
+		position: relative
+		width: 35px
+		height: 35px		
+		overflow: hidden
+		z-index: 10
+		@include transition(all 0.3s)
+		@include border-radius(50%)			
+		&:hover 
+			color: $white
+			&:before 
+				width: 45px
+				height: 45px				
+				@include transform(scale(2.0))
+		&:before 
+			position: absolute
+			content: ""
+			width: 0
+			height: 0
+			top: 50%
+			left: 50%
+			z-index: -1		
+			background-color: $main
+			@include transition(all 0.3s)
+//Social button end
+
+//Button down start
+.button_down 
+	position: absolute
+	bottom: 20px
+	left: 50%
+	width: 85px
+	height: 85px
+	background-color: $blackLight
+	text-align: center
+	line-height: 85px
+	font-size: 30px
+	color: $main
+	cursor: pointer
+	margin-left: -42px
+	z-index: 10	
+	box-shadow: 0 2px 2px $blackLight
+	overflow: hidden
+	@include border-radius(50%)			
+	@include transition(all 0.3s)
+	&:before 
+		position: absolute
+		content: ""
+		background-color: $main		
+		width: 0
+		height: 0
+		top: 50%		
+		left: 50%
+		z-index: -1	
+		@include border-radius(50%)			
+		@include transition(all 0.4s)
+	&:hover 
+		color: $white
+		&:before 
+			top: 0
+			left: 0
+			width: 90px
+			height: 90px			
+			@include transform(scale(2.0))
+//Button down end
