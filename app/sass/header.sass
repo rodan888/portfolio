@@ -63,7 +63,12 @@ h1,h2,h3,h4,p,hr,ul,nav
 a 
 	color: $greyLight
 	text-decoration: none
-
+.title-defoult
+	font-family: 'OpenSansLight'
+	font-size: 26px
+	font-weight: 100
+	text-align: center
+	letter-spacing: 3px
 // Preloader start
 #hellopreloader_preload 
 	display: block
@@ -107,6 +112,34 @@ header
 			@include transform(rotateY(20deg))
 		.button_down 
 			box-shadow: 0 -20px 30px $color_dune_approx
+	&.inner
+		height: 60px
+		box-shadow: 0 1px 3px $greyLight
+		nav
+			position: initial
+			margin: 0
+			z-index: 10	
+			ul				
+				text-align: left				
+				li
+					display: inline-block	
+					line-height: 60px
+					padding: 0 10px
+					position: relative 
+					&:before
+						position: absolute
+						content: ''
+						top: 50%
+						right: 0
+						margin-top: -5px
+						width: 1px 
+						height: 10px
+						background-color: $white
+					a
+						color: $white
+						font-size: 12px
+						margin: 0
+
 	nav 
 		position: absolute
 		top: 50%
@@ -314,3 +347,43 @@ header
 			height: 90px			
 			@include transform(scale(2.0))
 //Button down end
+
+//Search button start----------------
+.search-wrap
+	min-height: 60px
+.search-button
+	position: absolute
+	width: 32px
+	height: 32px
+	cursor: pointer	
+	z-index: 1000		
+	top: 50%	
+	right: 40px
+	margin: -14px auto 0	
+	span
+		position: absolute
+		width: 100%
+		left: 0
+		height: 1px
+		background-color: $white
+		&:nth-child(1)
+			top: 4px
+			width: 12px
+			height: 12px
+			background-color: transparent
+			border: 1px solid $white
+			@include border-radius(50%)
+		&:nth-child(2)
+			top: 16px
+			background-color: transparent
+		&:nth-child(3)
+			top: 19px
+			left: 7px
+			width: 10px
+			@include transform(rotate(55deg))
+			@include transition(all 0.3s)
+	&.active
+		span:last-child
+			@include transform(rotate(120deg))
+			left: -4px
+//Search button end---------------------

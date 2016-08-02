@@ -8,7 +8,35 @@ section
 	min-height: 600px
 	padding: 40px 0
 	position: relative
+	&.black_section 
+		position: relative
+		background-color: $blackLight
+		margin-top: 100px
+		margin-bottom: 140px
+		min-height: 480px
+		&:after 
+			position: absolute
+			content: ""
+			width: 0
+			height: 0
+			border-style: solid
+			bottom: -109px
+			border-width: 110px 1920px 0 0
+			border-color: $blackLight transparent transparent transparent	
+		&:before 
+			position: absolute
+			content: ""
+			width: 0
+			height: 0
+			border-style: solid
+			top: -109px
+			border-width: 0 0 110px 1920px
+			border-color: transparent transparent $blackLight transparent
 
+.contacts 
+	margin: 80px 0!important
+.z_menu 
+	z-index: 100
 ul.second-menu 
 	margin-top: -306px!important
 
@@ -310,7 +338,7 @@ ul.second-menu
 					left: 19px
 					height: 30px
 					@include transition-delay(0.1s)						
-					@include transform(rotate(-23deg))									
+					@include transform(rotate(23deg))									
 				&:after 
 					top: 15px
 					right: 46px
@@ -333,7 +361,7 @@ ul.second-menu
 
 //Blog items start
 #blog 
-	padding-bottom: 160px
+	padding-bottom: 80px
 	.blog-item 
 		position: relative
 		&:after 
@@ -358,67 +386,65 @@ ul.second-menu
 			&:before 
 				width: 50%			
 			&:after 
-				height: 100%	
-		.site-descr 
-			position: relative
+				height: 100%		
+		.site-descr 		
 			padding-left: 60px
-			padding-top: 10px			
-			.site-link
-				background-color: $blackLight
-				z-index: 10
-				&:after 
-					border-color: transparent transparent transparent $blackLight
+			padding-top: 10px		
+			h4 
+				margin-top: 0
+				font-size: 16px
+				margin-bottom: 20px		
 		.data-block 
-			.date:before 
+			text-align: right
+			padding-right: 25px
+			.date
 				position: absolute
-				content: ""
-				width: 0
-				height: 0
-				left: 0
-				bottom: -12px
-				border-style: solid
-				border-width: 12px 40px 0 40px
-				border-color: $main transparent transparent transparent
-//Blog items end
-
-
-
-.z_menu 
-	z-index: 100
-
-			
-.wrap_prew 
-	min-width: 559px
-
-.site-item 
-	min-height: 510px
-	clear: both
-	.site-screen 
-		min-height: 355px	
-	&:nth-child(even) 
-		.wrap_prew 
-			float: right		
-		.site-descr 
-			margin-top: 75px
-	
-
+				width: 80px
+				top: 0
+				left: -40px
+				background-color: $main
+				box-shadow: 1px 2px 8px
+				&:before 
+					position: absolute
+					content: ""
+					width: 0
+					height: 0
+					left: 0
+					bottom: -12px
+					border-style: solid
+					border-width: 12px 40px 0 40px
+					border-color: $main transparent transparent transparent
+				span 
+					display: block
+					font-family: $font_4
+					color: $white
+					line-height: 25px
+					text-align: center
+					font-size: 22px					
+					&:nth-child(3) 
+						font-size: 25px
 .site-descr 
+	position: relative
 	padding-left: 20px
 	text-align: center
+	h4 
+		color: $main
+		font-size: 20px
+		font-family: 'OpenSansLight'
+		text-align: left
+		margin-top: 25px
+		font-weight: 100
 	h3 
 		font-size: 24px
 		color: $blackLight
 		font-family: $font_5
 		text-align: left
 		line-height: 20px
-	
-	h4 
-		color: $main
-		font-size: 20px
-		font-family: $font_5
-		text-align: left
-		margin-top: 25px
-	
+	.site-link
+		background-color: $blackLight
+		z-index: 10
+		&:after 
+			border-color: transparent transparent transparent $blackLight		
 	ul 
 		list-style-position: inside
 		list-style-type: disc
@@ -426,335 +452,341 @@ ul.second-menu
 		padding-left: 20px
 		text-align: left
 		margin-top: 15px
-		border-bottom: 2px solid $grey
+		border-bottom: 1px solid $grey
 		max-width: 360px
 		padding-bottom: 10px
 		li 
 			color: $blackLight
 			text-align: left
 			margin-bottom: 4px
-		
-	
 	p 
 		text-align: left
-	
-	.site-link 
-		display: inline-block
-		color: $white
-		background-color: $blackLight
-		text-transform: uppercase
-		font-family: $font_5
-		font-size: 12px
-		margin-top: 15px
-		position: relative
-		width: 145px
-		height: 46px
-		line-height: 46px
-		span 
-			position: absolute
-			width: 100%
-			height: 100%
-			text-align: center
-			left: 0	
-			@include transition(all 0.3s)
-			&:nth-child(1) 
-				bottom: 0
-			
-			&:nth-child(2) 
-				bottom: -46px
-			
-		
-		&:after 
-			position: absolute
-			content: ""
-			top: 0
-			width: 0
-			height: 0
-			border-style: solid
-			border-width: 23px 0 22px 23px
-			border-color: transparent transparent transparent $blackLight
-			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-			transition: all 0.3s
-			right: -12px
-			border-width: 23px 0 22px 12px
-		
-		&:hover span 
-			&:nth-child(1) 
-				bottom: 46px
-			
-			&:nth-child(2) 
-				bottom: 0
-			
-		
-	
+//Blog items end
 
-.hover-btn 
+
+//Buttons link style start
+.link_button 
+	text-align: left
 	overflow: hidden
-	position: relative
-	height: 40px
-	width: 100%
-	max-width: 200px
+	padding-right: 16px
+.site-link 
+	display: inline-block
+	color: $white
+	background-color: $blackLight
+	text-transform: uppercase
+	font-size: 12px
+	margin-top: 15px
+	position: relative	
+	min-width: 145px
+	height: 38px
+	line-height: 37px
+	padding: 0 10px
+	&:hover span 
+		&:nth-child(1) 
+			bottom: 38px		
+		&:nth-child(2) 
+			bottom: 0
 	span 
 		position: absolute
 		width: 100%
 		height: 100%
 		text-align: center
 		left: 0	
-		@include transition(all 0.3s)
+		@include transition(bottom 0.3s)
 		&:nth-child(1) 
-			bottom: 0
-		
+			bottom: 0		
 		&:nth-child(2) 
-			bottom: -46px
-		
-	
-	&:hover span 
-		&:nth-child(1) 
-			bottom: 46px
-		
-		&:nth-child(2) 
-			bottom: 0
-		
-	
+			bottom: -38px	
+	&:after
+		position: absolute
+		content: ""
+		top: 0
+		right: -12px
+		width: 0
+		height: 0
+		border-style: solid
+		border-color: transparent transparent transparent $blackLight
+		border-width: 19px 0 19px 12px
+	&.download 
+		border: 1px solid $main
+		text-decoration: none!important
+		padding: 0 10px
+		background-color: transparent
+		color: $blackLight
+		min-width: 195px
+		overflow: hidden
+		&:after
+			display: none
+		i 
+			margin-right: 10px
+	&.white
+		color: $white
+//Buttons link style end
 
-#send 
-	display: block
-	max-width: 600px
-	margin: 80px auto 30px
+
+//Work step block start
+#work_step 
+	padding-bottom: 80px!important	
 	position: relative
-	z-index: 150
-	button 
-		width: 150px
-		height: 40px
-		line-height: 40px
+	background-color: $blackLight
+	.work_step 
 		text-align: center
 		color: $white
-		display: block
-		margin: 30px auto
-		text-transform: uppercase
-		border: 1px solid $main
-		background-color: transparent
-		position: relative
-		overflow: hidden
-		z-index: 110
-		span 
-			position: absolute
-			width: 100%
-			height: 100%
-			text-align: center
-			left: 0	
-			@include transition(all 0.3s)
-			&:nth-child(1) 
-				bottom: 0
-			
-			&:nth-child(2) 
-				bottom: -46px
-			
+		margin-top: 20px
+		i 
+			font-size: 50px
+			width: 70px
+			height: 70px
+			line-height: 70px
 		
-		&:hover span 
-			&:nth-child(1) 
-				bottom: 46px
-			
-			&:nth-child(2) 
-				bottom: 0
-			
-		
-	
-	label 
+		h3 
+			font-family: $font_5
+			font-size: 20px
+			margin: 20px 0 10px		
+		p 
+			line-height: 24px
+	.kino 
 		position: absolute
-		font-size: 16px
-		color: $main
-		line-height: 40px
-		padding-left: 10px
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all 0.3s
-	
-	input 
-		text-indent: 10px
-		display: block
-		height: 40px
-		width: 100%
-		background-color: $white
-		margin-bottom: 30px
-	
-	textarea 
-		background-color: $white
-		display: block
-		width: 100%
-		height: 150px
-	
-
-.link_button 
-	overflow: hidden
-	padding-right: 16px
-
-.data-block 
-	text-align: right
-	padding-right: 25px
-	.date 
-		position: absolute
-		width: 80px
-		top: 0
-		left: -40px
-		background-color: $main
-		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-		box-shadow: 1px 2px 8px
-		span 
-			display: block
-			font-family: $font_4
-			color: $white
-			line-height: 25px
-			text-align: center
-			&:nth-child(1) 
-				font-size: 22px
-			
-			&:nth-child(2) 
-				font-size: 22px
-			
-			&:nth-child(3) 
-				font-size: 25px
-			
-		
-	
-
-#work_step 
-	padding-bottom: 180px!important	
-	position: relative
-	padding-bottom: 120px
-	background-color: $blackLight
-
-.work_step 
-	text-align: center
-	color: $white
-	margin-top: 20px
-	i 
-		font-size: 50px
-		width: 70px
-		height: 70px
-		line-height: 70px
-	
-	h3 
-		font-family: $font_5
-		font-size: 20px
-		margin: 20px 0 10px
-	
-	p 
-		line-height: 24px
-	
-
-.kino 
-	position: absolute
-	height: 170px
-	background-image: $url_1
-	background-repeat: no-repeat
-	background-size: cover
-	width: calc(100% + 40px)
-	left: -20px
-	bottom: -100px
-	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-	transform: rotate(-6deg)
-	z-index: 100
-
-.black_section 
-	position: relative
-	background-color: $blackLight
-	margin-top: 180px
-	margin-bottom: 180px
-	&:after 
-		position: absolute
-		content: ""
-		width: 0
-		height: 0
-		border-style: solid
-		bottom: -200px
-		border-width: 200px 1920px 0 0
-		border-color: $blackLight transparent transparent transparent
-	
-	&:before 
-		position: absolute
-		content: ""
-		width: 0
-		height: 0
-		border-style: solid
-		top: -200px
-		border-width: 0 0 200px 1920px
-		border-color: transparent transparent $blackLight transparent
-	
-
-#contacts 
-	padding-bottom: 0
-	position: relative
-	padding-bottom: 120px
-	background-color: $blackLight
-	&:before 
-		position: absolute
-		content: ""
-		width: 0
-		height: 0
-		top: -200px
-		border-style: solid
-		border-width: 0 0 200px 1920px
-		border-color: transparent transparent $blackLight transparent	
-	object 
-		position: absolute
-		width: 200px
-	
-
-footer 
-	min-height: 300px
-	background-color: $black
-	position: relative
-	padding-bottom: 60px
-	z-index: 100
-	color: $greyLight
-	&:before 
-		position: absolute
-		content: ""
-		width: 0
-		height: 0
-		top: -200px
-		border-style: solid
-		border-width: 0 0 200px 1920px
-		border-color: transparent transparent $black transparent
-	.dev 
-		position: absolute
-		right: 0
-		bottom: -45px
-		width: 150px
-		height: 40px
-		padding-left: 24px
-		background-image: url(../img/copy.png)
+		height: 170px
+		background-image: $url_1
 		background-repeat: no-repeat
-		background-position: center left
-		line-height: 14px!important
-		background-size: 20px
-		font-size: 10px
-		padding-top: 5px
-		span 
-			display: block
-	ul 
-		margin-top: 45px
-		li 
-			margin: 10px 0
-			a 
-				&:hover 
-					text-decoration: underline
-					color: $main
-				
-				i 
-					margin-right: 5px
-				
-			
-		
-	
-	h3 
-		font-family: $font_4
-		font-weight: 100
-		margin: 0 15px
-	
+		background-size: cover
+		width: calc(100% + 40px)
+		width: -moz-calc(100% + 40px)
+		width: -webkit-calc(100% + 40px)
+		width: -o-calc(100% + 40px)
+		left: -20px
+		bottom: -100px
+		z-index: 100
+		@include transform(rotate(-6deg))
+//Work step block end
 
-#feedback 
-	padding-bottom: 1px
+
+//Portfolio block start
+.site-item 
+	min-height: 560px
+	clear: both		
+	&:nth-child(even) 
+		.wrap_prew 
+			float: right		
+		.site-descr 
+			margin-top: 75px
+	.wrap_prew 
+		.prew 
+			min-height: 400px
+		.port_wrap 
+			position: relative
+			text-align: center
+			.active 
+				> span 
+					width: 40px
+					height: 30px
+					width: 80px
+					height: 80px
+					top: 1px
+					margin: 10px
+					right: 2px
+					line-height: 94px
+					text-align: center
+					border: 3px solid $grey			
+					cursor: pointer
+					overflow: hidden
+					transition: all 0.3s cubic-bezier(0,2,1,0.5)
+					@include border-radius(50%)		
+					i 
+						font-size: 35px
+						color: $blackLight
+						line-height: 75px
+						display: block
+						@include transition(all 0.3s)			
+					&:hover i 
+						&:nth-child(1) 
+							margin-top: -75px				
+						&:nth-child(2) 
+							color: $main			
+					.ipod_but 
+						top: 42px
+						@include transition-delay(0.4s)			
+					.iphone_but 
+						top: 83px
+						@include transition-delay(0.8s)	
+			div > span 
+				color: transparent
+				display: inline-block
+.monitor 
+	@include transition(all 0.5s)
+	&:before 
+		@include transition(all 0.5s)
+		content: ""
+		position: absolute	
+	.stand 
+		position: absolute
+		bottom: -31px
+		left: 45%
+		height: 30px
+		background-color: $grey
+		width: 10%
+		@include transition(all 0.5s)	
+	.stand_bot 		
+		position: absolute
+		bottom: -37px
+		left: 35%
+		height: 5px
+		width: 30%
+		background-color: $grey		
+		@include transition(all 0.5s)	
+		@include border-radius(3px)		
+	.monitor 
+		width: 100%
+		max-width: 515px
+		min-width: 350px
+		height: 300px
+		margin: 0 auto
+		position: relative
+		background-color: $grey		
+		@include border-radius(5px)			
+		&:before 
+			bottom: calc(2.5%/2)
+			left: calc(50% - 7.5px)
+			text-align: center
+			width: 15px
+			height: 15px
+			background-color: $white			
+			@include border-radius(50%)
+	.cont 
+		top: 2.5%	
+		position: absolute
+		background-color: $white
+		width: 96%
+		height: 90%
+		left: 2%
+		overflow: hidden
+		@include transition(all 0.3s)
+		@include transition-delay(0.3s)
+		img 
+			width: 100%
+			height: auto
+			@include transition(all 0.3s)
+//Portfolio block end
+
+	
+// Portfolio inner start
+.portfolio-inner
+	position: relative
+	min-height: 600px
+	padding-top: 0
+	@include perspective(1200px)
+	.site-descr
+		padding-top: 25px
+		h2
+			font-family: 'OpenSansLight'
+			font-size: 44px			
+			font-weight: 100
+			text-align: left
+			line-height: 40px
+		h4
+			margin-top: 15px
+			position: relative
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				left: 0
+				width: 100%
+				max-width: 360px
+				height: 1px
+				background-color: $grey
+.shadow-block
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	max-width: 500px
+	height: 600px
+	transform-style: preserve-3d
+	transform-origin: left
+	-webkit-transform-origin: left
+	-moz-transform-origin: left
+	-o-transform-origin: left
+	@include transform(rotateY(38deg) rotateX(14deg))
+	&:before
+		position: absolute
+		content: ""
+		bottom: 11px
+		left: 2%
+		width: 94%
+		height: 30px
+		z-index: -1
+		box-shadow: 0 45px 57px 0px $greyLight
+		@include transform(rotate(-1deg))			
+	.site-screen				
+		box-shadow: -23px 27px 52px $grey
+		height: 600px
+		overflow-y: scroll							
+		img
+			width: 100%		
+			max-width: 500px	
+#fast-send
+	padding: 0
+	min-height: 80px
+	.title-defoult
+		color: $white
+	#send
+		margin: 30px auto -40px
+		max-width: 100%
+		textarea
+			height: 110px
+// Portfolio inner end
+
+// breadcrumb start
+.bread
+	text-align: left
+	margin-top: 25px
+	padding-left: 20px
+	li
+		display: inline-block
+		position: relative
+		margin-right: 15px
+		color: $color_storm_dust_approx
+		&:last-child:before
+			display: none
+		&:before
+			position: absolute
+			content: '/'
+			top: 0
+			right: -16px
+			width: 15px
+			height: 22px
+			line-height: 23px
+			font-size: 14px
+			text-align: center
+			color: $main
+		a
+			display: block
+			color: $main
+			line-height: 22px
+			&:hover
+				text-decoration: underline
+// breadcrumb end
+
+// Last-portfolio slider start
+.last-portfolio
+	margin-top: 60px
+	.title_block
+		margin-bottom: 60px
+	.site-item
+		min-height: 400px
+	.wrap_prew
+		position: relative
+		.port_wrap
+			position: absolute
+			top: 10px	
+			right: 0
+			span
+				display: block!important
+
+// Last-portfolio slider end
+
 
 .footLamp 
 	z-index: 10
@@ -787,15 +819,11 @@ footer
 			background-image: $url_5
 			top: -75px
 			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-			transform: rotate(7deg)
-		
-	
+			transform: rotate(7deg)	
 	.img_block_hover:before 
 		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 		transition: all 0.3s
 		width: 560px
-	
-
 .lamp_left 
 	position: absolute
 	bottom: 0
@@ -815,15 +843,11 @@ footer
 			background-repeat: no-repeat
 			left: 62px
 			transform: rotate(-8deg)
-			background-image: $url_4
-		
-	
+			background-image: $url_4	
 	.img_block_hover:before 
 		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 		transition: all 0.3s
 		width: 560px
-	
-
 .rect 
 	width: 10px
 	height: 530px
@@ -834,43 +858,20 @@ footer
 	top: 103px
 	z-index: -1
 
-.download 
-	line-height: 40px
-	border: 1px solid $main
-	display: inline-block
-	text-decoration: none!important
-	padding: 0 10px
-	margin-top: 9px
-	i 
-		margin-right: 10px
+
 	
 
-.copy 
-	position: absolute
-	bottom: 0
-	left: 0
-	width: 100%
-	min-height: 60px
-	line-height: 60px
-	background-color: $color_cod_gray_approx
-	border-top: 1px solid $blackLight
-	overflow: hidden
-	a 
-		color: $main
-		&:hover 
-			text-decoration: underline
+
 		
 	
 
 #blog-page 
 	padding-bottom: 160px
-
 .blog 
 	h1 
 		font-weight: 100
 		margin-bottom: 20px
-		line-height: 35px
-	
+		line-height: 35px	
 	ul 
 		list-style-type: disc
 		padding-left: 20px
@@ -879,9 +880,6 @@ footer
 			margin: 10px 0
 			span 
 				font-family: $font_5
-			
-		
-	
 	.code-console 
 		display: block
 		line-height: 40px
@@ -903,137 +901,10 @@ footer
 	a 
 		color: $main
 		&:hover 
-			text-decoration: underline
-		
-	
+			text-decoration: underline	
 	img 
 		max-width: 700px
 		margin: 20px 0
-
-.prew 
-	min-height: 400px
-
-.monitor 
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-	transition: all 0.5s
-	&:before 
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all 0.5s
-		content: ""
-		position: absolute
-	
-	.stand 
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all 0.5s
-		position: absolute
-		bottom: -31px
-		left: 45%
-		height: 30px
-		background-color: $grey
-		width: 10%
-	
-	.stand_bot 		
-		transition: all 0.5s
-		position: absolute
-		bottom: -37px
-		left: 35%
-		height: 5px
-		width: 30%
-		background-color: $grey		
-		@include border-radius(3px)			
-	
-	.monitor 
-		width: 100%
-		max-width: 515px
-		min-width: 350px
-		height: 300px
-		margin: 0 auto
-		position: relative
-		background-color: $grey		
-		@include border-radius(5px)			
-		&:before 
-			bottom: calc(2.5%/2)
-			left: calc(50% - 7.5px)
-			text-align: center
-			width: 15px
-			height: 15px
-			background-color: $white			
-			@include border-radius(50%)
-		.cont 
-			top: 2.5%	
-	
-
-.cont 
-	position: absolute
-	background-color: $white
-	width: 96%
-	height: 90%
-	left: 2%
-	overflow: hidden
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-	transition: all 0.3s
-	//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-	transition-delay: 0.3s
-	img 
-		width: 100%
-		height: auto
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: all 0.3s
-	
-
-.port_wrap 
-	position: relative
-	text-align: center
-	.active 
-		> span 
-			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-			transition: all 0.3s cubic-bezier(0,2,1,0.5)
-			width: 40px
-			height: 30px
-			width: 80px
-			height: 80px
-			top: 1px
-			margin: 10px
-			right: 2px
-			line-height: 94px
-			text-align: center
-			border: 3px solid $grey			
-			@include border-radius(50%)		
-			cursor: pointer
-			overflow: hidden
-			i 
-				font-size: 35px
-				color: $blackLight
-				line-height: 75px
-				//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-				transition: all 0.3s
-				display: block
-			
-			&:hover i 
-				&:nth-child(1) 
-					margin-top: -75px
-				
-				&:nth-child(2) 
-					color: $main
-				
-			
-		
-		> 
-			.ipod_but 
-				top: 42px
-				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-				transition-delay: 0.4s
-			
-			.iphone_but 
-				top: 83px
-				//Instead of the line below you could use @include transition-delay($delay-1, $delay-2, $delay-3, $delay-4, $delay-5, $delay-6, $delay-7, $delay-8, $delay-9, $delay-10)
-				transition-delay: 0.8s
-			
-		
-	
-	div > span 
-		color: transparent
-		display: inline-block
 
 
 @media only screen and(max-width : 1366px) 
@@ -1125,10 +996,7 @@ svg:not(:root)
 .img_wrap img 
 	width: 100%
 
-.blog-item .site-descr h4 
-	margin-top: 0
-	font-size: 16px
-	margin-bottom: 20px
+
 
 .ipod .monitor 
 	width: 30%
@@ -1208,6 +1076,76 @@ svg:not(:root)
 			width: 100%		
 	.stand_bot 
 		width: 0
+
+
+
+
+
+
+//Footer start
+footer 
+	min-height: 300px
+	margin-top: 140px
+	background-color: $black
+	position: relative
+	padding-bottom: 60px
+	z-index: 100
+	color: $greyLight
+	&:before 
+		position: absolute
+		content: ""
+		width: 0
+		height: 0
+		top: -200px
+		border-style: solid
+		border-width: 0 0 200px 1920px
+		border-color: transparent transparent $black transparent
+	.copy 
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		min-height: 60px
+		line-height: 60px
+		background-color: $color_cod_gray_approx
+		border-top: 1px solid $blackLight
+		overflow: hidden
+		a 
+			color: $main
+			&:hover 
+				text-decoration: underline
+	.dev 
+		position: absolute
+		right: 0
+		bottom: -45px
+		width: 150px
+		height: 40px
+		padding-left: 24px
+		background-image: url(../img/copy.png)
+		background-repeat: no-repeat
+		background-position: center left
+		line-height: 14px!important
+		background-size: 20px
+		font-size: 10px
+		padding-top: 5px
+		span 
+			display: block
+	ul 
+		margin-top: 45px
+		li 
+			margin: 10px 0
+			a 
+				&:hover 
+					text-decoration: underline
+					color: $main				
+				i 
+					margin-right: 5px	
+	h3 
+		font-family: $font_4
+		font-weight: 100
+		margin: 0 15px
+//Footer end
+
 
 //Header lamp animation start
 @-webkit-keyframes lamp
