@@ -1077,7 +1077,83 @@ svg:not(:root)
 	.stand_bot 
 		width: 0
 
+//Page calculator start
+#calc
+	background-color: #f9f9f9
+.type-site
+	margin-bottom: 10px
+	border-bottom: 1px solid $grey
+	form
+		margin: 0
+		.form-group
+			margin-bottom: 10px
+			span
+				vertical-align: top
+	.type-title
+		margin-bottom: 15px
+		padding-bottom: 5px
+		padding-left: 25px
+		&.active
+			h2:before
+				content: '\f106'
+		h2
+			cursor: pointer
+			position: relative
+			font-family: 'OpenSansRegular'
+			font-weight: 200
+			&:before
+				position: absolute
+				content: '\f107'
+				width: 20px
+				height: 20px
+				top: 8px
+				left: -25px
+				font-family: 'FontAwesome'
+				color: $black
+				font-size: 22px
+				line-height: 20px
+		span
+			display: block
+			max-width: 500px
+			font-size: 12px
+			color: $greyLight
+	.site-element
+		padding-left: 50px	
+		display: none	
+		>li
+			border-bottom: 1px solid $grey
+			// margin-bottom: 15px
+			&:last-child
+				border: none
+			>span
+				font-family: 'OpenSansRegular'
+				font-size: 18px
+				display: block
+				position: relative
+				cursor: pointer
+				padding: 10px 0
+				&:before
+					position: absolute
+					content: '\f107'
+					width: 20px
+					height: 20px
+					top: 15px
+					left: -25px
+					font-family: 'FontAwesome'
+					color: $black
+					font-size: 15px
+					line-height: 20px	
+			form
+				display: none		
+			.select 	
+				margin-bottom: 5px
+				span
+					display: inline-block
+					vertical-align: top
 
+
+
+//Page calculator end
 
 
 

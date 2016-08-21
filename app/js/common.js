@@ -125,6 +125,35 @@ var main = {
 	// 	var cont = this.opt.header.find('.container');						
 	// 	cont.height(this.opt.header.find('img.screenshot').height());			
 	// },
+	calculator: function(){
+		var levelOne = $('.type-title'),
+			levelTwo = $('.level-two'),
+			siteOpt = function(title,elemT,design){					
+					this.title = title, 
+					this.subTitle = elemT,
+					this.design = design,
+					this.module = []						
+			},
+			mSite;
+
+		levelOne.on('click',function(){
+			var title = $(this).find('h2').text();				
+			
+
+			nSite = new siteOpt(title);
+			console.log(nSite);
+		});
+		
+
+		main.toggleC(levelTwo);		
+		main.toggleC(levelOne);
+	},
+	toggleC: function(el){
+		el.on('click',function(){
+			el.not(this).removeClass('active').next().slideUp('slow');
+			$(this).toggleClass('active').next().slideToggle('slow');						
+		});
+	},
 	logoAnim: function(){
 		var clearAnim,					
 				logo = main.opt.fixedMenu.find('.logo'),
@@ -333,6 +362,8 @@ var main = {
 		main.rotatePort();
 		//fixed menu
 		main.logoAnim();
+		//calculator
+		this.calculator();
 
 		// main.innerHeader();
 		

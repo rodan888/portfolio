@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>My Portfolio</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="img/favicon.png" />	
+	<link rel="stylesheet" href="css/vendor.min.css">		
+	<link rel="stylesheet" href="css/header.min.css" />
+	<link rel="stylesheet" href="css/main.min.css" />	
+</head>
+<body>	
+<!-- 	<div id="hellopreloader">
+		<div id="hellopreloader_preload">
+			<img src="img/svg/lampInPre.svg" alt="front-end">
+			<div class="progr"></div>
+		</div>
+	</div> -->
+	<script src="angular/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<header class="inner">		
+		<div class="container">
+			<div class="row">			
+				<div class="col-md-8">
+					<nav>
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О себе</a></li>
+							<li><a href="#">Этапы работы</a></li>
+							<li><a href="#">Портфолио</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-4 search-wrap">
+					<form id="searchForm">
+						
+					</form>
+					<div class="search-button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</header>	
+	<main id="calc" data-ng-app="myApp">		
+		<div class="container">
+			<div class="row">				
+				<div class="col-md-12">
+					<ul class="bread">
+						<li><a href="/">Главная</a></li>
+						<li><a href="#">Портфолио</a></li>				    
+						<li>Rif-line.com</li>
+					</ul>		
+				</div>
+			</div>
+		</div>
+		<section data-ng-controller="mainCtrl">
+	<!-- 		<div class="title_block">
+				<h2 class="section_title front_side">
+					Калькулятор
+					<span class="sub_title">Рассчот стоимости</span>
+					<span class="section_title back_side">Калькулятор
+						<span class="sub_title">Рассчот стоимости</span>
+					</span>
+				</h2>
+			</div> -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<div class="type-site">
+							<div class="type-title">
+								<h2>{{title}}</h2>
+								<span>
+									сайт на 3-6 страниц, который включает общую информацию о компании, ее контактные данные, краткую характеристику товаров и услуг.
+								</span>																
+							</div>
+							<ul class="site-element"> 
+								<li>
+									<span class="level-two">Дизайн</span>	
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input 
+													type="radio" 
+													name="fancy-radio" 
+													id="design-1"  
+													checked=""
+													value="Один из готовых шаблонов" 
+													data-prise="50">
+												<label for="design-1"></label>
+												<span>Один из готовых шаблонов</span>
+											</div>
+											<div class="select">											
+												<input 
+													type="radio" 
+													name="fancy-radio" 
+													id="design-2"
+													value="Ваш дизайн (на базе .psd файла)" 
+													data-prise="150">
+												<label for="design-2"></label>
+												<span>Ваш дизайн (на базе .psd файла)</span>
+											</div>
+											<div class="select">																						
+												<input 
+													type="radio"
+													name="fancy-radio" 
+													id="design-3"
+													value="Разработка у нас простого дизайна" 
+													data-prise="170">
+												<label for="design-3"></label>
+												<span>Разработка у нас простого дизайна</span>
+											</div>
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Функциональные модули</span>
+									<form>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+											<label for="fancy-checkbox"></label>		
+											<span>Форма поиска</span>									
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
+											<label for="fancy-checkbox1"></label>		
+											<span>Комментарии</span>									
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Мультиязычность</span>
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="lang-1" checked="">
+												<label for="lang-1"></label>
+												<span>Один зык</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="lang-2">
+												<label for="lang-2"></label>
+												<span>Два зыка</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="lang-3">
+												<label for="lang-3"></label>
+												<span>Три языка</span>
+											</div>
+										</div>
+									</form>
+								</li>								
+							</ul>
+						</div>
+						<div class="type-site">
+							<div class="type-title">
+								<h2>Бизнес сайт</h2>
+								<span>
+									мощный инструмент для презентации Вашей компании, продвижения ее товаров и услуг, содержащий подробную информацию об этих товарах и услугах.
+								</span>
+							</div>
+							<ul class="site-element"> 
+								<li>
+									<span class="level-two">Дизайн</span>	
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="design-1" checked="">
+												<label for="design-1"></label>
+												<span>Один из готовых шаблонов</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="design-2">
+												<label for="design-2"></label>
+												<span>Ваш дизайн (на базе .psd файла)</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="design-3">
+												<label for="design-3"></label>
+												<span>Разработка у нас простого дизайна</span>
+											</div>
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Функциональные модули</span>
+									<form>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+											<label for="fancy-checkbox"></label>		
+											<span>Форма поиска</span>									
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
+											<label for="fancy-checkbox1"></label>		
+											<span>Комментарии</span>									
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Мультиязычность</span>
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="lang-1" checked="">
+												<label for="lang-1"></label>
+												<span>Один зык</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="lang-2">
+												<label for="lang-2"></label>
+												<span>Два зыка</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="lang-3">
+												<label for="lang-3"></label>
+												<span>Три языка</span>
+											</div>
+										</div>
+									</form>
+								</li>								
+							</ul>
+						</div>
+						<div class="type-site">
+							<div class="type-title">
+								<h2>Корпоративный сайт</h2>
+								<span>
+									платформа для ежедневной работы Вашей компании, охватывающая значительный массив данных, которая обеспечивает постоянный обмен информацией с клиентами и внутри компании.
+								</span>
+							</div>
+							<ul class="site-element"> 
+								<li>
+									<span class="level-two">Дизайн</span>	
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="design-1" checked="">
+												<label for="design-1"></label>
+												<span>Один из готовых шаблонов</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="design-2">
+												<label for="design-2"></label>
+												<span>Ваш дизайн (на базе .psd файла)</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="design-3">
+												<label for="design-3"></label>
+												<span>Разработка у нас простого дизайна</span>
+											</div>
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Функциональные модули</span>
+									<form>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+											<label for="fancy-checkbox"></label>		
+											<span>Форма поиска</span>									
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
+											<label for="fancy-checkbox1"></label>		
+											<span>Комментарии</span>									
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Мультиязычность</span>
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="lang-1" checked="">
+												<label for="lang-1"></label>
+												<span>Один зык</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="lang-2">
+												<label for="lang-2"></label>
+												<span>Два зыка</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="lang-3">
+												<label for="lang-3"></label>
+												<span>Три языка</span>
+											</div>
+										</div>
+									</form>
+								</li>								
+							</ul>
+						</div>
+						<div class="type-site">
+							<div class="type-title">
+								<h2>Портал</h2>
+								<span>
+									сайт с большим количеством информации, интенсивным ее потоком и относительно сложной структурой, где предусмотрена регистрация посетителей для обмена информацией.
+								</span>
+							</div>
+							<ul class="site-element"> 
+								<li>
+									<span class="level-two">Дизайн</span>	
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="design-1" checked="">
+												<label for="design-1"></label>
+												<span>Один из готовых шаблонов</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="design-2">
+												<label for="design-2"></label>
+												<span>Ваш дизайн (на базе .psd файла)</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="design-3">
+												<label for="design-3"></label>
+												<span>Разработка у нас простого дизайна</span>
+											</div>
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Функциональные модули</span>
+									<form>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+											<label for="fancy-checkbox"></label>		
+											<span>Форма поиска</span>									
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
+											<label for="fancy-checkbox1"></label>		
+											<span>Комментарии</span>									
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Мультиязычность</span>
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="lang-1" checked="">
+												<label for="lang-1"></label>
+												<span>Один зык</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="lang-2">
+												<label for="lang-2"></label>
+												<span>Два зыка</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="lang-3">
+												<label for="lang-3"></label>
+												<span>Три языка</span>
+											</div>
+										</div>
+									</form>
+								</li>								
+							</ul>
+						</div>
+						<div class="type-site">
+							<div class="type-title">
+								<h2>Интернет магазин</h2>
+								<span>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, recusandae!
+								</span>
+							</div>
+							<ul class="site-element"> 
+								<li>
+									<span class="level-two">Дизайн</span>	
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="design-1" checked="">
+												<label for="design-1"></label>
+												<span>Один из готовых шаблонов</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="design-2">
+												<label for="design-2"></label>
+												<span>Ваш дизайн (на базе .psd файла)</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="design-3">
+												<label for="design-3"></label>
+												<span>Разработка у нас простого дизайна</span>
+											</div>
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Функциональные модули</span>
+									<form>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
+											<label for="fancy-checkbox"></label>		
+											<span>Форма поиска</span>									
+										</div>
+										<div class="form-group">
+											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
+											<label for="fancy-checkbox1"></label>		
+											<span>Комментарии</span>									
+										</div>
+									</form>
+								</li>
+								<li>
+									<span class="level-two">Мультиязычность</span>
+									<form>
+										<div class="form-group">
+											<div class="select">
+												<input type="radio" name="fancy-radio" id="lang-1" checked="">
+												<label for="lang-1"></label>
+												<span>Один зык</span>
+											</div>
+											<div class="select">											
+												<input type="radio" name="fancy-radio" id="lang-2">
+												<label for="lang-2"></label>
+												<span>Два зыка</span>
+											</div>
+											<div class="select">																						
+												<input type="radio" name="fancy-radio" id="lang-3">
+												<label for="lang-3"></label>
+												<span>Три языка</span>
+											</div>
+										</div>
+									</form>
+								</li>								
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="price">
+							
+						</div>			
+						<button type="button" class="download site-link">
+							<span>Заказать</span>
+							<span>Заказать</span>							
+						</button>
+						<button type="button" class="download site-link">
+							<span><i class="fa fa-download"></i> Скачать результат</span>							
+							<span><i class="fa fa-download"></i> Скачать результат</span>							
+						</button>
+						<button type="button" class="download site-link">
+							<span><i class="fa fa-envelope"></i>Отправить на почту</span>							
+							<span><i class="fa fa-envelope"></i>Отправить на почту</span>							
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-6">
+					<h3>Рубрики</h3>
+					<div class="col-md-6 col-sm-6">
+						<ul class="foot_menu">
+							<li><a href="#"><i class="fa fa-home"></i> Главная</a></li>
+							<li><a href="#"><i class="fa fa-archive"></i> О себе</a></li>
+							<li><a href="#"><i class="fa fa-list-ol"></i> Этапы работы</a></li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<ul>
+							<li><a href="#"><i class="fa fa-desktop"></i> Портфолио</a></li>
+							<li><a href="#"><i class="fa fa-pencil"></i> Блог</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i> Контакты</a></li>
+						</ul>
+					</div>	
+				</div>
+				<div class="col-md-6 col-xs-6">
+					<h3>Соц. сети</h3>
+					<div class="col-md-6 col-sm-6">
+						<ul class="soc">
+							<li>								
+								<a href="https://www.instagram.com/" target="_blank">
+									<i class="fa fa-instagram"></i>
+									instagram			
+								</a>			
+							</li>
+							<li>								
+								<a href="https://www.youtube.com/channel/UCwiwLMn5o6vnu90aLBntD5g" target="_blank">
+									<i class="fa fa-youtube"></i>
+									youtube			
+								</a>			
+							</li>
+							<li>								
+								<a href="https://twitter.com/ykarservises" target="_blank">
+									<i class="fa fa-twitter"></i>
+									twitter								
+								</a>			
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<ul>
+							<li>								
+								<a href="https://www.facebook.com/ykarservice" target="_blank">
+									<i class="fa fa-facebook"></i>
+									facebook
+								</a>			
+							</li>
+							<li>								
+								<a href="https://vk.com/ykarservis" target="_blank">
+									<i class="fa fa-vk"></i>
+									Вконтакте
+								</a>			
+							</li>
+							<li>								
+								<a href="https://vk.com/ykarservis" target="_blank">
+									<i class="fa fa-linkedin"></i>
+									Linkedin
+								</a>			
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copy">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<a href="Aleksandr_Tsumbaluk.pdf" class="download site-link white">
+							<span><i class="fa fa-download"></i> Скачать резюме в PDF</span>
+							<span><i class="fa fa-download"></i> Скачать резюме в PDF</span>							
+						</a>
+					</div>					
+					<div class="col-md-4 col-sm-4">
+						<p><i class="fa fa-envelope-o"></i> E-mail: <a href="mailto:tsumbaluk888@gmail.com">tsumbaluk888@gmail.com</a></p>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="dev">
+							<a href="http://tsumbaluk.in.ua/">
+								Developed by
+								<span>Alexander Tsymbalyuk</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed_menu">
+			<div class="button_logo">
+				<div class="logo">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="icon_button">
+					<span class="fa fa-bars" data-menu="first-menu"></span>
+					<span class="fa fa-link" data-menu="second-menu"></span>
+				</div>
+			</div>
+
+			<ul class="open_fixed first-menu">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">О себе</a></li>
+				<li><a href="#">Этапы работы</a></li>
+				<li><a href="#">Портфолио</a></li>
+				<li><a href="#">Блог</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+			<ul class="open_fixed second-menu">
+				<li>								
+					<a href="https://www.instagram.com/" target="_blank">
+						<i class="fa fa-instagram"></i>instagram</a>			
+					</li>
+					<li>								
+						<a href="https://www.youtube.com/channel/UCwiwLMn5o6vnu90aLBntD5g" target="_blank">
+							<i class="fa fa-youtube"></i>youtube</a>			
+						</li>
+						<li>								
+							<a href="https://twitter.com/ykarservises" target="_blank">
+								<i class="fa fa-skype"></i>
+								Skype							
+							</a>			
+						</li>
+						<li>								
+							<a href="https://www.facebook.com/ykarservice" target="_blank">
+								<i class="fa fa-facebook"></i>
+								facebook
+							</a>			
+						</li>
+						<li>								
+							<a href="https://vk.com/ykarservis" target="_blank">
+								<i class="fa fa-vk"></i>
+								Вконтакте
+							</a>			
+						</li>
+						<li>								
+							<a href="https://vk.com/ykarservis" target="_blank">
+								<i class="fa fa-linkedin"></i>
+								Linkedin
+							</a>			
+						</li>
+					</ul>
+
+				</div>
+			</footer>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	
+	<script src="js/jquery-1.11.2.min.js"></script>	
+	<script src="js/plagin.min.js"></script>
+	<script src="js/common.min.js"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
