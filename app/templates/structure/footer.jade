@@ -1,0 +1,41 @@
+footer
+	div.copy
+		div.container
+			div.row
+				div.col-md-4 © 
+					a(href="http://tsumbaluk.in.ua") tsumbaluk.in.ua
+				div.col-md-4.center
+					a(href="sitemap.xml")
+						i.fa.fa-sitemap 
+						| Sitemap
+				div.col-md-4
+					div.dev
+						a(href="http://tsumbaluk.in.ua/", target="_blank", rel="nofollow") Developed by
+							span Alexander Tsymbalyuk
+	div.fixed_menu
+		div.button_logo
+			div.logo
+				span
+				span
+				span
+			div.icon_button
+				span(class="fa fa-bars" data-menu="first-menu")
+				span(class="fa fa-link" data-menu="second-menu")
+		ul.open_fixed.first-menu
+			include ../tpl/navigation
+		ul.open_fixed.second-menu
+			-
+				var social = {
+					1:'fa fa-twitter',
+					2:'fa fa-facebook',
+					3:'fa fa-linkedin',
+					4:'fa fa-twitter',
+					5:'fa fa-facebook',
+					6:'fa fa-linkedin'					
+				};		
+			each val, index in social
+				li
+					a(href="#" target="_blank")
+						i(class=val)
+						| Soc-net
+					

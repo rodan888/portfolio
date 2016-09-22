@@ -1,0 +1,29 @@
+header
+	div.lamp_wrap
+		div.container
+			div.row
+				include ../tpl/header-lamp
+	div.header_wrap
+		h1 alexander tsymbalyuk
+		span.prof FRONT-END / WEB-DEVELOPER
+	div.top_nav
+		div.toggle_but
+			span
+			span
+			span
+		div.soc_wrap
+			-
+				var social = {
+					1:'fa fa-twitter',
+					2:'fa fa-facebook',
+					3:'fa fa-linkedin',
+					4:'fa fa-vk'
+				};		
+			each val, index in social
+				a(href="#" target="_blank")
+					i(class=val)
+	nav
+		ul
+			include ../tpl/navigation
+	span.button_down
+		i.fa.fa-chevron-down

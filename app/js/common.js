@@ -53,7 +53,9 @@ $(document).ready(function() {
 
 });
 window.onload = function(){
-	preloader();		
+	if($('#hellopreloader_preload').length){
+		preloader();				
+	}
 };
 
 function preloader(){
@@ -167,15 +169,24 @@ var main = {
 		logoAnim.call();
 
 		butonMenu.click(function(){
-			var el = $(this).attr('data-menu');
+			var el = $(this).attr('data-menu'),
+    			t  = $("." + el);
 			logo.toggleClass('logo-anim');
 			if(logo.hasClass('logo-anim')){
 				clearInterval(clearAnim);
 			}else{
 				logoAnim();
 			}
-			$('.'+ el).toggleClass('open_fixed');
-		});
+			t.toggleClass("open_fixed").css("z-index", "150");;
+			console.log(t);
+			if(1 == t.index()){
+				t.next().addClass("open_fixed").css("z-index", "-1"); 
+			}else{
+				t.prev().addClass("open_fixed").css("z-index", "-1");
+			}
+
+           //1 == $('.'+ el).index() ? t.next().addClass("open_fixed").css("z-index", "-1") : t.prev().addClass("open_fixed").css("z-index", "-1")
+        });
 	},
 	rotatePort: function(){
 		var width  = $('#contacts').width(),

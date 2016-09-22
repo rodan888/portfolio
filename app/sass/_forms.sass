@@ -19,7 +19,7 @@ button,input,textarea
 	outline: none
 	border: none
 
-form 
+form:not('#send')
 	// padding: 20px
 	margin: 0 auto
 	max-width: 600px 	
@@ -213,7 +213,10 @@ form#send
 		color: $main
 		line-height: 40px
 		padding-left: 10px
+		padding-left: 5px
 		@include transition(margin 0.3s)	
+		i
+			margin-right: 5px
 	input 
 		text-indent: 10px
 		display: block

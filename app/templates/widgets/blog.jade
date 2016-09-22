@@ -1,0 +1,43 @@
+section#portfolio
+	div.title_block
+		h2.section_title.front_side Блог
+			span.sub_title записи / советы
+			span.section_title.back_side Блог
+				span.sub_title записи / советы
+	div.container
+		div.row
+			div.col-md-12
+				-
+					var blogList = [
+						{
+							image: "img/gulp.jpg",
+							title: "Первоначальная настройка Gulp",
+							sub_title: "пошаговое руководство",
+							introtext: "Gulp.js это потоковый сборщик проектов на JavaScript. Свою популярность он обрёл благодаря Stream, что делает его работу очень быстрой. В этой статье мы поговорим о установки и настройке Гальпа. Сразу оговорюсь, что я работаю под Windows и какие-то нюансы на других операционных системах могут отличаться. Для начало нам нужно установить Node.js , который является платформой для работы Gulp, основанной на движке V8, превращающая JavaScript из узкоспециализированного языка в язык общего назначения (машинный код)."
+						},{
+							image: "img/sublime.jpg",
+							title: "Подготовка к работе!",
+							sub_title: "Необзодимые плагины, и настройки.",
+							introtext: "В этот посте я хочу детально осветить пункт за пунктом где скачать, какой стартовый набор плагинов необходим для комфортной работы, базовая настройка интерфейса и несколько дополнительных полезных настроек. В этом прекрасном редакторе кода."
+						}
+					];
+				for blog in blogList
+					div.blog-item
+						div.container-fluid
+							div.row
+								div.col-md-6.clrp.site-screen
+									div.img_wrap
+										img(src= blog.image alt= blog.title)
+								div.col-md-6.site-descr
+									h3.anim-title= blog.title
+									h4= blog.sub_title
+									p= blog.introtext
+									div.data-block
+										div.date
+											span 22
+											span 10
+											span 1015
+										div.link_button
+											a(href="inner-blog.html")
+												span Перейти
+												span Перейти

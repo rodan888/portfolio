@@ -37,9 +37,6 @@ section
 	margin: 80px 0!important
 .z_menu 
 	z-index: 100
-ul.second-menu 
-	margin-top: -306px!important
-
 //Rotate title start
 .title_block 
 	width: 300px
@@ -167,6 +164,10 @@ ul.second-menu
 	width: 100px
 	z-index: 1000
 	@include transition(all 0.3s)
+	.first-menu,.second-menu
+		position: absolute
+		width: 100%
+		top: 106px
 	.button_logo 
 		background-color: $blackLight
 		margin-bottom: 1px

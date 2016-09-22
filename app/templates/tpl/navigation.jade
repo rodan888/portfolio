@@ -1,0 +1,30 @@
+-
+	var nav = [
+		{
+			title:'Главная',
+			page_url: '/'
+		},
+		{
+			title:'О себе',
+			page_url: 'abou.html'
+		},
+		{
+			title:'Этапы работы',
+			page_url: 'work-step.html'
+		},
+		{
+			title:'Портфолио',
+			page_url: 'portfolio.html'
+		},
+		{
+			title:'Блог',
+			page_url: 'blog.html'
+		},
+		{
+			title:'Контакты',
+			page_url: 'contacts.html'
+		}					
+	];
+for val, index in nav
+	li
+		a(href=val.page_url)= val.title

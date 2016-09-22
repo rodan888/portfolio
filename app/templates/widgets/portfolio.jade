@@ -1,0 +1,133 @@
+section#portfolio
+	div.title_block
+		h2.section_title.front_side Портфолио
+			span.sub_title примеры / работы
+			span.section_title.back_side Портфолио
+				span.sub_title примеры / работы
+	div.container
+		div.row
+			div.col-md-12
+				-
+					var portfolio = [
+						{
+							buttons:[
+								{
+									class: "pc_but",
+									data_show: "monitor",
+									data_src: "img/maket4.jpg",
+									icon: "fa fa-desktop"
+								},{
+									class: "ipod_but",
+									data_show: "ipod",
+									data_src: "img/maket-plan4.jpg",
+									icon: "fa fa-tablet"								
+								},{
+									class: "iphone_but",
+									data_show: "iphone",
+									data_src: "img/maket-phone4.jpg",
+									icon: "fa fa-mobile"								
+								}
+							],
+							image: "img/maket4.jpg",
+							title: "Ykarservis.com.ua",							
+							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+						},{
+							buttons:[
+								{
+									class: "pc_but",
+									data_show: "monitor",
+									data_src: "img/maket2.jpg",
+									icon: "fa fa-desktop"
+								},{
+									class: "ipod_but",
+									data_show: "ipod",
+									data_src: "img/maket-plan2.jpg",
+									icon: "fa fa-tablet"								
+								},{
+									class: "iphone_but",
+									data_show: "iphone",
+									data_src: "img/maket-phone2.jpg",
+									icon: "fa fa-mobile"								
+								}
+							],
+							image: "img/maket2.jpg",				
+							title: "Greenmeadows.com.ua",
+							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+						},{
+							buttons:[
+								{
+									class: "pc_but",
+									data_show: "monitor",
+									data_src: "img/maket3.jpg",
+									icon: "fa fa-desktop"
+								},{
+									class: "ipod_but",
+									data_show: "ipod",
+									data_src: "img/maket-plan3.jpg",
+									icon: "fa fa-tablet"								
+								},{
+									class: "iphone_but",
+									data_show: "iphone",
+									data_src: "img/maket-phone3.jpg",
+									icon: "fa fa-mobile"								
+								}
+							],
+							image: "img/maket3.jpg",				
+							title: "Studiorivoli.net",
+							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+						},{
+							buttons:[
+								{
+									class: "pc_but",
+									data_show: "monitor",
+									data_src: "img/maket5.jpg",
+									icon: "fa fa-desktop"
+								},{
+									class: "ipod_but",
+									data_show: "ipod",
+									data_src: "img/maket-plan5.jpg",
+									icon: "fa fa-tablet"								
+								},{
+									class: "iphone_but",
+									data_show: "iphone",
+									data_src: "img/maket-phone5.jpg",
+									icon: "fa fa-mobile"								
+								}
+							],
+							image: "img/maket5.jpg",				
+							title: "iwait.biz",
+							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+						}
+					];
+				for site,index in portfolio
+					div.site-item
+						div.wrap_prew
+							div.prew.monitor
+								div.monitor
+									div.stand
+									div.stand_bot
+									div.cont
+										img(src= site.image alt=site.title)
+							div.port_wrap
+								div.active
+									for el in site.buttons
+										span(class= el.class data-show=el.data_show data-src=el.data_src)
+											i(class= el.icon)
+											i(class= el.icon)
+						div.site-descr
+							h3= site.title
+							p= site.description
+							h4 Technologies
+							ul
+								for el in site.technologies
+									li= el
+							div.link_button
+								a(href="inner-portfolio.html" class="site-link")
+									span Перейти
+										i.fa.fa-caret-right
+									span Перейти
+										i.fa.fa-caret-right
