@@ -22,6 +22,7 @@
 	</div> -->
 	<script src="angular/angular.min.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/service.js"></script>	
 	<header class="inner">		
 		<div class="container">
 			<div class="row">			
@@ -50,7 +51,7 @@
 			</div>
 		</div>		
 	</header>	
-	<main id="calc" data-ng-app="myApp">		
+	<main id="calc" data-ng-app="myApp" ng-cloak>		
 		<div class="container">
 			<div class="row">				
 				<div class="col-md-12">
@@ -75,372 +76,84 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
-						<div class="type-site">
-							<div class="type-title">
-								<h2>{{title}}</h2>
-								<span>
-									сайт на 3-6 страниц, который включает общую информацию о компании, ее контактные данные, краткую характеристику товаров и услуг.
-								</span>																
+
+						<div class="type-site" data-ng-repeat="item in list">
+							<div class="type-title" data-ng-click="check(result,$event)">
+								<h2>{{item.title}}</h2>
+								<span>{{item.description}}</span>																								
 							</div>
 							<ul class="site-element"> 
-								<li>
-									<span class="level-two">Дизайн</span>	
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input 
-													type="radio" 
-													name="fancy-radio" 
-													id="design-1"  
-													checked=""
-													value="Один из готовых шаблонов" 
-													data-prise="50">
-												<label for="design-1"></label>
-												<span>Один из готовых шаблонов</span>
+								<li data-ng-repeat="service in item.list">
+									<div data-ng-if="service.cat == 'design' || service.cat == 'lang'">
+										<span class="level-two">{{service.title}}</span>	
+										<form id="{{item.type}}-{{$index}}">
+											<div class="form-group">
+												<div class="select" data-ng-repeat="el in service.listInner">
+													<input 
+														type="radio" 
+														name="fancy-radio" 
+														id="{{el.cat}}-{{$index}}"  													
+														value="{{el.title}}" 														
+														data-time="{{el.time}}"
+														data-prise="{{el.price}}" 
+														data-ng-click="setRadio(listInner,el)">
+													<label for="{{el.cat}}-{{$index}}"></label>
+													<span>{{el.title}}</span>
+												</div>
 											</div>
-											<div class="select">											
-												<input 
-													type="radio" 
-													name="fancy-radio" 
-													id="design-2"
-													value="Ваш дизайн (на базе .psd файла)" 
-													data-prise="150">
-												<label for="design-2"></label>
-												<span>Ваш дизайн (на базе .psd файла)</span>
-											</div>
-											<div class="select">																						
-												<input 
-													type="radio"
-													name="fancy-radio" 
-													id="design-3"
-													value="Разработка у нас простого дизайна" 
-													data-prise="170">
-												<label for="design-3"></label>
-												<span>Разработка у нас простого дизайна</span>
-											</div>
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Функциональные модули</span>
-									<form>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
-											<label for="fancy-checkbox"></label>		
-											<span>Форма поиска</span>									
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
-											<label for="fancy-checkbox1"></label>		
-											<span>Комментарии</span>									
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Мультиязычность</span>
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="lang-1" checked="">
-												<label for="lang-1"></label>
-												<span>Один зык</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="lang-2">
-												<label for="lang-2"></label>
-												<span>Два зыка</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="lang-3">
-												<label for="lang-3"></label>
-												<span>Три языка</span>
-											</div>
-										</div>
-									</form>
+										</form>
+									</div>
+
+									<div data-ng-if="service.cat != 'design'">
+										<span class="level-two">{{service.title}}</span>
+										<form id="{{item.type}}-{{$index}}">
+<!-- 
+											<div class="form-group">
+												<input type="checkbox" ng-model="all" id="{{item.type}}-all"> 
+												<label for="{{item.type}}-all"></label>
+												<span>Отметить все</span>
+											</div> -->
+
+											<div class="form-group" data-ng-repeat="el in service.listInner">
+												<input type="checkbox" 
+																ng-checked="all"
+																name="fancy-checkbox" 
+																id="{{item.type+'-'+el.cat+'-'+$index}}"
+																data-time="{{el.time}}"
+																data-price="{{el.price}}"																
+																data-ng-click="check(el.price,$event)">
+												<label for="{{item.type+'-'+el.cat+'-'+$index}}"></label>
+												<span>{{el.title}}</span>									
+											</div>										
+										</form>
+									</div>
 								</li>								
 							</ul>
-						</div>
-						<div class="type-site">
-							<div class="type-title">
-								<h2>Бизнес сайт</h2>
-								<span>
-									мощный инструмент для презентации Вашей компании, продвижения ее товаров и услуг, содержащий подробную информацию об этих товарах и услугах.
-								</span>
-							</div>
-							<ul class="site-element"> 
-								<li>
-									<span class="level-two">Дизайн</span>	
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="design-1" checked="">
-												<label for="design-1"></label>
-												<span>Один из готовых шаблонов</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="design-2">
-												<label for="design-2"></label>
-												<span>Ваш дизайн (на базе .psd файла)</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="design-3">
-												<label for="design-3"></label>
-												<span>Разработка у нас простого дизайна</span>
-											</div>
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Функциональные модули</span>
-									<form>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
-											<label for="fancy-checkbox"></label>		
-											<span>Форма поиска</span>									
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
-											<label for="fancy-checkbox1"></label>		
-											<span>Комментарии</span>									
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Мультиязычность</span>
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="lang-1" checked="">
-												<label for="lang-1"></label>
-												<span>Один зык</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="lang-2">
-												<label for="lang-2"></label>
-												<span>Два зыка</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="lang-3">
-												<label for="lang-3"></label>
-												<span>Три языка</span>
-											</div>
-										</div>
-									</form>
-								</li>								
-							</ul>
-						</div>
-						<div class="type-site">
-							<div class="type-title">
-								<h2>Корпоративный сайт</h2>
-								<span>
-									платформа для ежедневной работы Вашей компании, охватывающая значительный массив данных, которая обеспечивает постоянный обмен информацией с клиентами и внутри компании.
-								</span>
-							</div>
-							<ul class="site-element"> 
-								<li>
-									<span class="level-two">Дизайн</span>	
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="design-1" checked="">
-												<label for="design-1"></label>
-												<span>Один из готовых шаблонов</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="design-2">
-												<label for="design-2"></label>
-												<span>Ваш дизайн (на базе .psd файла)</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="design-3">
-												<label for="design-3"></label>
-												<span>Разработка у нас простого дизайна</span>
-											</div>
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Функциональные модули</span>
-									<form>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
-											<label for="fancy-checkbox"></label>		
-											<span>Форма поиска</span>									
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
-											<label for="fancy-checkbox1"></label>		
-											<span>Комментарии</span>									
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Мультиязычность</span>
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="lang-1" checked="">
-												<label for="lang-1"></label>
-												<span>Один зык</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="lang-2">
-												<label for="lang-2"></label>
-												<span>Два зыка</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="lang-3">
-												<label for="lang-3"></label>
-												<span>Три языка</span>
-											</div>
-										</div>
-									</form>
-								</li>								
-							</ul>
-						</div>
-						<div class="type-site">
-							<div class="type-title">
-								<h2>Портал</h2>
-								<span>
-									сайт с большим количеством информации, интенсивным ее потоком и относительно сложной структурой, где предусмотрена регистрация посетителей для обмена информацией.
-								</span>
-							</div>
-							<ul class="site-element"> 
-								<li>
-									<span class="level-two">Дизайн</span>	
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="design-1" checked="">
-												<label for="design-1"></label>
-												<span>Один из готовых шаблонов</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="design-2">
-												<label for="design-2"></label>
-												<span>Ваш дизайн (на базе .psd файла)</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="design-3">
-												<label for="design-3"></label>
-												<span>Разработка у нас простого дизайна</span>
-											</div>
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Функциональные модули</span>
-									<form>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
-											<label for="fancy-checkbox"></label>		
-											<span>Форма поиска</span>									
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
-											<label for="fancy-checkbox1"></label>		
-											<span>Комментарии</span>									
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Мультиязычность</span>
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="lang-1" checked="">
-												<label for="lang-1"></label>
-												<span>Один зык</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="lang-2">
-												<label for="lang-2"></label>
-												<span>Два зыка</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="lang-3">
-												<label for="lang-3"></label>
-												<span>Три языка</span>
-											</div>
-										</div>
-									</form>
-								</li>								
-							</ul>
-						</div>
-						<div class="type-site">
-							<div class="type-title">
-								<h2>Интернет магазин</h2>
-								<span>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, recusandae!
-								</span>
-							</div>
-							<ul class="site-element"> 
-								<li>
-									<span class="level-two">Дизайн</span>	
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="design-1" checked="">
-												<label for="design-1"></label>
-												<span>Один из готовых шаблонов</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="design-2">
-												<label for="design-2"></label>
-												<span>Ваш дизайн (на базе .psd файла)</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="design-3">
-												<label for="design-3"></label>
-												<span>Разработка у нас простого дизайна</span>
-											</div>
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Функциональные модули</span>
-									<form>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox">
-											<label for="fancy-checkbox"></label>		
-											<span>Форма поиска</span>									
-										</div>
-										<div class="form-group">
-											<input type="checkbox" name="fancy-checkbox" id="fancy-checkbox1">
-											<label for="fancy-checkbox1"></label>		
-											<span>Комментарии</span>									
-										</div>
-									</form>
-								</li>
-								<li>
-									<span class="level-two">Мультиязычность</span>
-									<form>
-										<div class="form-group">
-											<div class="select">
-												<input type="radio" name="fancy-radio" id="lang-1" checked="">
-												<label for="lang-1"></label>
-												<span>Один зык</span>
-											</div>
-											<div class="select">											
-												<input type="radio" name="fancy-radio" id="lang-2">
-												<label for="lang-2"></label>
-												<span>Два зыка</span>
-											</div>
-											<div class="select">																						
-												<input type="radio" name="fancy-radio" id="lang-3">
-												<label for="lang-3"></label>
-												<span>Три языка</span>
-											</div>
-										</div>
-									</form>
-								</li>								
-							</ul>
-						</div>
+						</div>		
 					</div>
 					<div class="col-md-4">
+
 						<div id="price">
-							
-						</div>			
+							<form>
+								<input 
+										type="radio" 
+										name="fancy-radio" 
+										id="rad1"  																													
+										ng-model="res"
+									>
+									<input 
+										type="radio" 
+										name="fancy-radio" 										
+										id="rad2"  																							
+										ng-model="res"
+									>
+								</form>
+								<h3>{{res}}</h3>
+							<h1>Стоимость проекта: {{result}}$</h1>
+							<h1>Время на реализацию: {{test}}</h1>
+						</div>	
+
+
 						<button type="button" class="download site-link">
 							<span>Заказать</span>
 							<span>Заказать</span>							

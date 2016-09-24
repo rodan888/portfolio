@@ -53,26 +53,27 @@ $(document).ready(function() {
 
 });
 window.onload = function(){
-	preloader();		
+	// preloader();	
+
 };
 
-function preloader(){
-	var hellopreloader = document.getElementById("hellopreloader_preload");
+// function preloader(){
+// 	var hellopreloader = document.getElementById("hellopreloader_preload");
 	
-	function fadeOutnojquery(el){
-		el.style.opacity = 1;
-		var interhellopreloader = setInterval(function(){	
-			el.style.opacity = el.style.opacity - 0.05;
-			if (el.style.opacity <=0.05){
-				clearInterval(interhellopreloader);
-				hellopreloader.style.display = "none";}
-			},30);
-	};
-	setTimeout(function(){
-			fadeOutnojquery(hellopreloader);
-			animTitle('.header_wrap h1','fadeInLeft',50);
-	},3000);	
-};
+// 	function fadeOutnojquery(el){
+// 		el.style.opacity = 1;
+// 		var interhellopreloader = setInterval(function(){	
+// 			el.style.opacity = el.style.opacity - 0.05;
+// 			if (el.style.opacity <=0.05){
+// 				clearInterval(interhellopreloader);
+// 				hellopreloader.style.display = "none";}
+// 			},30);
+// 	};
+// 	setTimeout(function(){
+// 			fadeOutnojquery(hellopreloader);
+// 			animTitle('.header_wrap h1','fadeInLeft',50);
+// 	},3000);	
+// };
 
 function animTitle(el,effect,speed){
 	var $this    = $(el),
@@ -127,31 +128,14 @@ var main = {
 	// },
 	calculator: function(){
 		var levelOne = $('.type-title'),
-			levelTwo = $('.level-two'),
-			siteOpt = function(title,elemT,design){					
-					this.title = title, 
-					this.subTitle = elemT,
-					this.design = design,
-					this.module = []						
-			},
-			mSite;
-
-		levelOne.on('click',function(){
-			var title = $(this).find('h2').text();				
-			
-
-			nSite = new siteOpt(title);
-			console.log(nSite);
-		});
-		
-
+			levelTwo = $('.level-two');
 		main.toggleC(levelTwo);		
 		main.toggleC(levelOne);
 	},
 	toggleC: function(el){
 		el.on('click',function(){
 			el.not(this).removeClass('active').next().slideUp('slow');
-			$(this).toggleClass('active').next().slideToggle('slow');						
+			$(this).toggleClass('active').next().slideToggle('slow');					
 		});
 	},
 	logoAnim: function(){
@@ -362,8 +346,10 @@ var main = {
 		main.rotatePort();
 		//fixed menu
 		main.logoAnim();
-		//calculator
-		this.calculator();
+
+		window.onload = function(){
+			main.calculator();			
+		};
 
 		// main.innerHeader();
 		
