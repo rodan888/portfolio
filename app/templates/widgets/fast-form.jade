@@ -1,0 +1,29 @@
+section#fast-send.black_section
+	div.container
+		div.row
+			div.col-md-12
+				h3.title-left Связаться с автором
+				form#send
+					div.container-fluid
+						div.row
+							div.col-sm-6
+								label(for="name")
+									i.fa.fa-user
+									| Введите имя:
+								input(type="text" id="name" name="name" requaired)
+								label(for="mail")
+									i.fa.fa-envelope
+									| Введите E-mail:
+								input(type="email" id="mail" name="mail" requaired)
+							div.col-sm-6
+								label(for="text")
+									i.fa.fa-file-text
+									| Введите сообщение:
+								textarea(name="text" id="text" requaired)
+					button(type="submit" class="download site-link white")
+						span
+							i.fa.fa-paper-plane
+							|Отправить
+						span
+							i.fa.fa-paper-plane
+							|Отправить

@@ -14,21 +14,21 @@ section#portfolio
 								{
 									class: "pc_but",
 									data_show: "monitor",
-									data_src: "img/maket4.jpg",
+									data_src: "img/portfolio-scren/ykarservis-com-desktop.jpg",
 									icon: "fa fa-desktop"
 								},{
 									class: "ipod_but",
 									data_show: "ipod",
-									data_src: "img/maket-plan4.jpg",
+									data_src: "img/portfolio-scren/ykarservis-com-tablet.jpg",
 									icon: "fa fa-tablet"								
 								},{
 									class: "iphone_but",
 									data_show: "iphone",
-									data_src: "img/maket-phone4.jpg",
+									data_src: "img/portfolio-scren/ykarservis-com-mobile.jpg",
 									icon: "fa fa-mobile"								
 								}
 							],
-							image: "img/maket4.jpg",
+							image: "img/portfolio-scren/ykarservis-com-desktop.jpg",
 							title: "Ykarservis.com.ua",							
 							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
 							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
@@ -37,21 +37,21 @@ section#portfolio
 								{
 									class: "pc_but",
 									data_show: "monitor",
-									data_src: "img/maket2.jpg",
+									data_src: "img/portfolio-scren/Green-meadows-desktop.jpg",
 									icon: "fa fa-desktop"
 								},{
 									class: "ipod_but",
 									data_show: "ipod",
-									data_src: "img/maket-plan2.jpg",
+									data_src: "img/portfolio-scren/Green-meadows-tablet.jpg",
 									icon: "fa fa-tablet"								
 								},{
 									class: "iphone_but",
 									data_show: "iphone",
-									data_src: "img/maket-phone2.jpg",
+									data_src: "img/portfolio-scren/Green-meadows-mobile.jpg",
 									icon: "fa fa-mobile"								
 								}
 							],
-							image: "img/maket2.jpg",				
+							image: "img/portfolio-scren/Green-meadows-desktop.jpg",				
 							title: "Greenmeadows.com.ua",
 							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
 							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
@@ -60,21 +60,21 @@ section#portfolio
 								{
 									class: "pc_but",
 									data_show: "monitor",
-									data_src: "img/maket3.jpg",
+									data_src: "img/portfolio-scren/studiorivoli-desktop.jpg",
 									icon: "fa fa-desktop"
 								},{
 									class: "ipod_but",
 									data_show: "ipod",
-									data_src: "img/maket-plan3.jpg",
+									data_src: "img/portfolio-scren/studiorivoli-tablet.jpg",
 									icon: "fa fa-tablet"								
 								},{
 									class: "iphone_but",
 									data_show: "iphone",
-									data_src: "img/maket-phone3.jpg",
+									data_src: "img/portfolio-scren/studiorivoli-mobile.jpg",
 									icon: "fa fa-mobile"								
 								}
 							],
-							image: "img/maket3.jpg",				
+							image: "img/portfolio-scren/studiorivoli-desktop.jpg",				
 							title: "Studiorivoli.net",
 							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
 							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
@@ -83,21 +83,21 @@ section#portfolio
 								{
 									class: "pc_but",
 									data_show: "monitor",
-									data_src: "img/maket5.jpg",
+									data_src: "img/portfolio-scren/iwait-biz-desctop.jpg",
 									icon: "fa fa-desktop"
 								},{
 									class: "ipod_but",
 									data_show: "ipod",
-									data_src: "img/maket-plan5.jpg",
+									data_src: "img/portfolio-scren/iwait-biz-tablet.jpg",
 									icon: "fa fa-tablet"								
 								},{
 									class: "iphone_but",
 									data_show: "iphone",
-									data_src: "img/maket-phone5.jpg",
+									data_src: "img/portfolio-scren/iwait-biz-mobile.jpg",
 									icon: "fa fa-mobile"								
 								}
 							],
-							image: "img/maket5.jpg",				
+							image: "img/portfolio-scren/iwait-biz-desctop.jpg",				
 							title: "iwait.biz",
 							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
 							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
@@ -114,10 +114,16 @@ section#portfolio
 										img(src= site.image alt=site.title)
 							div.port_wrap
 								div.active
-									for el in site.buttons
-										span(class= el.class data-show=el.data_show data-src=el.data_src)
-											i(class= el.icon)
-											i(class= el.icon)
+									for el,index in site.buttons
+										if index === 0
+											span(class="active "+ el.class data-show=el.data_show data-src=el.data_src)
+												i(class= el.icon)
+												i(class= el.icon)
+										else
+											span(class= el.class data-show=el.data_show data-src=el.data_src)
+												i(class= el.icon)
+												i(class= el.icon)
+
 						div.site-descr
 							h3= site.title
 							p= site.description

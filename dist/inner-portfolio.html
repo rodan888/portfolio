@@ -12,7 +12,206 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <main></main>
+    <header class="inner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <nav>
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="abou.html">О себе</a></li>
+                <li><a href="work-step.html">Этапы работы</a></li>
+                <li><a href="portfolio.html">Портфолио</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-sm-4 search-wrap">
+            <form id="searchForm" action="system/search.html" method="get">
+              <input type="hidden" name="id" value="52">
+              <input type="text" name="search" id="search" value="" placeholder="Поиск">
+              <label for="search">
+                <button type="submit" value="Поиск"><i class="fa fa-search"></i></button>
+              </label>
+            </form>
+            <div class="search-button"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="portfolio-inner mb6">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="shadow-block">
+                <div class="site-screen"><img src="img/portfolio-scren/ykarservis-com.png" class="screenshot">
+                  <div class="mouse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28.375" height="70.375" viewBox="0 0 34.375 80.375" id="mouse">
+                      <path id="mouse-scroll" d="M32.927,37.933c0,6.972-5.652,12.625-12.625,12.625h-6.333C6.997,50.558,1.344,44.905,1.344,37.933V13.917  c0-6.972,5.652-12.625,12.625-12.625l6.333,0c6.973,0,12.625,5.653,12.625,12.625V37.933zM19.198,15.125c0,1.104-0.895,2-2,2h-0.125c-1.104,0-2-0.896-2-2V9.166c0-1.104,0.896-2,2-2h0.125c1.105,0,2,0.896,2,2V15.125zM17.136 7.166 L17.166 1.437zM17.136 17.125 L17.136 23.208z"></path>
+                      <polyline id="arrow1" points="26.948,58.5 17.136,68.313   7.323,58.5 "></polyline>
+                      <polyline id="arrow2" points="26.948,65.25 17.136,75.063   7.323,65.25 "></polyline>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <ul class="bread">
+                <li><a href="/">Главная</a></li>
+                <li><a href="portfolio-list.html">Портфолио</a></li>
+                <li>Rif-line.com</li>
+              </ul>
+              <div class="site-descr">
+                <h2 class="anim_title">Rif-line.com</h2>
+                <h4>Уют в каждый дом</h4>
+                <p>Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта. Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта.</p>
+                <h4>Technologies:</h4>
+                <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JS</li>
+                  <li>jQuery</li>
+                  <li>Full Responsive</li>
+                </ul>
+                <div class="link_button"><a href="http://rif-line.com/" target="_blank" rel="nofollow" class="site-link"><span>Перейти<i class="fa fa-caret-right"></i></span><span>Перейти<i class="fa fa-caret-right"></i></span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--include templates/widgets/fast-form-->
+      <section class="last-portfolio no-animation">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="title-left">Последние работы</h3>
+            </div>
+          </div>
+        </div>
+        <div id="sli-block">
+          <div id="sli-wrap">
+            <div class="sli-item">
+              <div class="container site-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="site-descr">
+                      <h3 class="anim_title">Ykarservis.com.ua</h3>
+                      <h4>lorem ipsum dolor</h4>
+                      <p>Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.</p>
+                      <div class="link_button"><a href="portfolio-inner.html" class="site-link"><span>Подробнее<i class="fa fa-caret-right"></i></span><span>Подробнее<i class="fa fa-caret-right"></i></span></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-8 clrp">
+                    <div class="wrap_prew">
+                      <div class="prew monitor">
+                        <div class="monitor">
+                          <div class="stand"></div>
+                          <div class="stand_bot"></div>
+                          <div class="cont"><img src="img/portfolio-scren/ykarservis-com-desktop.jpg" alt="Ykarservis.com.ua"></div>
+                        </div>
+                      </div>
+                      <div class="port_wrap">
+                        <div class="active"><span data-show="monitor" data-src="img/portfolio-scren/ykarservis-com-desktop.jpg" class="active pc_but"><i class="fa fa-desktop"></i><i class="fa fa-desktop"></i></span><span data-show="ipod" data-src="img/portfolio-scren/ykarservis-com-tablet.jpg" class="ipod_but"><i class="fa fa-tablet"></i><i class="fa fa-tablet"></i></span><span data-show="iphone" data-src="img/portfolio-scren/ykarservis-com-mobile.jpg" class="iphone_but"><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sli-item">
+              <div class="container site-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="site-descr">
+                      <h3 class="anim_title">Greenmeadows.com.ua</h3>
+                      <h4>lorem ipsum dolor</h4>
+                      <p>Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.</p>
+                      <div class="link_button"><a href="portfolio-inner.html" class="site-link"><span>Подробнее<i class="fa fa-caret-right"></i></span><span>Подробнее<i class="fa fa-caret-right"></i></span></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-8 clrp">
+                    <div class="wrap_prew">
+                      <div class="prew monitor">
+                        <div class="monitor">
+                          <div class="stand"></div>
+                          <div class="stand_bot"></div>
+                          <div class="cont"><img src="img/portfolio-scren/Green-meadows-desktop.jpg" alt="Greenmeadows.com.ua"></div>
+                        </div>
+                      </div>
+                      <div class="port_wrap">
+                        <div class="active"><span data-show="monitor" data-src="img/portfolio-scren/Green-meadows-desktop.jpg" class="active pc_but"><i class="fa fa-desktop"></i><i class="fa fa-desktop"></i></span><span data-show="ipod" data-src="img/portfolio-scren/Green-meadows-tablet.jpg" class="ipod_but"><i class="fa fa-tablet"></i><i class="fa fa-tablet"></i></span><span data-show="iphone" data-src="img/portfolio-scren/Green-meadows-mobile.jpg" class="iphone_but"><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sli-item">
+              <div class="container site-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="site-descr">
+                      <h3 class="anim_title">Studiorivoli.net</h3>
+                      <h4>lorem ipsum dolor</h4>
+                      <p>Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.</p>
+                      <div class="link_button"><a href="portfolio-inner.html" class="site-link"><span>Подробнее<i class="fa fa-caret-right"></i></span><span>Подробнее<i class="fa fa-caret-right"></i></span></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-8 clrp">
+                    <div class="wrap_prew">
+                      <div class="prew monitor">
+                        <div class="monitor">
+                          <div class="stand"></div>
+                          <div class="stand_bot"></div>
+                          <div class="cont"><img src="img/portfolio-scren/studiorivoli-desktop.jpg" alt="Studiorivoli.net"></div>
+                        </div>
+                      </div>
+                      <div class="port_wrap">
+                        <div class="active"><span data-show="monitor" data-src="img/portfolio-scren/studiorivoli-desktop.jpg" class="active pc_but"><i class="fa fa-desktop"></i><i class="fa fa-desktop"></i></span><span data-show="ipod" data-src="img/portfolio-scren/studiorivoli-tablet.jpg" class="ipod_but"><i class="fa fa-tablet"></i><i class="fa fa-tablet"></i></span><span data-show="iphone" data-src="img/portfolio-scren/studiorivoli-mobile.jpg" class="iphone_but"><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sli-item">
+              <div class="container site-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="site-descr">
+                      <h3 class="anim_title">iwait.biz</h3>
+                      <h4>lorem ipsum dolor</h4>
+                      <p>Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.</p>
+                      <div class="link_button"><a href="portfolio-inner.html" class="site-link"><span>Подробнее<i class="fa fa-caret-right"></i></span><span>Подробнее<i class="fa fa-caret-right"></i></span></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-8 clrp">
+                    <div class="wrap_prew">
+                      <div class="prew monitor">
+                        <div class="monitor">
+                          <div class="stand"></div>
+                          <div class="stand_bot"></div>
+                          <div class="cont"><img src="img/portfolio-scren/iwait-biz-desctop.jpg" alt="iwait.biz"></div>
+                        </div>
+                      </div>
+                      <div class="port_wrap">
+                        <div class="active"><span data-show="monitor" data-src="img/portfolio-scren/iwait-biz-desctop.jpg" class="active pc_but"><i class="fa fa-desktop"></i><i class="fa fa-desktop"></i></span><span data-show="ipod" data-src="img/portfolio-scren/iwait-biz-tablet.jpg" class="ipod_but"><i class="fa fa-tablet"></i><i class="fa fa-tablet"></i></span><span data-show="iphone" data-src="img/portfolio-scren/iwait-biz-mobile.jpg" class="iphone_but"><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <div class="copy">
         <div class="container">
@@ -27,7 +226,7 @@
       </div>
       <div class="fixed_menu">
         <div class="button_logo">
-          <div class="logo"><span></span><span></span><span></span></div>
+          <div class="logo"><a href="/"><span></span><span></span><span></span></a></div>
           <div class="icon_button"><span data-menu="first-menu" class="fa fa-bars"></span><span data-menu="second-menu" class="fa fa-link"></span></div>
         </div>
         <ul class="open_fixed first-menu">

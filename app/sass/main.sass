@@ -518,10 +518,13 @@ section
 		text-align: left
 		line-height: 20px
 	.site-link
-		background-color: $blackLight
+		background-color: $main
 		z-index: 10
 		&:after 
-			border-color: transparent transparent transparent $blackLight		
+			border-color: transparent transparent transparent $main
+		span
+			i
+				margin-left: 5px
 	ul 
 		list-style-position: inside
 		list-style-type: disc
@@ -592,6 +595,7 @@ section
 		color: $blackLight
 		min-width: 195px
 		overflow: hidden
+		cursor: pointer
 		&:after
 			display: none
 		i 
@@ -648,7 +652,7 @@ section
 			float: right		
 		.site-descr 
 			margin-top: 75px
-	.wrap_prew 
+	.wrap_prew
 		.prew 
 			min-height: 400px
 		.port_wrap 
@@ -670,6 +674,9 @@ section
 					overflow: hidden
 					transition: all 0.3s cubic-bezier(0,2,1,0.5)
 					@include border-radius(50%)		
+					&.active
+						i
+							color: $main
 					i 
 						font-size: 35px
 						color: $blackLight
@@ -802,7 +809,18 @@ section
 		overflow-y: scroll							
 		img
 			width: 100%		
-			max-width: 500px	
+			max-width: 500px
+	.mouse
+		position: absolute		
+		top: 520px
+		left: 50%
+		width: 90px
+		padding-top: 5px
+		margin-left: -45px
+		text-align: center
+		border-top-left-radius: 40px
+		border-top-right-radius: 40px
+		background-color: $main
 #fast-send
 	padding: 0
 	min-height: 80px
@@ -847,12 +865,36 @@ section
 // breadcrumb end
 
 // Last-portfolio slider start
+.title-left
+	font-family: 'OpenSansLight'
+	font-size: 44px
+	font-weight: 100
+	text-align: left
+	line-height: 40px
+	position: relative
+	margin-bottom: 60px
+	&:before
+		position: absolute
+		content: ''
+		bottom: -15px
+		left: 0
+		width: 100%
+		max-width: 400px
+		height: 1px
+		background-color: $grey
 .last-portfolio
-	margin-top: 60px
-	.title_block
-		margin-bottom: 60px
-	.site-item
+	margin-top: 60px	
+	.site-item,.col-md-4
 		min-height: 400px
+	.col-md-4
+		position: relative
+		.site-descr
+			position: absolute
+			top: 60px
+			left: 0
+			width: 100%
+			
+			
 	.wrap_prew
 		position: relative
 		.port_wrap
@@ -1298,34 +1340,41 @@ footer
 		margin: 0 15px
 //Footer end
 
+//Mouse svg scroll start
+svg#mouse	
+	path,
+	polyline 
+		fill: none
+		stroke: white
+		stroke-width: 2
+		stroke-linecap: round
+	path 
+		opacity: 0
+		animation: stroke .9s .35s forwards
+		animation-timing-function: cubic-bezier(1, .1, .8, 1)
+	polyline 
+		opacity: 0
+		animation: arrows .7s infinite, arrow_intro 2.25s forwards		
+		+ polyline 
+			animation-delay: .1s
 
-//Header lamp animation start
-@-webkit-keyframes lamp
-	0% 
-		@include transform(rotate(0deg))	
-	9% 
-		@include transform(rotate(-20deg))		
-	18% 
-		@include transform(rotate(20deg))			
-	27% 
-		@include transform(rotate(-16deg))				
-	36% 
-		@include transform(rotate(16deg))				
-	45% 
-		@include transform(rotate(-12deg))					
-	54% 
-		@include transform(rotate(12deg))						
-	63% 
-		@include transform(rotate(-8deg))							
-	72% 
-		@include transform(rotate(8deg))								
-	81% 
-		@include transform(rotate(-4deg))									
-	90% 
-		@include transform(rotate(4deg))									
+@keyframes stroke 
 	100% 
-		@include transform(rotate(0deg))		
-//Header lamp animation end
+		opacity: 1
+		stroke-dashoffset: 0
+
+@keyframes arrow_intro 
+	0%, 50% 
+		opacity: 0	
+	100% 
+		opacity: 1
+
+@keyframes arrows 
+	0%, 100% 
+		@include transform(translate3d(0, 0, 0))
+	50% 
+		@include transform(translate3d(0, -2px, 0))
+//Mouse svg scroll end
 
 @import _fontsvg.sass
 @import _media.sass

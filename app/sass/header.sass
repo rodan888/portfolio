@@ -90,7 +90,7 @@ a
 		margin-left: -100px
 		transform-origin: top center
 		animation-iteration-count: infinite
-		-webkit-animation: lamp3 3.8s   	
+		-webkit-animation: lamp 3.8s   	
 	.progr 
 		position: absolute
 		top: 55%
@@ -115,6 +115,13 @@ header
 	&.inner
 		height: 60px
 		box-shadow: 0 1px 3px $greyLight
+		#searchForm
+			position: absolute
+			top: 50%
+			right: 0			
+			overflow: hidden
+			@include transform(translateY(-50%))
+			@include transition(width 0.5s)
 		nav
 			position: initial
 			margin: 0
@@ -139,7 +146,44 @@ header
 						color: $white
 						font-size: 12px
 						margin: 0
-
+	.hidden-block
+		position: absolute
+		width: 250px
+		height: 100%
+		top: 0
+		right: 0
+		#searchForm
+			position: absolute
+			bottom: 10px
+			right: 20px
+			z-index: -1
+			height: 38px
+			&:before
+				position: absolute
+				content: ''
+				top: 5px
+				left: 0
+				height: 28px
+				width: 1px
+				background-color: $main
+			input
+				height: 38px
+				text-indent: 15px
+				color: $white
+			button
+				width: 38px
+				height: 38px
+				position: relative
+				line-height: 36px
+				color: $main
+				&:before
+					position: absolute
+					content: ''
+					top: 5px
+					left: 0
+					height: 28px
+					width: 1px
+					background-color: $main
 	nav 
 		position: absolute
 		top: 50%
@@ -387,3 +431,32 @@ header
 			@include transform(rotate(120deg))
 			left: -4px
 //Search button end---------------------
+
+
+//Header lamp animation start
+@-webkit-keyframes lamp
+	0% 
+		@include transform(rotate(0deg))	
+	9% 
+		@include transform(rotate(-20deg))		
+	18% 
+		@include transform(rotate(20deg))			
+	27% 
+		@include transform(rotate(-16deg))				
+	36% 
+		@include transform(rotate(16deg))				
+	45% 
+		@include transform(rotate(-12deg))					
+	54% 
+		@include transform(rotate(12deg))						
+	63% 
+		@include transform(rotate(-8deg))							
+	72% 
+		@include transform(rotate(8deg))								
+	81% 
+		@include transform(rotate(-4deg))									
+	90% 
+		@include transform(rotate(4deg))									
+	100% 
+		@include transform(rotate(0deg))		
+//Header lamp animation end

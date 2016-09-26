@@ -24,8 +24,13 @@ header
 			each val, index in social
 				a(href="#" target="_blank")
 					i(class=val)
-	nav
-		ul
-			include ../tpl/navigation
+	div.hidden-block
+		
+		include ../widgets/searchForm					
+
+		nav
+			ul
+				include ../tpl/navigation
+
 	span.button_down
 		i.fa.fa-chevron-down

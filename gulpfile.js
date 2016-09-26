@@ -43,7 +43,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('compress', function() {
-  return gulp.src('app/img/*')
+  return gulp.src('app/img/**/*')
   .pipe(imagemin(''))
   .pipe(gulp.dest('dist/img/'));
 });

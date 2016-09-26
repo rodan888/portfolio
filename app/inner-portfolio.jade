@@ -4,9 +4,51 @@ doctype html
 html.no-js(lang="ru")
 	include templates/structure/head
 	body
+		include templates/structure/header-inner
 		main
+			section.portfolio-inner.mb6
+				div.container
+					div.row
+						div.col-md-6
+							div.shadow-block
+								div.site-screen
+									img(class="screenshot" src="img/portfolio-scren/ykarservis-com.png")
+									div.mouse
+										include templates/tpl/mouse-svg
+						div.col-md-6
+							ul.bread
+								li
+									a(href="/") Главная
+								li
+									a(href="portfolio-list.html") Портфолио
+								li Rif-line.com
+							div.site-descr
+								h2.anim_title Rif-line.com
+								h4 Уют в каждый дом
+								p Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта. Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта.
+								h4 Technologies:
+								ul
+									li HTML5
+									li CSS3
+									li JS
+									li jQuery
+									li Full Responsive
+								div.link_button
+									a(href="http://rif-line.com/" target="_blank" rel="nofollow" class="site-link")
+										span
+											| Перейти
+											i.fa.fa-caret-right
+										span
+											| Перейти
+											i.fa.fa-caret-right
+				
+
+			//include templates/widgets/fast-form
+			include templates/widgets/lust-work
 
 			
+
+
 
 		include templates/structure/footer	
 		include templates/structure/scripts
