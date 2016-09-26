@@ -1,0 +1,68 @@
+section#skill
+	div.title_block
+		h2.section_title.front_side О себе
+			span.sub_title навыки / цели
+			span.section_title.back_side О себе
+				span.sub_title навыки / цели
+	div.container
+		div.row
+			div.col-md-12
+				div#sli-block
+					div#sli-wrap
+						div.sli-item
+							div.col-md-6.clrp.text_block
+								p Всем привет! Меня зовут Александр я Front-end developer.С тех пор как впервые увидел на экране "Hello world!" понял, что это то чему хочу посвятить всего себя! С тех пор утекло немало строчек кода. Сейчас я работаю в команде. Мы создаем все от Landing page до  eCommerce проектов.
+								h3 Моими ключевыми функциональными обязаностями является:
+								ul
+									li Верстка новых страниц из PSD макетов
+									li Адаптация новых и готовых страниц под мобильные устройства
+									li Реализация JavaScript логики (слайдеры, попапы, анимации, AJAX и т.д.)
+									li Интеграция новых модулей в готовые проекты
+								h3 В ежедневной работа использую:
+								ul.icon-list
+									-
+										var iconset = {
+											1:"icon-html",
+											2:"icon-css",
+											3:"icon-js",
+											4:"icon-gulp",
+											5:"icon-bootstrap",
+											6:"icon-ajax",
+											7:"icon-jquery",
+											8:"icon-photoshop",
+											9:"icon-sass",
+											10:"icon-svg",
+											11:"icon-json",
+											12:"icon-wordpress"
+										};
+									for el in iconset
+										li(class= el)
+							div.col-md-6.clrp.svg_block
+								include ../tpl/first-face-svg
+						div.sli-item
+							div.leng_wrap
+								for i,index in ['html','css','javas']
+									div.leng
+										svg(width="100%" height="450" viewbox="0 0 250 250" id="circle-path"+index)
+											circle(fill="none" class="circle-path" stroke="#2CBC99" stroke-width="6" cx="50%" cy="50%" r="90")
+										img(src="img/"+ i +".png" alt=i)
+										p(data-procent="95" class="procent")
+										h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, corporis!
+						div.sli-item
+							div.col-md-6.clrp.svg_block
+								include ../tpl/second-face-svg
+							div.col-md-6.clrp.text_block
+								h2 Коротко о себе
+								p На данном этапе моей жизни главная моя задача и цель - это достижение вершин в Web-разработке. Для этого я все время познаю новые технологии и тем самым улучшаю свои навыки и знания. И конечно, немного о личных качествах:
+								ul.task-list
+									li Целеустремленность
+									li Настоичивостъ
+									li Ответственность
+									li Коммуникабельность
+									li Умение работать в команде
+									li Внимательность к деталям
+								a(hreh="Aleksandr_Tsumbaluk.pdf" class="download site-link")
+									span
+										i.fa.fa-download Скачать резюме в PDF
+									span
+										i.fa.fa-download Скачать резюме в PDF

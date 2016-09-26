@@ -1,0 +1,26 @@
+include templates/helpers/mixins
+
+doctype html
+html.no-js(lang="ru")
+	include templates/structure/head
+	body
+		//div#hellopreloader
+			div#hellopreloader_preload
+				img(src="img/svg/lampInPre.svg" alt="front-end")
+				div.progr		
+		include templates/structure/header
+		main
+			include templates/widgets/skills
+			include templates/widgets/work-step
+			include templates/widgets/portfolio
+			include templates/widgets/blog
+			include templates/widgets/contacts
+
+			div.content-block.center
+				h1.title Write code here
+				p.subtitle or click button and select some dom element
+				a(href="elements.html").btn.fool my simple framework
+				+titleBlock('title','subtitle')
+
+		include templates/structure/footer	
+		include templates/structure/scripts

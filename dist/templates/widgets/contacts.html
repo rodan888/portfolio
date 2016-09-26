@@ -1,0 +1,22 @@
+
+<section class="black_section contacts">
+  <div class="title_block">
+    <h2 class="section_title front_side">Контакты<span class="sub_title">связаться / написать</span><span class="section_title back_side">Контакты<span class="sub_title">связаться / написать</span></span></h2>
+  </div>
+  <div id="feedback">
+    <form id="send">
+      <label for="name"><i class="fa fa-user"> </i>Введите имя:</label>
+      <input type="text" name="name" id="name" required="required"/>
+      <label for="phone"><i class="fa fa-phone"> </i>Введите номер телефона:</label>
+      <input type="tel" name="phone" id="phone" required="required"/>
+      <label for="mail"><i class="fa fa-envelope"> </i>Введите E-mail:</label>
+      <input type="email" name="mail" id="mail" required="required"/>
+      <label for="text"><i class="fa fa-file-text"> </i>Введите сообщение:</label>
+      <textarea name="text" id="text" required="required"></textarea>
+      <button type="submit" class="download site-link white"><span><i class="fa fa-paper-plane"></i>Отправить</span><span><i class="fa fa-paper-plane"></i>Отправить</span></button>
+      <input type="hidden" name="project_name" value="[[++site_name]]"/>
+      <input type="hidden" name="admin_email" value="atsumbaluk@jayadigital.com"/>
+      <input type="hidden" name="form_subject" value="Заявка с [[++site_name]]"/>
+    </form>
+  </div>
+</section>

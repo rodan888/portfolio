@@ -1,0 +1,35 @@
+section.black_section.contacts
+
+	div.title_block
+		h2.section_title.front_side Контакты
+			span.sub_title связаться / написать
+			span.section_title.back_side Контакты
+				span.sub_title связаться / написать
+	div#feedback
+		form#send
+			label(for="name")
+				i.fa.fa-user 
+				|Введите имя:
+			input(type="text" name="name" id="name" required)
+			label(for="phone")
+				i.fa.fa-phone 
+				|Введите номер телефона:
+			input(type="tel" name="phone" id="phone" required)
+			label(for="mail")
+				i.fa.fa-envelope 
+				|Введите E-mail:
+			input(type="email" name="mail" id="mail" required)
+			label(for="text")
+				i.fa.fa-file-text 
+				|Введите сообщение:
+			textarea(name="text" id="text" required)
+			button(type="submit" class="download site-link white")
+				span
+					i.fa.fa-paper-plane
+					| Отправить
+				span
+					i.fa.fa-paper-plane
+					| Отправить
+			input(type="hidden" name="project_name" value="[[++site_name]]")
+			input(type="hidden" name="admin_email" value="atsumbaluk@jayadigital.com")
+			input(type="hidden" name="form_subject" value="Заявка с [[++site_name]]")

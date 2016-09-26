@@ -1,0 +1,28 @@
+section#work_step.black_section
+	div.title_block
+		h2.section_title.front_side Этапы работы
+			span.sub_title план / работы
+			span.section_title.back_side Этапы работы
+				span.sub_title план / работы
+	div.container
+		div.row
+			-
+				var workStep = [
+					{title: 'Обсуждение',
+						description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tenetur eveniet rem laborum, nostrum officia deleniti mollitia similique explicabo commodi!',
+						icon: 'fa fa-comments'},
+					{title: 'Создание концепта',
+						description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tenetur eveniet rem laborum, nostrum officia deleniti mollitia similique explicabo commodi!',
+						icon: 'fa fa-pencil'},
+					{title: 'Разработка',
+						description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tenetur eveniet rem laborum, nostrum officia deleniti mollitia similique explicabo commodi!',
+						icon: 'fa fa-code'},
+					{title: 'Довольный клиент',
+						description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate tenetur eveniet rem laborum, nostrum officia deleniti mollitia similique explicabo commodi!',
+						icon: 'fa fa-heart'},
+				];
+			for item in workStep
+				div.col-md-3.work_step
+					i(class=item.icon)
+					h3=item.title
+					p=item.description

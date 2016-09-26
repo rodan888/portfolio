@@ -1,0 +1,37 @@
+section#blog
+	div.title_block
+		h2.section_title.front_side Блог
+			span.sub_title записи / советы
+			span.section_title.back_side Блог
+				span.sub_title записи / советы
+	div.container
+		div.row
+			div.col-md-12
+				-
+					var blogList = [
+						{
+							image: "img/gulp.jpg",
+							title: "Стартовая настройка Gulp",
+							sub_title: "пошаговое руководство",
+							introtext: "Gulp.js это потоковый сборщик проектов на JavaScript. Свою популярность он обрёл благодаря Stream, что делает его работу очень быстрой. В этой статье мы поговорим о установки и настройке Галпа."
+						},{
+							image: "img/sublime.jpg",
+							title: "Подготовка к работе!",
+							sub_title: "Необзодимые плагины, и настройки.",
+							introtext: "В этот посте я хочу детально осветить пункт за пунктом где скачать, какой стартовый набор плагинов необходим для комфортной работы, базовая настройка интерфейса и несколько дополнительных полезных настроек. В этом прекрасном редакторе кода."
+						},{
+							image: "img/icomoon.jpg",
+							title: "Векторные иконочные шрифты. Iconmoon",
+							sub_title: "Необзодимые плагины, и настройки.",
+							introtext: "Создаем собственный иконочный шрифт шаг за шагом. На сегодняшний день иконочниые шрифты используются практически на всех сайтах. Оно и не странно поскольку они обладают колоссальными преимуществами в сравнении с растровыми изображениями."
+						}
+					];
+				for blog in blogList
+					div.blog-item
+						div.site-screen
+							div.img_wrap
+								img(src= blog.image alt= blog.title)
+						div.site-descr
+							span tsumbaluk.in.ua || 28.12.2016
+							h3.anim-title= blog.title							
+							p= blog.introtext							

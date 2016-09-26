@@ -6,7 +6,7 @@
 
 section 
 	min-height: 600px
-	padding: 40px 0
+	padding: 10px 0
 	position: relative
 	&.black_section 
 		position: relative
@@ -37,15 +37,11 @@ section
 	margin: 80px 0!important
 .z_menu 
 	z-index: 100
-ul.second-menu 
-	margin-top: -306px!important
-
 //Rotate title start
 .title_block 
 	width: 300px
-	margin: 0 auto
-	position: relative
-	margin-bottom: 45px
+	margin: 0 auto 75px	
+	position: relative	
 	transform-style: preserve-3d
 	-moz-transform-style: preserve-3d
 	-o-transform-style: preserve-3d
@@ -167,6 +163,10 @@ ul.second-menu
 	width: 100px
 	z-index: 1000
 	@include transition(all 0.3s)
+	.first-menu,.second-menu
+		position: absolute
+		width: 100%
+		top: 106px
 	.button_logo 
 		background-color: $blackLight
 		margin-bottom: 1px
@@ -211,7 +211,7 @@ ul.second-menu
 					@include transform(rotateX(71.5deg)translateY(-36px))
 					@include transition-delay(0.6s)			
 				&:nth-child(4) 
-					@include transform(rotateX(90deg)translateY(-36px))
+					@include transform(rotateX(90.5deg)translateY(-36px))
 					@include transition-delay(0.4s)			
 				&:nth-child(5) 
 					@include transform(rotateX(109deg)translateY(-36px))
@@ -364,29 +364,29 @@ ul.second-menu
 	padding-bottom: 80px
 	.blog-item 
 		position: relative
-		&:after 
-			position: absolute
-			content: ""
-			background-color: $blackLight
-			@include transition(all 0.5s)
-			bottom: 0px
-			width: 1px
-			height: 0
-			right: 0px		
-		&:before 
-			position: absolute
-			content: ""
-			background-color: $blackLight
-			@include transition(all 0.5s)
-			right: 0
-			bottom: 0
-			width: 0
-			height: 1px		
-		&:hover 
-			&:before 
-				width: 50%			
-			&:after 
-				height: 100%		
+		// &:after 
+		// 	position: absolute
+		// 	content: ""
+		// 	background-color: $blackLight
+		// 	@include transition(all 0.5s)
+		// 	bottom: 0px
+		// 	width: 1px
+		// 	height: 0
+		// 	right: 0px		
+		// &:before 
+		// 	position: absolute
+		// 	content: ""
+		// 	background-color: $blackLight
+		// 	@include transition(all 0.5s)
+		// 	right: 0
+		// 	bottom: 0
+		// 	width: 0
+		// 	height: 1px		
+		// &:hover 
+		// 	&:before 
+		// 		width: 50%			
+		// 	&:after 
+		// 		height: 100%		
 		.site-descr 		
 			padding-left: 60px
 			padding-top: 10px		
@@ -423,6 +423,83 @@ ul.second-menu
 					font-size: 22px					
 					&:nth-child(3) 
 						font-size: 25px
+
+#blog	
+	.blog-item		
+		min-height: 300px
+		max-width: 900px
+		margin: 30px auto 0
+		&:before
+			position: absolute
+			content: ''			
+			top: -2px
+			width: 56%
+			height: 100%
+			max-width: 800px
+		&:nth-child(1)
+			margin-top: 0
+		&:nth-child(odd)
+			&:before
+				background-color: #dadada
+				left: 50px
+				box-shadow: 5px 10px 23px #999
+			.site-screen
+				width: 55%
+				top: 5px
+				right: -35px
+			.site-descr
+				width: 50%				
+				left: 35px	
+		&:nth-child(even)
+			&:before			
+				background-color: #BDC3C7
+				right: 50px	
+				box-shadow: -5px 10px 23px #999
+			.site-screen
+				width: 55%
+				top: 5px
+				left: -35px
+			.site-descr
+				width: 50%
+				right: 35px		
+		.site-screen
+			position: absolute
+			width: 60%
+			right: 0
+			top: 0
+			box-shadow: -3px 7px 20px #545454
+			z-index: 1
+		.site-descr
+			position: absolute			
+			z-index: 10
+			top: 25px
+			background-color: $white
+			padding: 30px 20px
+			box-shadow: -3px 7px 20px #545454
+			>span
+
+			h3
+				text-align: center
+				font-family: 'BebasNeueBold'
+				letter-spacing: 3px
+				position: relative
+				margin: 20px 0
+				&:before,&:after
+					position: absolute
+					content: ''
+					width: 120px
+					height: 1px
+					left: 50%
+					margin-left: -60px
+					background-color: $grey
+				&:before
+					top: -10px
+				&:after
+					bottom: -10px
+			p
+				text-align: center
+
+
 .site-descr 
 	position: relative
 	padding-left: 20px
@@ -1161,10 +1238,9 @@ svg:not(:root)
 //Footer start
 footer 
 	min-height: 300px
-	margin-top: 140px
+	margin-top: 105px
 	background-color: $black
-	position: relative
-	padding-bottom: 60px
+	position: relative	
 	z-index: 100
 	color: $greyLight
 	&:before 

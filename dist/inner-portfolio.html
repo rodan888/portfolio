@@ -1,362 +1,62 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8" />
-	<title>My Portfolio</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="img/favicon.png" />	
-	<link rel="stylesheet" href="css/vendor.min.css">		
-	<link rel="stylesheet" href="css/header.min.css" />
-	<link rel="stylesheet" href="css/main.min.css" />
-</head>
-<body>	
-<!-- 	<div id="hellopreloader">
-		<div id="hellopreloader_preload">
-			<img src="img/svg/lampInPre.svg" alt="front-end">
-			<div class="progr"></div>
-		</div>
-	</div> -->
-	<header class="inner">		
-		<div class="container">
-			<div class="row">			
-				<div class="col-md-8">
-					<nav>
-						<ul>
-							<li><a href="#">Главная</a></li>
-							<li><a href="#">О себе</a></li>
-							<li><a href="#">Этапы работы</a></li>
-							<li><a href="#">Портфолио</a></li>
-							<li><a href="#">Блог</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-md-4 search-wrap">
-					<form id="searchForm">
-						
-					</form>
-					<div class="search-button">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</header>	
-	<main>
-		<section class="portfolio-inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="shadow-block">
-							<div class="site-screen">
-								<img class="screenshot" src="img/rif-line.png" alt="rif">
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<ul class="bread">
-							<li><a href="/">Главная</a></li>
-							<li><a href="#">Портфолио</a></li>				    
-							<li>Rif-line.com</li>
-						</ul>		
-
-						<div class="site-descr">
-							<h2 class="anim_title">Rif-line.com</h2>
-							<h4>Уют в каждый дом</h4>
-
-							<p>Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта. Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта.</p>
-							<h4>Technologies:</h4>
-							<ul>
-								<li>HTML5</li>
-								<li>CSS3 (SASS)</li>
-								<li>JS</li>
-								<li>jQuery</li>
-								<li>Full Responsive</li>							
-							</ul>							
-							<div class="link_button">
-								<a href="http://ykarservis.com.ua/" target="_blank" class="site-link">				
-									<span>Перейти <i class="fa fa-caret-right"></i></span>
-									<span>Перейти <i class="fa fa-caret-right"></i></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>		
-		</section>
-		
-		<section id="fast-send" class="black_section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="title-defoult">Связаться с автором</h3>
-						<form id="send">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-sm-6">
-										<label for="name"><i class="fa fa-user"></i> Введите имя:</label>
-										<input type="text" name='name' id="name">	
-
-										<label for="mail"><i class="fa fa-envelope"></i> Введите E-mail:</label>
-										<input type="email" name='mail' id="mail" required>	
-										
-									</div>
-									<div class="col-sm-6">
-										<label for="text"><i class="fa fa-file-text"></i> Введите сообщение:</label>
-										<textarea name="text" id="text" required></textarea>								
-									</div>
-								</div>
-							</div>
-							<button type="submit" class='download site-link white'><span><i class="fa fa-paper-plane"></i> Отправить</span><span><i class="fa fa-paper-plane"></i> Отправить</span></button>
-						</form>	
-						
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="last-portfolio">
-			<h3 class="title-defoult mb4">
-					Последние работы
-			</h3>
-			<!-- <div class="title_block">
-				<h2 class="section_title front_side">
-					Последние работы
-					<span class="sub_title">сайты / приложения</span>
-					<span class="section_title back_side">Последние работы
-						<span class="sub_title">сайты / приложения</span>
-					</span>
-				</h2>
-			</div> -->
-			<div id="sli-block">
-				<div id="sli-wrap">	
-					<div class="sli-item">
-						<div class="container site-item">
-							<div class="row">
-								<div class="col-md-4 clrp">
-									<div class="site-descr">
-										<h3 class="anim_title">Rif-line.com</h3>
-										<h4>Уют в каждый дом</h4>
-
-										<p>Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта. Разработка уникального трендового дизайна, верстка, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность, посадка на WordPress, техническая поддержка и обучение по наполнению и продвижению сайта.</p>
-										<div class="link_button">
-											<a href="http://greenmeadows.com.ua/" target="_blank" class="site-link">				
-												<span>Подробнее <i class="fa fa-caret-right"></i></span>
-												<span>Подробнее <i class="fa fa-caret-right"></i></span>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-8 clrp">
-									<div class="wrap_prew">
-										<div class="prew monitor">
-											<div class="monitor">
-												<div class="stand"></div>
-												<div class="stand_bot"></div>
-												<div class="cont">
-													<img src="img/maket2.jpg" alt="foto">					
-												</div>
-											</div>
-										</div>	
-										<div class="port_wrap">
-											<div class="active">					
-												<span class="pc_but" data-show="monitor" data-src='img/maket2.jpg'><i class="fa fa-desktop"></i><i class="fa fa-desktop"></i></span>
-												<span class="ipod_but" data-show="ipod" data-src='img/maket-plan2.jpg'><i class="fa fa-tablet"></i><i class="fa fa-tablet"></i></span>
-												<span class="iphone_but" data-show="iphone" data-src='img/maket-phone2.jpg'><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>						
-					</div>
-
-					<div class="sli-item">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-6 clrp">
-									
-								</div>
-								<div class="col-md-6 clrp">
-									
-								</div>
-							</div>
-						</div>						
-					</div>
-				</div>
-			</div>			
-		</section>
-	</main>
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-xs-6">
-					<h3>Рубрики</h3>
-					<div class="col-md-6 col-sm-6">
-						<ul class="foot_menu">
-							<li><a href="#"><i class="fa fa-home"></i> Главная</a></li>
-							<li><a href="#"><i class="fa fa-archive"></i> О себе</a></li>
-							<li><a href="#"><i class="fa fa-list-ol"></i> Этапы работы</a></li>
-						</ul>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<ul>
-							<li><a href="#"><i class="fa fa-desktop"></i> Портфолио</a></li>
-							<li><a href="#"><i class="fa fa-pencil"></i> Блог</a></li>
-							<li><a href="#"><i class="fa fa-phone"></i> Контакты</a></li>
-						</ul>
-					</div>	
-				</div>
-				<div class="col-md-6 col-xs-6">
-					<h3>Соц. сети</h3>
-					<div class="col-md-6 col-sm-6">
-						<ul class="soc">
-							<li>								
-								<a href="https://www.instagram.com/" target="_blank">
-									<i class="fa fa-instagram"></i>
-									instagram			
-								</a>			
-							</li>
-							<li>								
-								<a href="https://www.youtube.com/channel/UCwiwLMn5o6vnu90aLBntD5g" target="_blank">
-									<i class="fa fa-youtube"></i>
-									youtube			
-								</a>			
-							</li>
-							<li>								
-								<a href="https://twitter.com/ykarservises" target="_blank">
-									<i class="fa fa-twitter"></i>
-									twitter								
-								</a>			
-							</li>
-						</ul>
-					</div>
-					<div class="col-md-6 col-sm-6">
-						<ul>
-							<li>								
-								<a href="https://www.facebook.com/ykarservice" target="_blank">
-									<i class="fa fa-facebook"></i>
-									facebook
-								</a>			
-							</li>
-							<li>								
-								<a href="https://vk.com/ykarservis" target="_blank">
-									<i class="fa fa-vk"></i>
-									Вконтакте
-								</a>			
-							</li>
-							<li>								
-								<a href="https://vk.com/ykarservis" target="_blank">
-									<i class="fa fa-linkedin"></i>
-									Linkedin
-								</a>			
-							</li>
-
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copy">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-sm-4">
-						<a href="Aleksandr_Tsumbaluk.pdf" class="download site-link white">
-							<span><i class="fa fa-download"></i> Скачать резюме в PDF</span>
-							<span><i class="fa fa-download"></i> Скачать резюме в PDF</span>							
-						</a>
-					</div>					
-					<div class="col-md-4 col-sm-4">
-						<p><i class="fa fa-envelope-o"></i> E-mail: <a href="mailto:tsumbaluk888@gmail.com">tsumbaluk888@gmail.com</a></p>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="dev">
-							<a href="http://tsumbaluk.in.ua/">
-								Developed by
-								<span>Alexander Tsymbalyuk</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="fixed_menu">
-			<div class="button_logo">
-				<div class="logo">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div class="icon_button">
-					<span class="fa fa-bars" data-menu="first-menu"></span>
-					<span class="fa fa-link" data-menu="second-menu"></span>
-				</div>
-			</div>
-
-			<ul class="open_fixed first-menu">
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О себе</a></li>
-				<li><a href="#">Этапы работы</a></li>
-				<li><a href="#">Портфолио</a></li>
-				<li><a href="#">Блог</a></li>
-				<li><a href="#">Контакты</a></li>
-			</ul>
-			<ul class="open_fixed second-menu">
-				<li>								
-					<a href="https://www.instagram.com/" target="_blank">
-						<i class="fa fa-instagram"></i>instagram</a>			
-					</li>
-					<li>								
-						<a href="https://www.youtube.com/channel/UCwiwLMn5o6vnu90aLBntD5g" target="_blank">
-							<i class="fa fa-youtube"></i>youtube</a>			
-						</li>
-						<li>								
-							<a href="https://twitter.com/ykarservises" target="_blank">
-								<i class="fa fa-skype"></i>
-								Skype							
-							</a>			
-						</li>
-						<li>								
-							<a href="https://www.facebook.com/ykarservice" target="_blank">
-								<i class="fa fa-facebook"></i>
-								facebook
-							</a>			
-						</li>
-						<li>								
-							<a href="https://vk.com/ykarservis" target="_blank">
-								<i class="fa fa-vk"></i>
-								Вконтакте
-							</a>			
-						</li>
-						<li>								
-							<a href="https://vk.com/ykarservis" target="_blank">
-								<i class="fa fa-linkedin"></i>
-								Linkedin
-							</a>			
-						</li>
-					</ul>
-
-				</div>
-			</footer>
-
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-	
-	<script src="js/jquery-1.11.2.min.js"></script>	
-	<script src="js/plagin.min.js"></script>
-	<script src="js/common.min.js"></script>
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
-</body>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Start gulp template</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <main></main>
+    <footer>
+      <div class="copy">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">© <a href="http://tsumbaluk.in.ua">tsumbaluk.in.ua</a></div>
+            <div class="col-md-4 center"><a href="sitemap.xml"><i class="fa fa-sitemap"> </i>Sitemap</a></div>
+            <div class="col-md-4">
+              <div class="dev"><a href="http://tsumbaluk.in.ua/" target="_blank" rel="nofollow">Developed by<span>Alexander Tsymbalyuk</span></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed_menu">
+        <div class="button_logo">
+          <div class="logo"><span></span><span></span><span></span></div>
+          <div class="icon_button"><span data-menu="first-menu" class="fa fa-bars"></span><span data-menu="second-menu" class="fa fa-link"></span></div>
+        </div>
+        <ul class="open_fixed first-menu">
+          <li><a href="/">Главная</a></li>
+          <li><a href="abou.html">О себе</a></li>
+          <li><a href="work-step.html">Этапы работы</a></li>
+          <li><a href="portfolio.html">Портфолио</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <ul class="open_fixed second-menu">
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i>Soc-net</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i>Soc-net</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i>Soc-net</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-twitter"></i>Soc-net</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-facebook"></i>Soc-net</a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i>Soc-net</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!--[if lt IE 9]
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    -->
+    <!--![endif]-->
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/plagin.min.js"></script>
+    <script src="js/common.min.js"></script>
+  </body>
 </html>
