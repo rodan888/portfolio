@@ -539,6 +539,25 @@ section
 			color: $blackLight
 			text-align: left
 			margin-bottom: 4px
+	.share-block
+		border-bottom: 1px solid $grey
+		max-width: 360px
+		padding-bottom: 10px
+		button
+			vertical-align: middle
+			i
+				font-size: 20px
+				color: $blackLight
+				width: 35px
+				height: 35px
+				line-height: 35px
+				border: 1px solid $grey
+				@include border-radius(50%)
+				@include transition(all 0.3s)
+			&:hover i
+				background-color: $blackLight
+				color: $white
+				border-color: $blackLight 
 	p 
 		text-align: left
 //Blog items end
@@ -792,7 +811,7 @@ section
 	-webkit-transform-origin: left
 	-moz-transform-origin: left
 	-o-transform-origin: left
-	@include transform(rotateY(38deg) rotateX(14deg))
+	@include transform(rotateY(14deg) rotateX(14deg))
 	&:before
 		position: absolute
 		content: ""
@@ -812,15 +831,14 @@ section
 			max-width: 500px
 	.mouse
 		position: absolute		
-		top: 520px
-		left: 50%
-		width: 90px
-		padding-top: 5px
-		margin-left: -45px
+		top: 50%
+		right: -75px
+		width: 90px		
+		margin-top: -41px
 		text-align: center
-		border-top-left-radius: 40px
-		border-top-right-radius: 40px
-		background-color: $main
+		// border-top-left-radius: 40px
+		// border-top-right-radius: 40px
+		// background-color: $main
 #fast-send
 	padding: 0
 	min-height: 80px
@@ -831,6 +849,38 @@ section
 		max-width: 100%
 		textarea
 			height: 110px
+section.black_section
+	min-height: 300px
+	&:after
+		left: 0
+	.site-descr
+		&.centr
+			max-width: 600px
+			margin: 40px auto 0
+			padding: 0
+			h2,p
+				text-align: center
+				color: $white
+			h2
+				margin-bottom: 35px
+				font-size: 32px
+				&:before
+					display: none
+			p
+				position: relative
+				padding: 10px 0
+				&:before,&:after
+					position: absolute
+					content: ''
+					width: 120px
+					height: 1px
+					background-color: $grey
+					left: 50%
+					margin-left: -60px
+					top: -10px
+				&:after
+					top: initial
+					bottom: -10px
 // Portfolio inner end
 
 // breadcrumb start
@@ -883,7 +933,7 @@ section
 		height: 1px
 		background-color: $grey
 .last-portfolio
-	margin-top: 60px	
+	margin-top: 180px	
 	.site-item,.col-md-4
 		min-height: 400px
 	.col-md-4
@@ -1280,7 +1330,7 @@ svg:not(:root)
 //Footer start
 footer 
 	min-height: 300px
-	margin-top: 105px
+	margin-top: 80px
 	background-color: $black
 	position: relative	
 	z-index: 100
@@ -1290,9 +1340,9 @@ footer
 		content: ""
 		width: 0
 		height: 0
-		top: -200px
+		top: -110px
 		border-style: solid
-		border-width: 0 0 200px 1920px
+		border-width: 0 0 110px 1920px
 		border-color: transparent transparent $black transparent
 	.copy 
 		position: absolute
@@ -1345,7 +1395,7 @@ svg#mouse
 	path,
 	polyline 
 		fill: none
-		stroke: white
+		stroke: $blackLight
 		stroke-width: 2
 		stroke-linecap: round
 	path 
