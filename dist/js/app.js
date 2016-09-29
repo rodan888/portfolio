@@ -9,19 +9,9 @@ var app = angular.module('myApp',[]);
 	$scope.list = {};	
 	$scope.result = 0;
 
-	// $scope.test = function(){
-	// 	console.log('test');
-	// };
-	// $scope.$watch('result', function() {
- //        alert('hey, myVar has changed!');
- //  });
- 
-
-
-
 	$scope.check = function(price,event){
 		var el = event.currentTarget;
-		console.log(event);
+		
 		if (el.checked) {
 			$scope.result += parseInt(price);
 		}else{
