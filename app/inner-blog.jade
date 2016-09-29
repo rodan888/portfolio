@@ -1,0 +1,76 @@
+include templates/helpers/mixins
+
+doctype html
+html.no-js(lang="ru")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		main
+			section.blog-inner.mb6.mt4
+				div.container
+					div.row
+						div.col-md-12
+							pre
+								code.css.
+									.first-menu,.second-menu
+										position: absolute
+										width: 100%
+										top: 106px
+									.button_logo
+										background-color: $blackLight
+										margin-bottom: 1px
+										cursor: pointer
+							pre
+								code#copy-clip.javascript.
+									$(function(){
+										var grid = $('.grid');
+										grid.packery();
+										grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});		
+
+										var clipboard = new Clipboard('.btn-сlipboard');
+										clipboard.on('success', function(e) {
+											console.log(e);
+										});										
+									}());
+								button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
+									i.fa.fa-files-o
+
+							div.share-block.left.mt1
+								span.label Поделиться:
+								a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
+									i.fa.fa-pinterest
+								button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
+									i.fa.fa-facebook
+								button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
+									i.fa.fa-vk
+						
+			include templates/widgets/lust-blog
+			
+		include templates/structure/footer	
+		include templates/structure/scripts		
+		include templates/structure/sharescripts
+		script(src="js/blog-script/jquery.hoverdir.js")
+		script(src="js/blog-script/packery.min.js")
+		script(src="js/blog-script/clipboard.min.js")
+		script(src="js/blog-script/highlight.pack.js")
+		link(rel="stylesheet", href="js/blog-script/zenburn.css")
+		script.
+			$(function(){
+				var grid = $('.grid');
+				grid.packery();
+				grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});				
+
+				var btnClipboard = $('.btn-сlipboard'),
+						dataCopy     = btnClipboard.prev('code').attr('id'),
+						clipboard    = new Clipboard('.btn-сlipboard');
+				
+				//- btnClipboard.attr('data-clipboard-target', dataCopy);
+				clipboard.on('success', function() {				
+					btnClipboard.addClass('active');
+					setTimeout(function() {		
+						btnClipboard.removeClass('active');
+					}, 2000);
+				});
+
+				hljs.initHighlightingOnLoad();
+			}());

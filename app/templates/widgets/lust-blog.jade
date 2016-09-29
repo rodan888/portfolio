@@ -1,0 +1,51 @@
+section.card-blog
+	div.container
+		div.row
+			div.col-md-12
+				h2.title-left Новое в блоге
+				div(id="da-thumbs" class="grid shema-blog da-thumbs" data-packery='{"itemSelector": ".blog-grid","gutter": 10}')
+					-
+						var blogList = [
+							{
+								image: "img/gulp.jpg",
+								title: "Стартовая настройка Gulp",
+								sub_title: "пошаговое руководство",
+								introtext: "Gulp.js это потоковый сборщик проектов на JavaScript. Свою популярность он обрёл благодаря Stream, что делает его работу очень быстрой."
+							},{
+								image: "img/sublime.jpg",
+								title: "Подготовка к работе!",
+								sub_title: "Необзодимые плагины, и настройки.",
+								introtext: "В этот посте я хочу детально осветить пункт за пунктом где скачать, какой стартовый набор плагинов необходим для комфортной работы."
+							},{
+								image: "img/icomoon.jpg",
+								title: "Векторные иконочные шрифты. Iconmoon",
+								sub_title: "Необзодимые плагины, и настройки.",
+								introtext: "Создаем собственный иконочный шрифт шаг за шагом. На сегодняшний день иконочниые шрифты используются практически на всех сайтах."
+							},{
+								image: "img/gulp.jpg",
+								title: "Стартовая настройка Gulp",
+								sub_title: "пошаговое руководство",
+								introtext: "Gulp.js это потоковый сборщик проектов на JavaScript. Свою популярность"
+							},{
+								image: "img/sublime.jpg",
+								title: "Подготовка к работе!",
+								sub_title: "Необзодимые плагины, и настройки.",
+								introtext: "В этот посте я хочу детально осветить пункт за пунктом где скачать, какой стартовый набор плагинов необходим для комфортной работы"
+							},{
+								image: "img/icomoon.jpg",
+								title: "Векторные иконочные шрифты. Iconmoon",
+								sub_title: "Необзодимые плагины, и настройки.",
+								introtext: "Создаем собственный иконочный шрифт шаг за шагом. На сегодняшний день иконочниые шрифты используются практически на всех сайтах."
+							}
+						];
+					for blog in blogList
+						div.blog-grid
+							div.site-screen
+								div.img_wrap
+									img(src= blog.image alt= blog.title)
+							div.site-descr
+								div.descr-wrap
+									span tsumbaluk.in.ua || 28.12.2016
+									h3.anim-title= blog.title									
+									a(href="inner-blog.html" class="read-more")
+										i.fa.fa-long-arrow-right

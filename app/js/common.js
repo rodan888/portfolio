@@ -117,6 +117,10 @@ var main = {
 		flag: 1,			
 		documentM: $('body'),			
 		elements: $('section'),
+		packeryOptions: {
+			itemSelector: '.blog-grid',
+			gutter: 10
+		},
 		elementsPort: $('.wrap_prew'),
 		dataCount: $('.procent'),
 		height: [],
@@ -329,11 +333,11 @@ var main = {
 		this.opt.searchButton.on('click', function(){
 			$(this).toggleClass('active');
 			searchForm.toggleClass('active');
-			if (searchForm.hasClass('active')) {
-				searchForm.width(sWrap);
-			}else{
-				searchForm.width(0);					
-			}
+			// if (searchForm.hasClass('active')) {
+			// 	searchForm.width(sWrap);
+			// }else{
+			// 	searchForm.width(0);					
+			// }
 		});
 	},
 	dragstart: function(el){

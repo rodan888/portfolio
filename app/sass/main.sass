@@ -541,6 +541,32 @@ section
 			margin-bottom: 4px
 	p 
 		text-align: left
+.share-block
+	border-bottom: 1px solid $grey
+	max-width: 360px
+	padding-bottom: 10px
+	.label
+		margin-right: 10px
+		display: inline-block
+	button,a
+		vertical-align: middle
+		text-align: center
+		display: inline-block
+		padding: 0
+		margin-right: 5px
+		i
+			font-size: 20px
+			color: $blackLight
+			width: 35px
+			height: 35px
+			line-height: 35px
+			border: 1px solid $grey
+			@include border-radius(50%)
+			@include transition(all 0.3s)
+		&:hover i
+			background-color: $blackLight
+			color: $white
+			border-color: $blackLight 
 //Blog items end
 
 
@@ -792,7 +818,7 @@ section
 	-webkit-transform-origin: left
 	-moz-transform-origin: left
 	-o-transform-origin: left
-	@include transform(rotateY(38deg) rotateX(14deg))
+	@include transform(rotateY(14deg) rotateX(14deg))
 	&:before
 		position: absolute
 		content: ""
@@ -812,15 +838,14 @@ section
 			max-width: 500px
 	.mouse
 		position: absolute		
-		top: 520px
-		left: 50%
-		width: 90px
-		padding-top: 5px
-		margin-left: -45px
+		top: 50%
+		right: -75px
+		width: 90px		
+		margin-top: -41px
 		text-align: center
-		border-top-left-radius: 40px
-		border-top-right-radius: 40px
-		background-color: $main
+		// border-top-left-radius: 40px
+		// border-top-right-radius: 40px
+		// background-color: $main
 #fast-send
 	padding: 0
 	min-height: 80px
@@ -831,6 +856,38 @@ section
 		max-width: 100%
 		textarea
 			height: 110px
+section.black_section
+	min-height: 300px
+	&:after
+		left: 0
+	.site-descr
+		&.centr
+			max-width: 600px
+			margin: 40px auto 0
+			padding: 0
+			h2,p
+				text-align: center
+				color: $white
+			h2
+				margin-bottom: 35px
+				font-size: 32px
+				&:before
+					display: none
+			p
+				position: relative
+				padding: 10px 0
+				&:before,&:after
+					position: absolute
+					content: ''
+					width: 120px
+					height: 1px
+					background-color: $grey
+					left: 50%
+					margin-left: -60px
+					top: -10px
+				&:after
+					top: initial
+					bottom: -10px
 // Portfolio inner end
 
 // breadcrumb start
@@ -883,7 +940,7 @@ section
 		height: 1px
 		background-color: $grey
 .last-portfolio
-	margin-top: 60px	
+	margin-top: 180px	
 	.site-item,.col-md-4
 		min-height: 400px
 	.col-md-4
@@ -903,8 +960,103 @@ section
 			right: 0
 			span
 				display: block!important
-
 // Last-portfolio slider end
+
+//Packery lust blog schema start
+.blog-inner
+	pre
+		position: relative
+		overflow: hidden
+		.btn-сlipboard
+			position: absolute
+			top: 0
+			right: 5px
+			width: 40px
+			height: 40px
+			text-align: center
+			font-size: 22px
+			z-index: 10
+			i
+				background-color: $blackLight
+				color: $white
+				line-height: 40px
+				width: 40px
+				height: 40px
+			&:before
+				position: absolute
+				content: 'Скопировано!'
+				z-index: -1
+				height: 100%
+				color: $white
+				line-height: 40px
+				padding: 0 5px
+				font-size: 14px
+				background-color: $blackLight
+				right: -70px
+				@include transition(right 0.3s)
+			&.active:before
+				right: 34px
+
+
+
+.blog-grid
+	width: 65%
+	overflow: hidden
+	&:nth-child(1),
+	&:nth-child(3),
+	&:nth-child(5),
+	&:nth-child(6)
+		width: 33%
+		height: 203px
+	&:nth-child(2),
+	&:nth-child(4)
+		height: 417px
+	.site-descr
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: rgba(255,255,255, .8)
+		.descr-wrap
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 90%
+			max-width: 400px
+			@include transform(translate(-50%,-50%))
+			h3,p
+				text-align: center
+			span
+				font-size: 12px
+				margin-bottom: 10px
+				display: block
+			.read-more
+				display: block
+				margin: 10px auto 0
+				font-size: 16px				
+				width: 35px
+				height: 35px
+				line-height: 35px
+				border: 1px solid
+				-webkit-border-radius: 50%
+				border-radius: 50%
+				background-color: $blackLight
+				color: $white
+				border-color: $blackLight 
+				@include transition(padding 0.3s)
+				&:hover
+					padding-left: 10px
+
+
+
+
+
+
+
+
+
+
+
+//Packery lust blog schema end
 
 
 .footLamp 
@@ -1280,7 +1432,7 @@ svg:not(:root)
 //Footer start
 footer 
 	min-height: 300px
-	margin-top: 105px
+	margin-top: 80px
 	background-color: $black
 	position: relative	
 	z-index: 100
@@ -1290,9 +1442,9 @@ footer
 		content: ""
 		width: 0
 		height: 0
-		top: -200px
+		top: -110px
 		border-style: solid
-		border-width: 0 0 200px 1920px
+		border-width: 0 0 110px 1920px
 		border-color: transparent transparent $black transparent
 	.copy 
 		position: absolute
@@ -1345,7 +1497,7 @@ svg#mouse
 	path,
 	polyline 
 		fill: none
-		stroke: white
+		stroke: $blackLight
 		stroke-width: 2
 		stroke-linecap: round
 	path 
