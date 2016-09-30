@@ -45,7 +45,8 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <pre><code class="css">.first-menu,.second-menu
+              <div class="blog-content">
+                <pre><code class="css">.first-menu,.second-menu
 	position: absolute
 	width: 100%
 	top: 106px
@@ -53,7 +54,7 @@
 	background-color: $blackLight
 	margin-bottom: 1px
 	cursor: pointer</code></pre>
-              <pre><code id="copy-clip" class="javascript">$(function(){
+                <pre><code id="copy-clip" class="javascript">$(function(){
 	var grid = $('.grid');
 	grid.packery();
 	grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});		
@@ -63,10 +64,11 @@
 		console.log(e);
 	});										
 }());</code>
-                <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
-              <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
-                <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
-                <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
+                  <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                  <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
+                  <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
+                </div>
               </div>
             </div>
           </div>

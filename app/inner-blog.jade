@@ -10,39 +10,40 @@ html.no-js(lang="ru")
 				div.container
 					div.row
 						div.col-md-12
-							pre
-								code.css.
-									.first-menu,.second-menu
-										position: absolute
-										width: 100%
-										top: 106px
-									.button_logo
-										background-color: $blackLight
-										margin-bottom: 1px
-										cursor: pointer
-							pre
-								code#copy-clip.javascript.
-									$(function(){
-										var grid = $('.grid');
-										grid.packery();
-										grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});		
+							div.blog-content
+								pre
+									code.css.
+										.first-menu,.second-menu
+											position: absolute
+											width: 100%
+											top: 106px
+										.button_logo
+											background-color: $blackLight
+											margin-bottom: 1px
+											cursor: pointer
+								pre
+									code#copy-clip.javascript.
+										$(function(){
+											var grid = $('.grid');
+											grid.packery();
+											grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});		
 
-										var clipboard = new Clipboard('.btn-сlipboard');
-										clipboard.on('success', function(e) {
-											console.log(e);
-										});										
-									}());
-								button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
-									i.fa.fa-files-o
+											var clipboard = new Clipboard('.btn-сlipboard');
+											clipboard.on('success', function(e) {
+												console.log(e);
+											});										
+										}());
+									button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
+										i.fa.fa-files-o
 
-							div.share-block.left.mt1
-								span.label Поделиться:
-								a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
-									i.fa.fa-pinterest
-								button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
-									i.fa.fa-facebook
-								button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
-									i.fa.fa-vk
+								div.share-block.left.mt1
+									span.label Поделиться:
+									a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
+										i.fa.fa-pinterest
+									button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
+										i.fa.fa-facebook
+									button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
+										i.fa.fa-vk
 						
 			include templates/widgets/lust-blog
 			

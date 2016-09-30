@@ -967,6 +967,7 @@ section.black_section
 	pre
 		position: relative
 		overflow: hidden
+		text-align: left
 		.btn-сlipboard
 			position: absolute
 			top: 0
@@ -996,8 +997,10 @@ section.black_section
 				@include transition(right 0.3s)
 			&.active:before
 				right: 34px
-
-
+.blog-content
+	max-width: 700px
+	margin: 0 auto
+	text-align: center
 
 .blog-grid
 	width: 65%
@@ -1089,10 +1092,8 @@ section.black_section
 			right: 61px
 			background-image: $url_5
 			top: -75px
-			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: rotate(7deg)	
 	.img_block_hover:before 
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 		transition: all 0.3s
 		width: 560px
 .lamp_left 
@@ -1115,8 +1116,7 @@ section.black_section
 			left: 62px
 			transform: rotate(-8deg)
 			background-image: $url_4	
-	.img_block_hover:before 
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+	.img_block_hover:before 		
 		transition: all 0.3s
 		width: 560px
 .rect 
@@ -1209,8 +1209,7 @@ section.black_section
 	.lamp_wrap svg 
 		height: 255px
 	
-	.open_mnu .header_wrap 
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	.open_mnu .header_wrap 		
 		transform: rotateY(35deg)
 	
 	#portfolio .site-item .site-descr 
