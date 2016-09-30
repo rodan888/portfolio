@@ -10,6 +10,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
+	.grid
+		.blog-grid
+			height: 126px
+			&:nth-child(2),
+			&:nth-child(4)
+				height: 263px
 
 
 /* Small Devices, Tablets */
@@ -35,17 +41,60 @@
 		-o-animation: none !important
 		-ms-animation: none !important
 		animation: none !important
+	footer
+		.copy
+			height: 120px
+			overflow: visible
+			.dev
+				right: 50%	
+				margin-right: -75px
+	.grid
+		.blog-grid
+			width: 100%
+			max-width: 480px
+			height: auto!important
+			position: relative!important
+			margin: 5px auto
+			top: initial!important
+	
+	#portfolio 
+		.site-item
+			>div
+				width: 100%
+				margin: 0 auto
+				display: block
+				max-width: 360px
+				float: none
+			.wrap_prew 
+				.port_wrap 
+					.active
+						>span
+							margin: 10px 5px
+	.monitor 
+		.monitor
+			height: 240px
+			min-height: 100px
+			min-width: 220px
+			width: 100%
+	.iphone
+		.monitor
+			width: 100%
+		.cont
+			height: 89%
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 	header 
+		&.open_mnu .header_wrap
+			@include transform(rotateY(65deg))
 		h1 
 			width: 300px
 			margin-left: -150px
-			margin-top: -110px
+			margin-top: -85px
 			font-size: 40px
+			line-height: 40px
 			text-align: center		
 		.prof 
 			width: 300px
@@ -64,6 +113,89 @@
 		height: 75px	
 	.open_mnu .header_wrap 
 		transform: rotateY(60deg)
+
+	.title-left,
+	.blog-inner .label	
+		text-align: center
+	.blog-inner
+		p
+			img
+				float: none				
+				display: block
+				margin: 10px auto	
+	footer
+		margin-top: 30px
+		&:before
+			display: none
+	section.black_section
+		margin-top: 30px!important
+		margin-bottom: 30px!important
+		&:after,&:before
+			display: none
+	
+	
+	#skill
+		.icon-list li
+			font-size: 50px
+		svg
+			height: 310px
+
+	// #portfolio 
+	// 	.site-item
+	// 		>div
+	// 			width: 100%
+	// 		.prew,
+	// 		.iphone .monitor
+	// 			min-height: 200px
+	// 		.monitor
+	// 			width: 100%
+	// 		.monitor .monitor
+	// 			min-width: 260px
+	// 	.iphone .monitor
+	// 		height: 245px
+
+	#blog
+		padding-bottom: 30px
+		.blog-item
+			&:before
+				display: none!important
+			.site-screen,
+			.site-descr
+				position: initial!important
+				width: 100%!important
+
+	.portfolio-inner
+		.shadow-block
+			position: initial
+			transform: none
+			height: 450px
+			.site-screen
+				height: 450px
+			.mouse				
+				top: 100%
+				right: 50%
+				margin-right: -45px
+				margin-top: -81px
+				background-color: $blackLight
+				border-top-left-radius: 55px
+				border-top-right-radius: 55px
+				padding-top: 5px
+				svg#mouse 
+					path, polyline
+						stroke: $white
+
+
+	.last-portfolio
+		margin-top: 30px
+		.col-md-4
+			min-height: 100px
+			.site-descr
+				position: initial
+				padding-left: 0
+		.site-item
+			min-height: 100px
+
+
 
 
 

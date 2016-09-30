@@ -53,6 +53,10 @@ $(document).ready(function() {
 
 		main.init();
 
+	var winW = $(window).width();
+	if(winW < 480){
+		$('.fixed_menu').detach();
+	};
 });
 
 	function preloader(){
@@ -106,6 +110,7 @@ var main = {
 		fixedMenu: $('.fixed_menu'),	
 		header: $('header.inner'),			
 		kino : $('.kino'),
+		popup: $('.btn.pop'),
 		togBut: $('.toggle_but'),
 		lampWrap: $('.lamp_wrap'),		
 		rotateBlock: $('.img_wrap'),	
@@ -134,6 +139,26 @@ var main = {
 	// 	var cont = this.opt.header.find('.container');						
 	// 	cont.height(this.opt.header.find('img.screenshot').height());			
 	// },
+	popup: function(el){
+		el.on('click',function(event){
+			event.preventDefault();		
+			var show = $(this).data('show'),
+					pop  = $('#'+ show);
+
+			pop.fadeIn(600)
+			.css('height', $(window).height() + 'px')
+			.find('.popup-content')
+			.removeClass('anim')
+			.append('<span class="fade_out">&#9587;</span>')
+
+			$('.fade_out').click(function(){
+				pop.fadeOut(600)
+				.find('.popup-content')
+				.addClass('anim');
+				$(this).detach();
+			});
+		});
+	},
 	calculator: function(){
 		var levelOne = $('.type-title'),
 			levelTwo = $('.level-two');
@@ -363,6 +388,8 @@ var main = {
 		main.rotatePort();
 		//fixed menu
 		main.logoAnim();
+		//Popup
+		main.popup(main.opt.popup);
 
 		window.onload = function(){
 			main.calculator();			

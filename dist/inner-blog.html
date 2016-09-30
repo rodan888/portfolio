@@ -2,7 +2,7 @@
 <html lang="ru" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Start gulp template</title>
+    <title>Alexander Tsymbaluk | Front-end Developer Portfolio</title>
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=1">
@@ -15,19 +15,19 @@
     <header class="inner">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-9">
             <nav>
               <ul>
                 <li><a href="/">Главная</a></li>
                 <li><a href="abou.html">О себе</a></li>
                 <li><a href="work-step.html">Этапы работы</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
-                <li><a href="blog.html">Блог</a></li>
+                <li><a href="blog-list.html">Блог</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
               </ul>
             </nav>
           </div>
-          <div class="col-sm-4 search-wrap">
+          <div class="col-sm-3 search-wrap">
             <form id="searchForm" action="system/search.html" method="get">
               <input type="hidden" name="id" value="52">
               <input type="text" name="search" id="search" value="" placeholder="Поиск">
@@ -45,29 +45,171 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <pre><code class="css">.first-menu,.second-menu
-	position: absolute
-	width: 100%
-	top: 106px
-.button_logo
-	background-color: $blackLight
-	margin-bottom: 1px
-	cursor: pointer</code></pre>
-              <pre><code id="copy-clip" class="javascript">$(function(){
-	var grid = $('.grid');
-	grid.packery();
-	grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});		
-
-	var clipboard = new Clipboard('.btn-сlipboard');
-	clipboard.on('success', function(e) {
-		console.log(e);
-	});										
-}());</code>
-                <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
-              <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
-                <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
-                <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
+              <div class="blog-content">
+                <h1 class="title-left mb0">Particles.js что это такое?</h1>
+                <p class="label mb4 mt2"><span>tsumbaluk.in.ua</span><span>28.12.2016</span></p>
+                <p>
+                   
+                  Последнее время часто видел этот эффект на сайтах и решил на одном из landing page тоже сделать что-то подобное. Наткнулся на этот онлайн генератор <a href="http://vincentgarreau.com/particles.js/" target="_blank" rel="nofollow">Particles.js </a><img src="img/particlesjs_generator.jpg" data-show="foto1" class="btn pop">Данная библиотека обладает множеством настроек начиная от количества частиц на экране до реагирования на события браузера. Задача у меня стояла следующая нужно было на фоне сайта сделать такой эффект. Итак, первым делом скачиваем архив с самой библиотекой. В нем вы найдете множество файлов, но нас интересует непосредственно сама библиотека я взял сжатую версию particles.min.js. Также там есть демо по которому легко разобраться что к чему. Вся прелесть в том что в генераторе в режиме реального времени мы можем сконфигурировать наш particles.json как нам угодно. Так же там доступен блок статистики при добавлении частиц стоит обращать внимание на количество FPS и не переусердствовать. Вот те незначительные настройки которые использовал я.
+                </p>
+                <ul>
+                  <li>particles>number>value 60 кол-во. частиц</li>
+                  <li>particles>color>value(single string) #ccc цвет частиц</li>
+                  <li>particles>line_linked>color #ccc цвет связующи линий</li>
+                  <li>interactivity>onhover>enable убираем событие hover</li>
+                  <li>interactivity>onclick>enable убираем событие click</li>
+                  <li>→ Download current config (json) скачиваем наш конфиг и вставляем в месте инита библиотеки</li>
+                </ul>
+                <div class="code-wrap">
+                  <pre><code id="copy-clip" class="javascript">particlesJS('particles-js',{
+	"particles": {
+		"number": {
+			"value": 100,
+			"density": {
+				"enable": true,
+				"value_area": 800}	
+		},
+		"color": {
+			"value": "#8DAAB8"
+		},
+		"shape": {
+			"type": "circle",
+			"stroke": {
+				"width": 0,
+				"color": "#000000"
+			},
+			"polygon": {
+				"nb_sides": 5
+			},
+			"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+			}
+		},
+		"opacity": {
+			"value": 0.5,
+			"random": false,
+			"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+			}
+		},
+		"size": {
+			"value": 8.8,
+			"random": true,
+			"anim": {
+				"enable": false,
+				"speed": 40,
+				"size_min": 0.1,
+				"sync": false
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"distance": 150,
+			"color": "#8DAAB8",
+			"opacity": 0.4,
+			"width": 2
+		},
+		"move": {
+			"enable": true,
+			"speed": 4,
+			"direction": "none",
+			"random": false,
+			"straight": false,
+			"out_mode": "out",
+			"bounce": false,
+			"attract": {
+				"enable": false,
+				"rotateX": 600,
+				"rotateY": 1200
+			}
+		}
+	},
+	"interactivity": {
+		"detect_on": "canvas",
+		"events": {
+			"onhover": {
+				"enable": false,
+				"mode": "repulse"
+			},
+			"onclick": {
+				"enable": false,
+				"mode": "push"
+			},
+			"resize": true
+		},
+		"modes": {
+			"grab": {
+				"distance": 400,
+				"line_linked": {
+					"opacity": 1
+				}
+			},
+			"bubble": {
+				"distance": 400,
+				"size": 40,
+				"duration": 2,
+				"opacity": 8,
+				"speed": 3
+			},
+			"repulse": {
+				"distance": 200,
+				"duration": 0.4
+			},
+			"push": {
+				"particles_nb": 4
+			},
+			"remove": {
+				"particles_nb": 2
+			}
+		}
+	},
+	"retina_detect": true
+});</code>
+                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                </div>
+                <p>
+                  									
+                  И еще так как задачей было сделать background из частиц то нужно добавить немного CSS. Здесь устанавливаем фиксированную позицию во весь экран, делаем прозрачный фон, и добавляем z-index: -1; для того чтобы наш блок не мешал взаимодействовать с остальной страничкой.
+                </p>
+                <div class="code-wrap">
+                  <pre><code id="copy-clip" class="css">#particles-js{ 
+	position: fixed; 
+	width: 100%; 
+	height: 100%; 
+	background-color: transparent; 				
+	z-index: -1;
+	top: 0; 
+	left: 0; 
+}</code>
+                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                </div>
+                <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                  <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
+                  <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div id="foto1" class="popup">
+          <div class="popup-content"><img src="img/particlesjs_generator.jpg"></div>
+        </div>
+      </section>
+      <section class="black_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-descr centr">
+                <h2 class="title-left">Результат</h2>
+              </div>
+              <p data-height="400" data-theme-id="dark" data-slug-hash="NRvLxJ" data-default-tab="result" data-user="rodan8888" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/rodan8888/pen/NRvLxJ/">
+                  Particles.js by Alexander Tsymbaluk 
+                  (<a href="http://codepen.io/rodan8888">@rodan8888</a>) on <a href="http://codepen.io">CodePen</a></a></p>
             </div>
           </div>
         </div>
@@ -148,9 +290,9 @@
       <div class="copy">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">© <a href="http://tsumbaluk.in.ua">tsumbaluk.in.ua</a></div>
-            <div class="col-md-4 center"><a href="sitemap.xml"><i class="fa fa-sitemap"> </i>Sitemap</a></div>
-            <div class="col-md-4">
+            <div class="col-sm-4 col-xs-6">© <a href="http://tsumbaluk.in.ua">tsumbaluk.in.ua</a></div>
+            <div class="col-sm-4 center col-xs-6"><a href="sitemap.xml"><i class="fa fa-sitemap"> </i>Sitemap</a></div>
+            <div class="col-sm-4 col-xs-12">
               <div class="dev"><a href="http://tsumbaluk.in.ua/" target="_blank" rel="nofollow">Developed by<span>Alexander Tsymbalyuk</span></a></div>
             </div>
           </div>
@@ -166,7 +308,7 @@
           <li><a href="abou.html">О себе</a></li>
           <li><a href="work-step.html">Этапы работы</a></li>
           <li><a href="portfolio.html">Портфолио</a></li>
-          <li><a href="blog.html">Блог</a></li>
+          <li><a href="blog-list.html">Блог</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="open_fixed second-menu">
@@ -234,6 +376,7 @@
       	}
       };
     </script>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
     <script src="js/blog-script/jquery.hoverdir.js"></script>
     <script src="js/blog-script/packery.min.js"></script>
     <script src="js/blog-script/clipboard.min.js"></script>
@@ -257,7 +400,16 @@
       		}, 2000);
       	});
       
+      	hljs.configure({
+      		  tabReplace: '  '					  
+      		});
       	hljs.initHighlightingOnLoad();
+      
+      	$('iframe.cp_embed_iframe').load(function(){
+      	console.log($(this));
+      		$(this).contents().find('body').css("border","1px solid #111");
+      	});
+      
       }());
     </script>
   </body>
