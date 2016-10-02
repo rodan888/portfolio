@@ -1,0 +1,74 @@
+include templates/helpers/mixins
+
+doctype html
+html.no-js(lang="ru")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		main
+			section#blog
+				div.container
+					div.row
+						div.col-md-12
+						
+							ul.bread
+								li
+									a(href="/") Главная
+								li
+									a(href="portfolio-list.html") Портфолио
+								li Rif-line.com
+
+							h2.title-left.center.mt2 Blog list
+						div.col-md-12
+							-
+								var blogList = [
+									{
+										image: "img/gulp.jpg",
+										title: "Стартовая настройка Gulp",
+										sub_title: "пошаговое руководство",
+										introtext: "Gulp.js это потоковый сборщик проектов на JavaScript. Свою популярность он обрёл благодаря Stream, что делает его работу очень быстрой. В этой статье мы поговорим о установки и настройке Галпа."
+									},{
+										image: "img/sublime.jpg",
+										title: "Подготовка к работе!",
+										sub_title: "Необзодимые плагины, и настройки.",
+										introtext: "В этот посте я хочу детально осветить пункт за пунктом где скачать, какой стартовый набор плагинов необходим для комфортной работы, базовая настройка интерфейса и несколько дополнительных полезных настроек. В этом прекрасном редакторе кода."
+									},{
+										image: "img/icomoon.jpg",
+										title: "Векторные иконочные шрифты. Iconmoon",
+										sub_title: "Необзодимые плагины, и настройки.",
+										introtext: "Создаем собственный иконочный шрифт шаг за шагом. На сегодняшний день иконочниые шрифты используются практически на всех сайтах. Оно и не странно поскольку они обладают колоссальными преимуществами в сравнении с растровыми изображениями."
+									},{
+										image: "img/particles_js.jpg",
+										title: "Particles.js что это такое?",
+										sub_title: "Настройка particles.json, подключаем к сайту.",
+										introtext: "Прекрасная javascript библиотека для создания интерактивной фоновой анимации на сайте. Обладает множеством настроек начиная от количества частиц на экране до реагирования на события браузера."
+									}
+								];
+							for blog in blogList
+								div.blog-item
+									div.site-screen
+										div.img_wrap
+											img(src= blog.image alt= blog.title)
+									div.site-descr
+										span tsumbaluk.in.ua || 28.12.2016
+										h3.anim-title= blog.title							
+										p= blog.introtext
+											a(href="inner-blog.html") Читать..
+						div.col-md-12
+							div.pagination.light.mt3
+								ul.pagination
+									li.control
+										a(href="#")
+											i.fa.fa-angle-left
+									li.active
+										a(href="#") 1
+									li
+										a(href="#") 2			
+									li
+										a(href="#") 3				
+									li.control
+										a(href="#")
+											i.fa.fa-angle-right
+	
+		include templates/structure/footer	
+		include templates/structure/scripts
