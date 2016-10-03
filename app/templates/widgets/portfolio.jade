@@ -7,156 +7,158 @@ section#portfolio
 	div.container
 		div.row
 			div.col-md-12
-				-
-					var portfolio = [
-						{
-							buttons:[
-								{
-									class: "pc_but",
-									data_show: "monitor",
-									data_src: "img/portfolio-scren/ykarservis-com-desktop.jpg",
-									icon: "fa fa-desktop"
-								},{
-									class: "ipod_but",
-									data_show: "ipod",
-									data_src: "img/portfolio-scren/ykarservis-com-tablet.jpg",
-									icon: "fa fa-tablet"								
-								},{
-									class: "iphone_but",
-									data_show: "phoneW",
-									data_src: "img/portfolio-scren/ykarservis-com-mobile.jpg",
-									icon: "fa fa-mobile"								
-								}
-							],
-							image: "img/portfolio-scren/ykarservis-com-desktop.jpg",
-							title: "Ykarservis.com.ua",							
-							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
-							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
-						},{
-							buttons:[
-								{
-									class: "pc_but",
-									data_show: "monitor",
-									data_src: "img/portfolio-scren/Green-meadows-desktop.jpg",
-									icon: "fa fa-desktop"
-								},{
-									class: "ipod_but",
-									data_show: "ipod",
-									data_src: "img/portfolio-scren/Green-meadows-tablet.jpg",
-									icon: "fa fa-tablet"								
-								},{
-									class: "iphone_but",
-									data_show: "phoneW",
-									data_src: "img/portfolio-scren/Green-meadows-mobile.jpg",
-									icon: "fa fa-mobile"								
-								}
-							],
-							image: "img/portfolio-scren/Green-meadows-desktop.jpg",				
-							title: "Greenmeadows.com.ua",
-							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
-							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
-						},{
-							buttons:[
-								{
-									class: "pc_but",
-									data_show: "monitor",
-									data_src: "img/portfolio-scren/studiorivoli-desktop.jpg",
-									icon: "fa fa-desktop"
-								},{
-									class: "ipod_but",
-									data_show: "ipod",
-									data_src: "img/portfolio-scren/studiorivoli-tablet.jpg",
-									icon: "fa fa-tablet"								
-								},{
-									class: "iphone_but",
-									data_show: "phoneW",
-									data_src: "img/portfolio-scren/studiorivoli-mobile.jpg",
-									icon: "fa fa-mobile"								
-								}
-							],
-							image: "img/portfolio-scren/studiorivoli-desktop.jpg",				
-							title: "Studiorivoli.net",
-							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
-							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
-						},{
-							buttons:[
-								{
-									class: "pc_but",
-									data_show: "monitor",
-									data_src: "img/portfolio-scren/iwait-biz-desctop.jpg",
-									icon: "fa fa-desktop"
-								},{
-									class: "ipod_but",
-									data_show: "ipod",
-									data_src: "img/portfolio-scren/iwait-biz-tablet.jpg",
-									icon: "fa fa-tablet"								
-								},{
-									class: "iphone_but",
-									data_show: "phoneW",
-									data_src: "img/portfolio-scren/iwait-biz-mobile.jpg",
-									icon: "fa fa-mobile"								
-								}
-							],
-							image: "img/portfolio-scren/iwait-biz-desctop.jpg",				
-							title: "iwait.biz",
-							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
-							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
-						},{
-							buttons:[
-								{
-									class: "pc_but",
-									data_show: "monitor",
-									data_src: "img/portfolio-scren/rif-line-desktop.png",
-									icon: "fa fa-desktop"
-								},{
-									class: "ipod_but",
-									data_show: "ipod",
-									data_src: "img/portfolio-scren/rif-line-tablet.png",
-									icon: "fa fa-tablet"								
-								},{
-									class: "iphone_but",
-									data_show: "phoneW",
-									data_src: "img/portfolio-scren/rif-line-mobile.png",
-									icon: "fa fa-mobile"								
-								}
-							],
-							image: "img/portfolio-scren/rif-line-desktop.png",
-							title: "Rif-line",							
-							description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
-							technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
-						}
-					];
-				for site,index in portfolio
-					div.site-item
-						div.wrap_prew
-							div.prew.monitor
-								div.monitor
-									div.stand
-									div.stand_bot
-									div.cont
-										img(src= site.image alt=site.title)
-							div.port_wrap
-								div.active
-									for el,index in site.buttons
-										if index === 0
-											span(class="active "+ el.class data-show=el.data_show data-src=el.data_src)
-												i(class= el.icon)
-												i(class= el.icon)
-										else
-											span(class= el.class data-show=el.data_show data-src=el.data_src)
-												i(class= el.icon)
-												i(class= el.icon)
+				div.ajax-wrap
+					-
+						var portfolio = [
+							{
+								buttons:[
+									{
+										class: "pc_but",
+										data_show: "monitor",
+										data_src: "img/portfolio-scren/ykarservis-com-desktop.jpg",
+										icon: "fa fa-desktop"
+									},{
+										class: "ipod_but",
+										data_show: "ipod",
+										data_src: "img/portfolio-scren/ykarservis-com-tablet.jpg",
+										icon: "fa fa-tablet"								
+									},{
+										class: "iphone_but",
+										data_show: "phoneW",
+										data_src: "img/portfolio-scren/ykarservis-com-mobile.jpg",
+										icon: "fa fa-mobile"								
+									}
+								],
+								image: "img/portfolio-scren/ykarservis-com-desktop.jpg",
+								title: "Ykarservis.com.ua",							
+								description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+								technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+							},{
+								buttons:[
+									{
+										class: "pc_but",
+										data_show: "monitor",
+										data_src: "img/portfolio-scren/Green-meadows-desktop.jpg",
+										icon: "fa fa-desktop"
+									},{
+										class: "ipod_but",
+										data_show: "ipod",
+										data_src: "img/portfolio-scren/Green-meadows-tablet.jpg",
+										icon: "fa fa-tablet"								
+									},{
+										class: "iphone_but",
+										data_show: "phoneW",
+										data_src: "img/portfolio-scren/Green-meadows-mobile.jpg",
+										icon: "fa fa-mobile"								
+									}
+								],
+								image: "img/portfolio-scren/Green-meadows-desktop.jpg",				
+								title: "Greenmeadows.com.ua",
+								description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+								technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+							},{
+								buttons:[
+									{
+										class: "pc_but",
+										data_show: "monitor",
+										data_src: "img/portfolio-scren/studiorivoli-desktop.jpg",
+										icon: "fa fa-desktop"
+									},{
+										class: "ipod_but",
+										data_show: "ipod",
+										data_src: "img/portfolio-scren/studiorivoli-tablet.jpg",
+										icon: "fa fa-tablet"								
+									},{
+										class: "iphone_but",
+										data_show: "phoneW",
+										data_src: "img/portfolio-scren/studiorivoli-mobile.jpg",
+										icon: "fa fa-mobile"								
+									}
+								],
+								image: "img/portfolio-scren/studiorivoli-desktop.jpg",				
+								title: "Studiorivoli.net",
+								description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+								technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+							},{
+								buttons:[
+									{
+										class: "pc_but",
+										data_show: "monitor",
+										data_src: "img/portfolio-scren/iwait-biz-desctop.jpg",
+										icon: "fa fa-desktop"
+									},{
+										class: "ipod_but",
+										data_show: "ipod",
+										data_src: "img/portfolio-scren/iwait-biz-tablet.jpg",
+										icon: "fa fa-tablet"								
+									},{
+										class: "iphone_but",
+										data_show: "phoneW",
+										data_src: "img/portfolio-scren/iwait-biz-mobile.jpg",
+										icon: "fa fa-mobile"								
+									}
+								],
+								image: "img/portfolio-scren/iwait-biz-desctop.jpg",				
+								title: "iwait.biz",
+								description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+								technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+							},{
+								buttons:[
+									{
+										class: "pc_but",
+										data_show: "monitor",
+										data_src: "img/portfolio-scren/rif-line-desktop.png",
+										icon: "fa fa-desktop"
+									},{
+										class: "ipod_but",
+										data_show: "ipod",
+										data_src: "img/portfolio-scren/rif-line-tablet.png",
+										icon: "fa fa-tablet"								
+									},{
+										class: "iphone_but",
+										data_show: "phoneW",
+										data_src: "img/portfolio-scren/rif-line-mobile.png",
+										icon: "fa fa-mobile"								
+									}
+								],
+								image: "img/portfolio-scren/rif-line-desktop.png",
+								title: "Rif-line",							
+								description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность.",
+								technologies: ['HTML5','CSS3 (SASS)','JS','jQuery','Full Responsive']
+							}
+						];
+					for site,index in portfolio
+						div.site-item
+							div.wrap_prew
+								div.prew.monitor
+									div.monitor
+										div.stand
+										div.stand_bot
+										div.cont
+											img(src= site.image alt=site.title)
+								div.port_wrap
+									div.active
+										for el,index in site.buttons
+											if index === 0
+												span(class="active "+ el.class data-show=el.data_show data-src=el.data_src)
+													i(class= el.icon)
+													i(class= el.icon)
+											else
+												span(class= el.class data-show=el.data_show data-src=el.data_src)
+													i(class= el.icon)
+													i(class= el.icon)
 
-						div.site-descr
-							h3.mb2= site.title
-							p= site.description
-							h4 Technologies
-							ul
-								for el in site.technologies
-									li= el
-							div.link_button
-								a(href="inner-portfolio.html" class="site-link")
-									span Подробнее
-										i.fa.fa-caret-right
-									span Подробнее
-										i.fa.fa-caret-right
+							div.site-descr
+								h3.mb2= site.title
+								p= site.description
+								h4 Technologies
+								ul
+									for el in site.technologies
+										li= el
+								div.link_button
+									a(href="inner-portfolio.html" class="site-link")
+										span Подробнее
+											i.fa.fa-caret-right
+										span Подробнее
+											i.fa.fa-caret-right
+				button.ajax-btn Load more

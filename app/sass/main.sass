@@ -360,6 +360,67 @@ section
 // Logo animation end
 
 
+// about start
+#about
+	padding: 0
+	.aside
+		background-color: $blackLight
+		color: $white
+	.main-info
+		text-align: center
+		.ava-wrap
+			width: 150px
+			height: 150px
+			margin: 10px auto
+			overflow: hidden
+			@include border-radius(50%)
+			img
+				width: 100%
+		h1
+			font-family: 'OpenSansRegular'
+			font-weight: 400
+			font-size: 24px
+			position: relative
+			margin-bottom: 15px
+			&:before
+				position: absolute
+				content: ''
+				width: 40px
+				height: 1px
+				background-color: $grey
+				bottom: -5px
+				left: 50%
+				margin-left: -20px
+			span
+				font-family: 'OpenSansLight'
+		h3
+			font-family: 'OpenSansLight'
+			font-weight: 100
+			font-size: 18px
+
+	.artic
+		span
+			font-size: 27px
+			font-family: serif
+			display: inline-block
+			vertical-align: -webkit-baseline-middle
+			line-height: 20px
+			margin: 0 5px
+	.skill-block
+		margin-top: 15px
+		h4
+			margin-bottom: 10px
+			font-family: 'OpenSansLight'
+			font-weight: 100
+			font-size: 18px
+			border-bottom: 1px solid $grey
+		ul
+			list-style-type: disc
+			list-style-position: outside
+			padding-left: 17px
+			
+// about end
+
 //Blog items start
 #blog 
 	padding-bottom: 80px

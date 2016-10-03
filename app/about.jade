@@ -1,0 +1,55 @@
+doctype html
+html.no-js(lang="ru")
+	include templates/structure/head
+	body
+		include templates/structure/header-inner
+		main
+			section#about
+				div.container
+					div.row
+						div.col-md-3.aside
+							div.main-info
+								div.ava-wrap
+									img(src="img/ava.jpg")
+								h1 
+									span Александр
+									|Цимбалюк
+								h3.artic 
+									span &#8220;
+									|Front-end developer 
+									span &#8221;
+							div.skill-block
+								h4 О себе
+								p.artic 
+									span &#8220;
+									|Lorem ipsum dolor sit amet, consectetur adipisicing elit. In animi, vero iusto, architecto facere inventore praesentium similique. Officia laudantium, ex dolor animi eius reprehenderit laboriosam.
+							div.skill-block
+								h4 Личные качества
+								ul
+									li Целеустремленность
+									li Настоичивостъ
+									li Ответственность
+									li Коммуникабельность
+									li Умение работать в команде
+									li Внимательность к деталям
+							div.skill-block
+								ul
+								-
+									var social = {
+										1:'fa fa-pinterest',
+										2:'fa fa-facebook',
+										3:'fa fa-linkedin',
+										4:'fa fa-vk',
+										5:'fa fa-github',
+										6:'fa fa-codepen'
+									};		
+								each val, index in social
+									li
+										a(href="#" target="_blank")
+											i(class=val)
+						div.col-md-9
+
+
+
+		include templates/structure/footer	
+		include templates/structure/scripts

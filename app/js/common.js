@@ -10,7 +10,7 @@ var main = {
 		togBut: $('.toggle_but'),
 		lampWrap: $('.lamp_wrap'),		
 		rotateBlock: $('.img_wrap'),	
-		scrolIdItem: $('nav ul li,nav ul li,.foot_menu li'),
+		scrolIdItem: $('header .hidden-block ul li'),
 		svgCircl: $('.circle-path'),
 		rotateBlock: $('.title_block'),
 		changeBg: $('.front_side'),
@@ -105,12 +105,29 @@ var main = {
 					  parrent = $(this).data('parent'),
 					  tpl     = $(this).data('tpl'),
 					  offset  = $(this).data('offset');
+
+				//Local ajax emulation
+				$.getJSON('portfolio-list.json', function(data) {
+					var res = [];
+					for(var i = 0; i<data.pinlist.length; i++){
+						res.push(data.pinlist[i].html);
+					};					
+						$('.ajax-wrap').append( res );
+						//reinit dom element
+						main.opt.elementsPort = $('.wrap_prew');
+						//generate section position
+						main.createPosition(main.opt.elements);
+						//generate portfolio item position
+						main.createPositionPort(main.opt.elementsPort);
+				});
+				//Local ajax emulation end
 				
-				$.get(url+'?offset='+offsetCount+'&parent='+parrent+'&limit='+offset+'&tpl='+tpl,  function(data) {
-					$('.ajax-wrap').append( data )						
+				// $.get(url+'?offset='+offsetCount+'&parent='+parrent+'&limit='+offset+'&tpl='+tpl,  function(data) {
+				// 	$('.ajax-wrap').append( data )	
+						// main.opt.elementsPort = $('.wrap_prew');
 						// main.createPosition(main.opt.elements);							
 						// main.createPositionPort(main.opt.elementsPort);
-				});
+				// });
 				offsetCount +=offset;
 				if(offsetCount > limit){
 					$(this).detach();
@@ -227,7 +244,8 @@ var main = {
 	},
 	//scroll for section in menu
 	smoofScroll: function(){
-		this.opt.scrolIdItem.on('click',function(){			
+		this.opt.scrolIdItem.on('click',function(event){
+			event.preventDefault();
 			main.opt.smooffScroll = $(this).index();			
 			var pos = main.opt.position[main.opt.smooffScroll - 1];
 			main.opt.documentM.animate({scrollTop: pos}, 1200);
@@ -235,6 +253,13 @@ var main = {
 	},
 	//Create position for all section
 	createPosition: function(element){
+		if(this.opt.position.length){
+			this.opt.position.length = 0;
+			this.opt.startAnim.length = 0;
+			this.opt.stopAnim.length = 0;
+			this.opt.height.length = 0;
+		};
+
 		for(var i = 0; i< element.length; i++){
 			var elementItem = element.eq(i),
 			offsetTop = elementItem.offset().top,
@@ -247,15 +272,21 @@ var main = {
 			this.opt.height.push(element.height());
 			this.opt.position.push(offsetTop);	
 		};
-		this.smoofScroll();
+		//add smoof scroll bi id in main poage
+		//this.smoofScroll();
 	},
 	//Create position for section portfolio item
 	createPositionPort: function(element){
+		if(this.opt.startAnimPort.length){
+			this.opt.startAnimPort.length = 0;
+		};
+		
 		for(var i = 0; i< element.length; i++){
 			var elementItem = element.eq(i),
 			offsetTop = elementItem.offset().top - this.windowHeight();			
-			this.opt.startAnimPort.push(offsetTop);		
+			this.opt.startAnimPort.push(offsetTop);	
 		};	
+		console.log(this.opt.startAnimPort);
 	},
 	//SVG photo add random position
 	randPosition: function(){		
@@ -321,7 +352,7 @@ var main = {
 		//slider
 		mySlider.init(600,1);
 		//generate section position
-		main.createPosition(main.opt.elements);	
+		main.createPosition(main.opt.elements);
 		//generate portfolio item position
 		main.createPositionPort(main.opt.elementsPort);
 		//rotate footer lamp
