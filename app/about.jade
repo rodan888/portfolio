@@ -14,9 +14,10 @@ html.no-js(lang="ru")
 										img(src="img/ava.jpg")
 								h1 
 									span Александр
-									|Цимбалюк
+									|Цимбалюк								
 								h3.artic
 									|Front-end developer
+
 							div.skill-block
 								h4.artic О себе
 								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In animi, vero iusto, architecto facere inventore praesentium similique. Officia laudantium, ex dolor animi eius reprehenderit laboriosam.
@@ -45,19 +46,146 @@ html.no-js(lang="ru")
 											a(href="#" target="_blank")
 												i(class=val)
 												=val
-						div.col-md-8
+						div.col-md-8.body-about
 							div.resume-block
 								h4
 									i.fa.fa-suitcase
 									|Опыт работы
+								-
+									var experiences = [
+										{
+											company: 'JayaDigital',
+											position: 'Front-end developer',
+											timeStart: 'декабрь 2016г.',
+											timeEnd: 'настоящее время',
+											description: 'Создание сайтов под ключ: Верстка новых страниц из PSD макетов, верстка писем	Адаптация новых и готовых страниц под мобильные устройства Реализация JavaScript логики (слайдеры, попапы, анимации, AJAX и т.д.)	посадка на CMF Modx посадка cms Wordpress'
+										},{
+											company: 'Adloud',
+											position: 'Front-end developer',
+											timeStart: 'май 2015г.',
+											timeEnd: 'декабрь 2016г.',
+											description: 'Создание сайтов под ключ: Верстка новых страниц из PSD макетов, верстка писем	Адаптация новых и готовых страниц под мобильные устройства Реализация JavaScript логики (слайдеры, попапы, анимации, AJAX и т.д.)	посадка на CMF Modx посадка cms Wordpress'
+										},{
+											company: 'Freelance',
+											position: 'Web developer',
+											timeStart: 'ноябрь 2014г.',
+											timeEnd: 'настоящее время',
+											description: 'Верстка новых страниц из PSD макетов, Создание Landing page, доработка и правка существующих сайтов, адаптация под мобильные устройства'
+										},{
+											company: 'ООО"Грин Медоу"',
+											position: 'Менеджер Логист',
+											timeStart: 'март 2011г.',
+											timeEnd: 'ноябрь 2014г.',
+											description: 'Поиск клиентов и поддержка существующих, организация логистики. Поиск клиентов и поддержка существующих.'
+										}
+									]
+								for work in experiences
+									div.resume-item
+										h5.company= work.company
+										h6.position= work.position
+										br
+										div.time
+											span= work.timeStart
+											span= work.timeEnd
+										div.descr= work.description
+
+							div.resume-block
+								h4
+									i.fa.fa-folder-open
+									|Примеры работ
+								div.resume-item.portfol
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+								div.resume-item.portfol
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+								div.resume-item.portfol
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+									div.page-item
+										h6 Ykarservis.com.ua
+										a(href="#" target="_blank" rel="nofollow") http//ykarservis.com.ua
+
+
+							div.resume-block
+								h4
+									i.fa.fa-pie-chart
+									|Профессиональные навыки
+								div.resume-item.skill-block
+									div.skill-item
+										h5 HTML
+										p.progres
+											span(data-progres="100")
+									div.skill-item
+										h5 Jade
+										p.progres
+											span(data-progres="90")
+									div.skill-item
+										h5 CSS
+										p.progres
+											span(data-progres="100")
+									div.skill-item
+										h5 SASS
+										p.progres
+											span(data-progres="100")									
+
+								div.resume-item.skill-block
+									div.skill-item
+										h5 JavaScript
+										p.progres
+											span(data-progres="90")
+									div.skill-item
+										h5 jQuery
+										p.progres
+											span(data-progres="90")
+									div.skill-item
+										h5 Angular
+										p.progres
+											span(data-progres="65")
+									div.skill-item
+										h5 Modx
+										p.progres
+											span(data-progres="70")
+
+								div.resume-item.skill-block
+									div.skill-item
+										h5 Git
+										p.progres
+											span(data-progres="80")
+									div.skill-item
+										h5 Gulp
+										p.progres
+											span(data-progres="70")
+									div.skill-item
+										h5 WordPress
+										p.progres
+											span(data-progres="55")
+									div.skill-item
+										h5 Photoshop
+										p.progres
+											span(data-progres="40")
+
 							div.resume-block
 								h4
 									i.fa.fa-graduation-cap
 									|Образование
-							div.resume-block
-								h4
-									i.fa.fa-pie-chart
-									|Примеры работ
+								div.resume-item
+									h5.company Геоинформационные системы
+									h6.position 
+										a(href="http://kitz.nau.edu.ua/" target="_blank" rel="nofollow") КИТЗ при Национальном Авиационном Университете
+									div.time
+										span 2006г.
+										span 2011г.
+									div.descr Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, ducimus
 				div.container
 					div.row
 						div.col-md-12.footer-about

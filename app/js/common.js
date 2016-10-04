@@ -523,6 +523,14 @@ $(document).ready(function() {
 			} catch(err){
 		};
 
+	//Resume progres bar start
+	var progres = $('#about .skill-block .progres span');
+	for(var i = 0; i<progres.length; i++){
+		var reslt = progres.eq(i).data('progres');
+		progres.eq(i).css('width', reslt+'%');
+	};
+	//Resume progres bar end
+
 
 		if(localStorage.getItem("User")){			
 			$('#hellopreloader_preload').detach();

@@ -363,37 +363,149 @@ section
 // about start
 #about
 	padding: 0
+	cursor: default
+	.body-about
+		padding-bottom: 95px
 	.resume-block
+		position: relative
+		margin-top: 20px
+		overflow: hidden		
+		&:last-child
+			.resume-item
+				display: block
+				width: 100%			
 		h4
-			font-family: 'OpenSansLight'
-			font-weight: 100
-			font-size: 24px			
-			overflow: hidden
+			font-family: 'OpenSansBold'			
+			font-size: 14px						
+			text-transform: uppercase
 			position: relative
-			&:before,&:after
+			&:before
 				position: absolute
 				content: ''
 				width: 100%
 				height: 1px
-				left: 37px
+				left: 18px
 				bottom: 0
-				background-color: $blackLight			
-			&:after
-				height: 4px
-				width: 10px				
-				bottom: 50%
-				margin-bottom: -3px
+				background-color: $blackLight						
 			i
 				width: 30px
 				height: 30px
 				line-height: 30px
 				text-align: center
-				font-size: 18px
+				font-size: 14px
 				color: $white				
 				display: inline-block
-				margin-right: 22px
+				margin-right: 10px
 				background-color: $blackLight
 				@include border-radius(50%)
+		.resume-item
+			font-size: 14px
+			padding-left: 35px
+			position: relative
+			display: inline-block
+			width: 49%
+			vertical-align: top
+			&.portfol
+				display: inline-block
+				width: 33%
+				vertical-align: top
+			&.skill-block
+				display: inline-block
+				width: 33%
+				vertical-align: top
+				padding-left: 25px
+				&:before
+					display: none
+					padding-left: 10px
+				.skill-item
+					position: relative				
+				h5
+					font-size: 12px
+				.progres
+					position: absolute
+					top: 12px
+					right: 0
+					width: 65%
+					height: 12px
+					overflow: hidden
+					border: 1px solid $main					
+					@include border-radius(10px)
+					span
+						background-color: $main
+						position: absolute
+						top: 0
+						left: 0
+						height: 12px
+						width: 95%
+			&:before
+				position: absolute
+				content: ''
+				height: 9px
+				width: 9px				
+				top: 14px
+				left: 11px
+				background-color: $blackLight
+				margin-bottom: -5px
+				@include border-radius(50%)
+			h5,h6
+				font-family: 'OpenSansBold'
+				font-weight: 600
+				position: relative
+				font-size: 16px
+				padding-left: 5px
+				margin: 0
+				margin-top: 5px
+				display: inline-block
+				vertical-align: top
+				&:after
+					position: absolute
+					content: ''
+					height: 2px
+					width: 10px				
+					bottom: 50%
+					left: -10px
+					background-color: $blackLight
+					margin-bottom: -2px
+			h6
+				margin-left: 14px
+				font-weight: 100
+				font-family: 'OpenSansLight'				
+				&:after
+					left: -7px
+					height: 12px
+					width: 2px
+					margin-bottom: -6px
+				a
+					color: $blackLight
+			.time
+				display: inline-block				
+				margin-bottom: 10px
+				span
+					background-color: $greyLight
+					color: $white
+					display: inline-block
+					font-size: 14px
+					line-height: 16px
+					padding: 0 3px
+					@include border-radius(3px)
+					&:first-child
+						position: relative
+						margin-right: 14px
+						&:before
+							position: absolute
+							content: ''
+							width: 6px
+							height: 1px
+							top: 8px
+							right: -10px
+							background-color: $greyLight
+			.page-item
+				a
+					display: block
+					color: $main
+					&:hover
+						text-decoration: underline
+
 
 
 	.aside
