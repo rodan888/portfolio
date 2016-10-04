@@ -7,22 +7,19 @@ html.no-js(lang="ru")
 			section#about
 				div.container
 					div.row
-						div.col-md-3.aside
+						div.col-md-4.aside
 							div.main-info
 								div.ava-wrap
-									img(src="img/ava.jpg")
+									a(href="/")
+										img(src="img/ava.jpg")
 								h1 
 									span Александр
 									|Цимбалюк
-								h3.artic 
-									span &#8220;
-									|Front-end developer 
-									span &#8221;
+								h3.artic
+									|Front-end developer
 							div.skill-block
-								h4 О себе
-								p.artic 
-									span &#8220;
-									|Lorem ipsum dolor sit amet, consectetur adipisicing elit. In animi, vero iusto, architecto facere inventore praesentium similique. Officia laudantium, ex dolor animi eius reprehenderit laboriosam.
+								h4.artic О себе
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. In animi, vero iusto, architecto facere inventore praesentium similique. Officia laudantium, ex dolor animi eius reprehenderit laboriosam.
 							div.skill-block
 								h4 Личные качества
 								ul
@@ -33,23 +30,59 @@ html.no-js(lang="ru")
 									li Умение работать в команде
 									li Внимательность к деталям
 							div.skill-block
-								ul
-								-
-									var social = {
-										1:'fa fa-pinterest',
-										2:'fa fa-facebook',
-										3:'fa fa-linkedin',
-										4:'fa fa-vk',
-										5:'fa fa-github',
-										6:'fa fa-codepen'
-									};		
-								each val, index in social
-									li
-										a(href="#" target="_blank")
-											i(class=val)
-						div.col-md-9
+								h4 В соц. сетях
+								ul.soc-block
+									-
+										var social = {
+											1:'fa fa-pinterest',
+											2:'fa fa-linkedin',
+											3:'fa fa-vk',
+											4:'fa fa-github',
+											5:'fa fa-codepen'
+										};		
+									each val, index in social
+										li
+											a(href="#" target="_blank")
+												i(class=val)
+												=val
+						div.col-md-8
+							div.resume-block
+								h4
+									i.fa.fa-suitcase
+									|Опыт работы
+							div.resume-block
+								h4
+									i.fa.fa-graduation-cap
+									|Образование
+							div.resume-block
+								h4
+									i.fa.fa-pie-chart
+									|Примеры работ
+				div.container
+					div.row
+						div.col-md-12.footer-about
+							div.container-fluid
+								div.row
+									div.col-md-3.col-sm-6
+										h4.artic Контактная информация		
+									div.col-md-3.col-sm-6
+										p
+											i.fa.fa-phone
+											a(href="tel:+380969391478") +380969391478
+									div.col-md-3.col-sm-6
+										p
+											i.fa.fa-envelope
+											a(href="mailto:tsumbaluk888@gmail.com") tsumbaluk888@gmail.com
+											br
+											a(href="http://tsumbaluk.in.ua/") http://tsumbaluk.in.ua
+									div.col-md-3.col-sm-6
+										p
+											i.fa.fa-map-marker
+											| Украина
+											br
+											|Киев
 
 
 
-		include templates/structure/footer	
+		//- include templates/structure/footer	
 		include templates/structure/scripts

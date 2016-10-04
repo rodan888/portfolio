@@ -363,19 +363,56 @@ section
 // about start
 #about
 	padding: 0
+	.resume-block
+		h4
+			font-family: 'OpenSansLight'
+			font-weight: 100
+			font-size: 24px			
+			overflow: hidden
+			position: relative
+			&:before,&:after
+				position: absolute
+				content: ''
+				width: 100%
+				height: 1px
+				left: 37px
+				bottom: 0
+				background-color: $blackLight			
+			&:after
+				height: 4px
+				width: 10px				
+				bottom: 50%
+				margin-bottom: -3px
+			i
+				width: 30px
+				height: 30px
+				line-height: 30px
+				text-align: center
+				font-size: 18px
+				color: $white				
+				display: inline-block
+				margin-right: 22px
+				background-color: $blackLight
+				@include border-radius(50%)
+
+
 	.aside
 		background-color: $blackLight
 		color: $white
+		padding-bottom: 95px
 	.main-info
 		text-align: center
 		.ava-wrap
 			width: 150px
 			height: 150px
 			margin: 10px auto
+			padding: 5px
 			overflow: hidden
+			border: 2px solid $white
 			@include border-radius(50%)
 			img
 				width: 100%
+				@include border-radius(50%)
 		h1
 			font-family: 'OpenSansRegular'
 			font-weight: 400
@@ -388,7 +425,7 @@ section
 				width: 40px
 				height: 1px
 				background-color: $grey
-				bottom: -5px
+				bottom: -9px
 				left: 50%
 				margin-left: -20px
 			span
@@ -408,17 +445,82 @@ section
 			margin: 0 5px
 	.skill-block
 		margin-top: 15px
+		line-height: 25px
 		h4
 			margin-bottom: 10px
 			font-family: 'OpenSansLight'
 			font-weight: 100
 			font-size: 18px
 			border-bottom: 1px solid $grey
+			position: relative
+			padding-left: 20px
+			line-height: 34px
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				margin-top: -2px
+				width: 10px
+				height: 4px
+				background-color: $white
+		p
+			text-indent: 20px
 		ul
 			list-style-type: disc
 			list-style-position: outside
 			padding-left: 17px
-			
+			&.soc-block
+				list-style-type: none
+				padding-left: 0
+				a
+					color: $white
+					&:hover
+						text-decoration: underline
+				i
+					font-size: 14px
+					margin-right: 10px
+	.footer-about
+		min-height: 60px
+		margin-top: -77px
+		border-top: 2px solid $white
+		border-bottom: 2px solid $white
+		background-color: $blackLight	
+		color: $white
+		.col-md-3
+			position: relative
+			min-height: 60px
+			p
+				position: absolute
+				padding-left: 55px
+				left: 0
+				top: 50%
+				@include transform(translateY(-50%))
+				a
+					color: $white
+					&:hover
+						text-decoration: underline
+		h4.artic
+			line-height: 60px
+			font-family: 'OpenSansLight'
+			font-weight: 100
+			font-size: 18px
+		i.fa
+			width: 40px
+			height: 40px
+			position: absolute
+			top: 50%
+			margin-top: -20px
+			left: 0
+			text-align: center
+			font-size: 20px
+			line-height: 40px
+			display: inline-block
+			vertical-align: middle
+			color: $blackLight
+			background-color: $white
+			@include border-radius(50%)
+
 // about end
 
 //Blog items start
