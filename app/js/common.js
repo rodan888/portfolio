@@ -14,6 +14,7 @@ var main = {
 		svgCircl: $('.circle-path'),
 		rotateBlock: $('.title_block'),
 		changeBg: $('.front_side'),
+		deviceBut: $('.port_wrap span'),
 		ajaxButton: $('.ajax-btn'),
 		polyLength: $('#skill').find('polygon, path'),
 		flag: 1,			
@@ -94,6 +95,18 @@ var main = {
 			});
 		});
 	},
+	devicePrew: function(){
+		this.opt.deviceBut.on('click', function(){
+			var prew      = $(this).parents('.wrap_prew').find('.prew'),
+				imgPath   = $(this).attr('data-src'),
+				dataClass = $(this).attr('data-show'),
+				className =	prew.attr('id');
+			main.opt.deviceBut.removeClass('active');
+			$(this).addClass('active');
+			prew.attr('class', 'prew '+ dataClass +'');
+			prew.find('img').attr('src',imgPath);			
+		});
+	},
 	ajaxPortfolio: function(){
 			var offsetCount = this.opt.ajaxButton.data('start');			
 
@@ -107,27 +120,29 @@ var main = {
 					  offset  = $(this).data('offset');
 
 				//Local ajax emulation
-				$.getJSON('portfolio-list.json', function(data) {
-					var res = [];
-					for(var i = 0; i<data.pinlist.length; i++){
-						res.push(data.pinlist[i].html);
-					};					
-						$('.ajax-wrap').append( res );
-						//reinit dom element
-						main.opt.elementsPort = $('.wrap_prew');
-						//generate section position
-						main.createPosition(main.opt.elements);
-						//generate portfolio item position
-						main.createPositionPort(main.opt.elementsPort);
-				});
+				// $.getJSON('portfolio-list.json', function(data) {
+				// 	var res = [];
+				// 	for(var i = 0; i<data.pinlist.length; i++){
+				// 		res.push(data.pinlist[i].html);
+				// 	};					
+				// 		$('.ajax-wrap').append( res );
+				// 		//reinit dom element
+				// 		main.opt.elementsPort = $('.wrap_prew');
+				// 		//generate section position
+				// 		main.createPosition(main.opt.elements);
+				// 		//generate portfolio item position
+				// 		main.createPositionPort(main.opt.elementsPort);
+				// });
 				//Local ajax emulation end
 				
-				// $.get(url+'?offset='+offsetCount+'&parent='+parrent+'&limit='+offset+'&tpl='+tpl,  function(data) {
-				// 	$('.ajax-wrap').append( data )	
-						// main.opt.elementsPort = $('.wrap_prew');
-						// main.createPosition(main.opt.elements);							
-						// main.createPositionPort(main.opt.elementsPort);
-				// });
+				$.get(url+'?offset='+offsetCount+'&parent='+parrent+'&limit='+offset+'&tpl='+tpl,  function(data) {
+					$('.ajax-wrap').append( data )	
+						main.opt.elementsPort = $('.wrap_prew');
+						main.opt.deviceBut = $('.port_wrap span');
+						main.devicePrew();
+						main.createPosition(main.opt.elements);							
+						main.createPositionPort(main.opt.elementsPort);
+				});
 				offsetCount +=offset;
 				if(offsetCount > limit){
 					$(this).detach();
@@ -169,8 +184,7 @@ var main = {
 			}else{
 				logoAnim();
 			}
-			t.toggleClass("open_fixed").css("z-index", "150");;
-			console.log(t);
+			t.toggleClass("open_fixed").css("z-index", "150");;		
 			if(1 == t.index()){
 				t.next().addClass("open_fixed").css("z-index", "-1"); 
 			}else{
@@ -285,8 +299,7 @@ var main = {
 			var elementItem = element.eq(i),
 			offsetTop = elementItem.offset().top - this.windowHeight();			
 			this.opt.startAnimPort.push(offsetTop);	
-		};	
-		console.log(this.opt.startAnimPort);
+		};			
 	},
 	//SVG photo add random position
 	randPosition: function(){		
@@ -311,7 +324,7 @@ var main = {
 
 		if(scrollPosit > main.opt.startAnim[item] && scrollPosit < main.opt.stopAnim[item]){
 			var posScroll = scrollPosit - main.opt.startAnim[item],
-					rotateDeg = 1 + Math.floor(posScroll / koefic),
+					rotateDeg = Math.floor(posScroll / koefic),
 					color     = 255 + Math.floor(posScroll / koeficBg);		      
 			this.opt.elements.eq(item).find(this.opt.rotateBlock).css({
 				transform: 'rotateX('+ -rotateDeg +'deg)',				
@@ -361,6 +374,8 @@ var main = {
 		main.logoAnim();
 		//Popup
 		main.popup(main.opt.popup);
+		//Home page device preview
+		main.devicePrew();
 		//main sceern smoof scroll
 		main.smoofScr();
 		//ajaxPortfolio
@@ -379,6 +394,24 @@ var main = {
 			if(main.opt.togBut.hasClass('tog_mnu')) {
 				main.opt.togBut.click();
 			};
+
+			// if($('.up').length){				
+			// 	if (scrl > 600) {
+			// 		$('.up').fadeIn('slow');
+			// 	}else{
+			// 		$('.up').fadeOut('slow');
+			// 	};
+			// 	$('.up').on('touchstart', function() {
+			// 		$('body').animate({scrollTop:0},{				
+			// 			duration: 1000,
+			// 			complete: function() { 
+			// 				console.log('khjhf');
+			// 				$('body').stop();
+			// 			}
+			// 		});			
+			// 	});								
+			// };
+
 
 			// portfolio item animated
 			if(!$('#portfolio, .last-portfolio ').hasClass('no-animation')){
@@ -546,19 +579,7 @@ $(document).ready(function() {
 			// Удаление значения
 			//localStorage.removeItem("Ключ")
 			// Очистка всего хранилища
-			//localStorage.clear()
-
-
-		$('.port_wrap span').click(function(){
-			var prew = $(this).parents('.wrap_prew').find('.prew'),
-					imgPath = $(this).attr('data-src'),
-					dataClass = $(this).attr('data-show'),
-					className =	prew.attr('id');
-			$('.port_wrap span').removeClass('active');
-			$(this).addClass('active');
-			prew.attr('class', 'prew '+ dataClass +'');
-			prew.find('img').attr('src',imgPath);			
-		});
+			//localStorage.clear()		
 
 
 		$('#send input, #send textarea').on('focusin',function(){
@@ -570,14 +591,31 @@ $(document).ready(function() {
 				$(this).prev().css('marginTop','0px');					
 			};		
 		});
+		
+		$('#about .aside').css('min-height', $('#about .body-about').outerHeight()+'px');
 
+		//E-mail Ajax Send
+		$("form.send").submit(function() { 
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: this.action,
+				data: th.serialize()
+			}).done(function() {
+				alert("Сообщение отправлено");
+				setTimeout(function() {		
+					th.trigger("reset");
+				}, 1000);
+			});
+			return false;
+		});
 
-		main.init();
+		if(winW < 480){
+			$('.fixed_menu').detach();
+			//$('<button type="button" class="up"><i class="fa fa-chevron-up"></i></button>').appendTo('body');
+		};
 
-	
-	if(winW < 480){
-		$('.fixed_menu').detach();
-	};
+		main.init();	
 });
 
 	function preloader(){
@@ -601,7 +639,7 @@ $(document).ready(function() {
 	$(window).on('load', function(){
 		if($('#hellopreloader_preload').length){
 			preloader();	
-		}
+		}		
 	});
 
 function animTitle(el,effect,speed){
@@ -622,6 +660,7 @@ function animTitle(el,effect,speed){
 			}
 		}, speed);
 	};
+
 
 
 

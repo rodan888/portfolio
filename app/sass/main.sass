@@ -1,7 +1,6 @@
 @import bourbon
 @import _vars.sass
 @import _mixins.sass
-@import _forms.sass
 @import _slider.sass
 
 section 
@@ -10,31 +9,50 @@ section
 	position: relative
 	&.black_section 
 		position: relative
-		background-color: $blackLight
-		margin-top: 100px
-		margin-bottom: 140px
+		margin-top: 40px
+		margin-bottom: 40px
 		min-height: 480px
-		&:after 
-			position: absolute
-			content: ""
-			width: 0
-			height: 0
-			border-style: solid
-			bottom: -109px
-			border-width: 110px 1920px 0 0
-			border-color: $blackLight transparent transparent transparent	
-		&:before 
-			position: absolute
-			content: ""
-			width: 0
-			height: 0
-			border-style: solid
-			top: -109px
-			border-width: 0 0 110px 1920px
-			border-color: transparent transparent $blackLight transparent
+		padding: 110px 0
+		overflow: hidden
+		.black_section_wrap
+			position: relative
+			background-color: $blackLight
+			padding: 40px 0 40px
+			&:after 
+				position: absolute
+				content: ""
+				width: 0
+				height: 0
+				border-style: solid
+				bottom: -109px
+				border-width: 110px 1920px 0 0
+				border-color: $blackLight transparent transparent transparent	
+			&:before 
+				position: absolute
+				content: ""
+				width: 0
+				height: 0
+				border-style: solid
+				top: -109px
+				border-width: 0 0 110px 1920px
+				border-color: transparent transparent $blackLight transparent
+		&.contacts
+			margin-bottom: -85px
+		&.plagin			
+			.buttons-wrap
+				min-height: 190px
+				position: relative
+				.buttons
+					position: absolute
+					top: 50%
+					right: 15px
+					width: 100%
+					text-align: right
+					@include transform(translateY(-50%))
+					.site-link
+						margin-left: 10px
 
-.contacts 
-	margin: 80px 0!important
+
 .z_menu 
 	z-index: 100
 //Rotate title start
@@ -126,7 +144,8 @@ section
 					top: 0
 					left: 0			
 				h3 
-					line-height: 30px
+					line-height: 22px
+					font-size: 14px
 					font-family: 'OpenSansLight'
 				img 
 					width: 90px!important
@@ -212,7 +231,7 @@ section
 					@include transform(rotateX(71.5deg)translateY(-36px))
 					@include transition-delay(0.6s)			
 				&:nth-child(4) 
-					@include transform(rotateX(90.5deg)translateY(-36px))
+					@include transform(rotateX(90.3deg)translateY(-36px))
 					@include transition-delay(0.4s)			
 				&:nth-child(5) 
 					@include transform(rotateX(109deg)translateY(-36px))
@@ -241,7 +260,7 @@ section
 				&:hover 
 					text-decoration: none
 					&:before 
-						width: 100%				
+						width: 100%									
 				&:before 
 					position: absolute
 					content: ""
@@ -251,6 +270,8 @@ section
 					left: 0
 					bottom: 0
 					@include transition(width 0.3s)			
+				i
+					margin-right: 5px
 			&:nth-child(2) 
 				@include transition-delay(0.2s)			
 			&:nth-child(3) 
@@ -409,6 +430,8 @@ section
 				display: inline-block
 				width: 33%
 				vertical-align: top
+				&:before
+					display: none
 			&.skill-block
 				display: inline-block
 				width: 33%
@@ -512,6 +535,7 @@ section
 		background-color: $blackLight
 		color: $white
 		padding-bottom: 95px
+		padding-top: 3px
 	.main-info
 		text-align: center
 		.ava-wrap
@@ -722,6 +746,9 @@ section
 			top: 0
 			box-shadow: -3px 7px 20px #545454
 			z-index: 1
+			.img_wrap
+				max-height: 280px
+				overflow: hidden
 		.site-descr
 			position: absolute			
 			z-index: 10
@@ -883,14 +910,16 @@ section
 			margin-right: 10px
 	&.white
 		color: $white
+		border: 1px solid $white
+		
 //Buttons link style end
 
 
 //Work step block start
 #work_step 
-	padding-bottom: 80px!important	
 	position: relative
-	background-color: $blackLight
+	.black_section_wrap
+		padding-bottom: 80px
 	.work_step 
 		text-align: center
 		color: $white
@@ -978,6 +1007,20 @@ section
 			div > span 
 				color: transparent
 				display: inline-block
+.button-wrap
+	position: relative
+	padding-bottom: 15px
+	border-bottom: 1px solid $grey
+	.link_button	
+		text-align: center
+	button
+		background-color: $main
+		display: inline-block
+		width: 290px
+		&:after
+			display: none
+		i
+			margin-left: 10px
 .monitor 
 	@include transition(all 0.5s)
 	&:before 
@@ -1033,25 +1076,42 @@ section
 			height: auto
 			@include transition(all 0.3s)
 
-.ipod .monitor 
-	width: 30%
-	min-width: 355px
-	max-width: 370px
-	height: 225px
-	position: relative
-	margin: 10px auto
-	background-color: $grey	
-	@include border-radius(5px)				
-	transition-delay: 0.5s
-	&:before 
-		right: calc(2.5% - 7px)
-		top: calc(50% - 7px)
-		width: 14px
-		height: 14px
-		background-color: $grey
-		border: 1px solid $white		
-		@include border-radius(50%)					
-		transition-delay: 0.5s			
+.ipod 
+	.monitor 
+		width: 30%
+		min-width: 355px
+		max-width: 370px
+		height: 225px
+		position: relative
+		margin: 10px auto
+		background-color: $grey	
+		@include border-radius(5px)				
+		transition-delay: 0.5s
+		&:before 
+			right: calc(2.5% - 7px)
+			top: calc(50% - 7px)
+			width: 14px
+			height: 14px
+			background-color: $grey
+			border: 1px solid $white		
+			@include border-radius(50%)					
+			transition-delay: 0.5s			
+		.stand
+			width: 0
+		.stand_bot
+			width: 6px
+			height: 84px
+			border: 1px solid $white
+			box-shadow: inset 0 0 4px $white
+			top: 50%
+			left: 4px
+			margin-top: -42px
+		.cont
+			top: 5%
+			left: 4%
+			width: 91%
+
+
 
 .stand 
 	height: 0
@@ -1197,7 +1257,7 @@ section.black_section
 	.site-descr
 		&.centr
 			max-width: 600px
-			margin: 40px auto 0
+			margin: 0px auto 0
 			padding: 0
 			h2,p
 				text-align: center
@@ -1228,11 +1288,12 @@ section.black_section
 .bread
 	text-align: left
 	margin-top: 25px
-	padding-left: 20px
+	padding-left: 0px	
 	li
 		display: inline-block
 		position: relative
 		margin-right: 15px
+		font-size: 12px
 		color: $color_storm_dust_approx
 		&:last-child:before
 			display: none
@@ -1251,6 +1312,7 @@ section.black_section
 			display: block
 			color: $main
 			line-height: 22px
+			font-size: 12px
 			&:hover
 				text-decoration: underline
 // breadcrumb end
@@ -1279,7 +1341,7 @@ section.black_section
 			left: 50%
 			margin-left: -200px
 .last-portfolio
-	margin-top: 180px	
+	margin: 60px 0
 	.site-item,.col-md-4
 		min-height: 400px
 	.col-md-4
@@ -1299,19 +1361,177 @@ section.black_section
 			right: 0
 			span
 				display: block!important
+	.sli-next,.sli-prew
+		top: 90%
 // Last-portfolio slider end
+
+//No result start
+.search-no-result 
+	.col-md-12 
+		min-height: 480px
+		position: relative
+		background-image: url(../img/system/no-result.png)
+		background-position: center left
+		background-repeat: no-repeat
+		.result 
+			position: absolute
+			top: 50%
+			left: 50%
+			-ms-transform: translate(-50%,-50%)
+			transform: translate(-50%,-50%)
+			-webkit-transform: translate(-50%,-50%)
+			-moz-transform: translate(-50%,-50%)
+			-o-transform: translate(-50%,-50%)
+			h3 
+				color: $main
+				font-size: 26px
+			p 
+				font-size: 20px
+//No result end
+
+// Plagin page-------------
+.main-title
+	background-color: $main
+	position: relative
+	h1
+		max-width: 700px
+		margin: 0 auto
+		font-family: 'OpenSansLight'
+		font-weight: 100
+		color: $white
+		font-size: 44px
+		line-height: 125px	
+		min-height: 135px
+		position: relative
+		&:before
+			position: absolute
+			content: ''
+			bottom: -39px
+			left: 0
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 40px 40px 0
+			border-color: $main transparent transparent transparent
+
+.title-plagin
+	font-size: 32px
+	font-family: 'OpenSansLight'
+	font-weight: 100
+	padding-left: 30px
+	border-left: 5px solid #fcbf02
+
+
+.table 
+	ul
+		min-height: 50px
+		padding-left: 0!important
+		font-size: 0
+		text-align: center
+		li
+			font-size: 16px
+			display: inline-block
+			vertical-align: top
+			&:nth-child(1)
+				width: 20%
+			&:nth-child(2)
+				width: 20%
+			&:nth-child(3)
+				width: 20%
+			&:nth-child(4)
+				width: 40%
+	.table-head li:not(:nth-child(1n+3))
+		line-height: 60px
+	.table-head
+		margin: 0
+		margin-top: 30px
+		li
+			background-color: #fcbf02
+			color: $white
+			border-left: 1px solid $white
+			min-height: 60px
+			line-height: 60px
+	.table-body
+		margin: 0
+		min-height: 40px
+		border-bottom: 1px solid $white
+		li
+			min-height: 50px
+			padding: 0 5px
+			line-height: 25px
+			border-left: 1px solid $white
+			position: relative
+			span
+				position: absolute
+				top: 50%
+				width: 100%
+				text-align: center
+				left: 0
+				word-break: break-word
+				@include transform(translateY(-50%))
+		&:nth-child(even)
+			background-color: #F5F5F5
+			li
+				background-color: #F5F5F5
+		&:nth-child(odd)
+			background-color: #ccc
+			li
+				background-color: #ccc
+
+.demo-wrap
+	.demo-item
+		display: inline-block
+		vertical-align: top
+		width: 32%
+		padding: 5px
+		position: relative
+		margin-left: 6px
+		&:nth-child(3n+1)
+			margin-left: 0
+		&:before
+			position: absolute
+			content: ''
+			top: 5px
+			left: 5px
+			width: 100%
+			height: 100%
+			background-color: $white
+			box-shadow: 1px 1px 6px $greyLight
+			z-index: -1
+			@include border-radius(8px)
+		img
+			width: 100%
+			height: auto
+		.demo-btn
+			position: absolute
+			top: 50%
+			left: 50%
+			padding: 5px 15px
+			background-color: $main
+			color: $white			
+			box-shadow: 3px 3px 15px $color_storm_dust_approx
+			@include border-radius(8px)
+			@include transition(box-shadow 0.3s)
+			@include transform(translate(-50%,-50%))
+			&:hover
+				box-shadow: none
+
+// Plagin page-------------
+
+
 
 //Packery lust blog schema start
 .blog-inner
 	ul
 		margin: 10px 0
 		padding-left: 5px
-		list-style-type: disc
-		list-style-position: inside
+		list-style-type: disc		
 		font-family: 'OpenSansRegular'
 		color: #3f3f3f
+		list-style-position: outside
+		margin-left: 25px
 		li
-			margin-bottom: 5px
+			margin-bottom: 2px
 			&:last-child
 				margin-bottom: 0
 	a
@@ -1330,6 +1550,18 @@ section.black_section
 			cursor: pointer
 			display: block
 			position: relative
+			&.popup-reset
+				float: none
+				min-width: 100%
+				filter: none
+	h3,h4
+		margin-top: 15px
+		font-size: 18px
+		font-family: 'OpenSansBold'
+		font-weight: 100
+	strong
+		font-family: 'OpenSansBold'
+
 	.clear
 		clear: both
 	.label
@@ -1348,7 +1580,9 @@ section.black_section
 		overflow: hidden
 		text-align: left
 		margin: 0
-		background-color: #3f3f3f
+		background-color: #3f3f3f		
+		min-height: 42px
+		line-height: 28px		
 		.btn-сlipboard
 			position: absolute
 			top: 0
@@ -1627,83 +1861,6 @@ section.black_section
 	img 
 		max-width: 700px
 		margin: 20px 0
-
-
-@media only screen and(max-width : 1366px) 
-	.kino 
-		bottom: -130px
-	
-
-@media only screen and(max-width : 1200px) 
-	#portfolio .site-item .site-descr 
-		width: 33%
-	
-
-@media only screen and(max-width : 992px) 
-	.site-item 
-		text-align: center
-		margin-bottom: 30px
-		&:nth-child(even) .wrap_prew 
-			float: none
-		
-	
-	.footLamp 
-		display: none
-	
-	.kino 
-		bottom: -150px
-	
-	footer ul 
-		margin-top: 0
-		margin-bottom: 45px
-	
-	.lamp_wrap svg 
-		height: 255px
-	
-	.open_mnu .header_wrap 		
-		transform: rotateY(35deg)
-	
-	#portfolio .site-item .site-descr 
-		width: 100%
-	
-	#blog .blog-item 
-		margin-bottom: 30px
-		&:before 
-			left: 0
-		
-		.site-descr 
-			padding-top: 20px
-		
-		> div 
-			display: block
-			width: 100%
-		
-		&:hover:before 
-			width: 100%
-		
-	
-	.data-block .date 
-		margin-left: -80px
-		top: -40px
-		left: 100%
-	
-
-@media only screen and(max-width : 768px) 
-	footer 
-		padding-bottom: 120px
-		ul 
-			margin-bottom: 0
-		
-	
-	.copy 
-		line-height: 30px
-		text-align: center
-	
-	#send 
-		padding: 0 10px
-	
-
-
 	
 
 svg:not(:root) 
@@ -1717,7 +1874,23 @@ svg:not(:root)
 .img_wrap img 
 	width: 100%
 
-
+.up
+	position: fixed
+	border: none
+	bottom: 20px
+	right: 0
+	display: none
+	width: 45px
+	height: 45px
+	line-height: 45px
+	border-radius: 50%
+	text-align: center
+	font-size: 30px
+	color: $main
+	background-color: $blackLight
+	outline: none
+	padding: 0
+	z-index: 100
 
 
 
@@ -1803,66 +1976,109 @@ svg:not(:root)
 
 
 //Footer start
-footer 
-	min-height: 300px
-	margin-top: 80px
-	background-color: $black
+footer 	
 	position: relative	
 	z-index: 100
+	overflow: hidden
+	padding-top: 110px
+	margin-top: -115px
 	color: $greyLight
-	&:before 
-		position: absolute
-		content: ""
-		width: 0
-		height: 0
-		top: -110px
-		border-style: solid
-		border-width: 0 0 110px 1920px
-		border-color: transparent transparent $black transparent
-	.copy 
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
-		min-height: 60px
-		line-height: 60px
-		background-color: $color_cod_gray_approx
-		border-top: 1px solid $blackLight
-		overflow: hidden
-		a 
-			color: $main
-			&:hover 
-				text-decoration: underline
-	.dev 
-		position: absolute
-		right: 0
-		bottom: -45px
-		width: 150px
-		height: 40px
-		padding-left: 24px
-		background-image: url(../img/copy.png)
-		background-repeat: no-repeat
-		background-position: center left
-		line-height: 14px!important
-		background-size: 20px
-		font-size: 10px
-		padding-top: 5px
-		span 
-			display: block
-	ul 
-		margin-top: 45px
-		li 
-			margin: 10px 0
+	.footer-wrap
+		min-height: 300px
+		padding-top: 40px
+		background-color: $black
+		position: relative	
+		&:before 
+			position: absolute
+			content: ""
+			width: 0
+			height: 0
+			top: -110px
+			border-style: solid
+			border-width: 0 0 110px 1920px
+			border-color: transparent transparent $black transparent
+		.foot-info
+			h4
+				display: inline-block
+				font-size: 14px
+				text-transform: uppercase
+				border-bottom: 1px solid $grey
+				margin-bottom: 10px
+				margin-top: 35px
+				font-family: 'OpenSansBold'
+			p
+				line-height: 25px
+				position: relative
+				padding-left: 35px
+				margin-bottom: 14px
+				i.fa
+					width: 25px
+					height: 25px
+					position: absolute
+					top: 50%
+					margin-top: -12px
+					left: 0
+					text-align: center
+					font-size: 18px
+					line-height: 25px
+					display: inline-block
+					vertical-align: middle
+					color: $blackLight
+					background-color: $white
+					@include border-radius(50%)
+		#searchForm
+			height: 38px
+			border-bottom: 1px solid $white
+			max-width: 193px
+			input,button
+				height: 38px
+
+		.copy 
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			min-height: 60px
+			line-height: 60px
+			background-color: $color_cod_gray_approx
+			border-top: 1px solid $blackLight
+			overflow: hidden
 			a 
+				color: $main
 				&:hover 
 					text-decoration: underline
-					color: $main				
-				i 
-					margin-right: 5px	
-	h3 
-		font-family: $font_4
-		font-weight: 100
-		margin: 0 15px
+				i.fa.fa-sitemap
+					margin-right: 5px
+		.dev 
+			position: absolute
+			right: 0
+			bottom: -45px
+			width: 150px
+			height: 40px
+			padding-left: 24px
+			background-image: url(../img/copy.png)
+			background-repeat: no-repeat
+			background-position: center left
+			line-height: 14px!important
+			background-size: 20px
+			font-size: 10px
+			padding-top: 5px
+			span 
+				display: block
+		ul 
+			margin-top: 45px
+			li 
+				margin: 10px 0
+				a 
+					&:hover 
+						text-decoration: underline
+						color: $main				
+					i 
+						margin-right: 5px	
+		h3 
+			font-family: $font_4
+			font-weight: 100
+			margin: 0 15px
 //Footer end
 
 //Mouse svg scroll start
@@ -1900,6 +2116,6 @@ svg#mouse
 	50% 
 		@include transform(translate3d(0, -2px, 0))
 //Mouse svg scroll end
-
+@import _forms.sass
 @import _fontsvg.sass
 @import _media.sass

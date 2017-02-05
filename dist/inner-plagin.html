@@ -47,12 +47,121 @@
       </div>
     </header>
     <main>
+      <div class="main-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>jQuery-svg-popup</h1>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="blog-inner mb6 mt4">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="blog-content">
-                <h1 class="title-left mb0">Particles.js что это такое?</h1>
+                <h2 class="title-plagin">Примеры</h2>
+                <div class="demo-wrap mt3 mb4">
+                  <div class="demo-item"><img src="img/demo1.jpg" alt="jquery-svg-popup">
+                    <button type="button" class="demo-btn">Demo 1</button>
+                  </div>
+                  <div class="demo-item"><img src="img/demo2.jpg" alt="jquery-svg-popup">
+                    <button type="button" class="demo-btn">Demo 2</button>
+                  </div>
+                  <div class="demo-item"><img src="img/demo3.jpg" alt="jquery-svg-popup">
+                    <button type="button" class="demo-btn">Demo 3</button>
+                  </div>
+                </div>
+                <div class="svg-popup">
+                </div>
+                <h2 class="title-plagin">Докумментация</h2>
+                <div class="table">
+                  <ul class="table-head">
+                    <li> <span>Свойство</span></li>
+                    <li> <span>Значение</span></li>
+                    <li> <span>Тип</span></li>
+                    <li> <span>Описание</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>stepX</span></li>
+                    <li> <span>12</span></li>
+                    <li> <span>Number</span></li>
+                    <li> <span>количество частиц по ширыне екрана</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>stepY</span></li>
+                    <li> <span>10</span></li>
+                    <li> <span>Number</span></li>
+                    <li> <span>количество частиц по висоте екрана</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>fill</span></li>
+                    <li> <span>#03BDD6</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Цвет попапа</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>fillOdd</span></li>
+                    <li> <span>null</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Цвет четных частиц попапа</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>fillEven</span></li>
+                    <li> <span>null</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Цвет не четных частиц попапа</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>strokeFill</span></li>
+                    <li> <span>null</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Цвет границы частиц попапа</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>opacity</span></li>
+                    <li> <span>0.8</span></li>
+                    <li> <span>Number</span></li>
+                    <li> <span>Прозрачность фона</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>speed</span></li>
+                    <li> <span>1.8</span></li>
+                    <li> <span>Number</span></li>
+                    <li> <span>Длительность анимации частиц</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>figure</span></li>
+                    <li> <span>triangle</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Тип частицы попапа доступно('triangle','rectangle')</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>visible</span></li>
+                    <li> <span>false</span></li>
+                    <li> <span>Boolean</span></li>
+                    <li> <span>Отображать неупорядочиные частицы при загрузке страницы</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>randomize</span></li>
+                    <li> <span>true</span></li>
+                    <li> <span>Boolean</span></li>
+                    <li> <span>Более хаотическое расположении фигур</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>closeButtonText</span></li>
+                    <li> <span>&amp;#10006;</span></li>
+                    <li> <span>String</span></li>
+                    <li> <span>Текст закрывающей кнопки</span></li>
+                  </ul>
+                  <ul class="table-body">
+                    <li> <span>onAnimationComplate</span></li>
+                    <li> <span>undefined</span></li>
+                    <li> <span>Function</span></li>
+                    <li> <span>Колбек функция авершения анимации фигур</span></li>
+                  </ul>
+                </div>
                 <p class="label mb4 mt2"><span>tsumbaluk.in.ua</span><span>28.12.2016</span></p>
                 <p>
                    
@@ -74,108 +183,7 @@
 			"density": {
 				"enable": true,
 				"value_area": 800}	
-		},
-		"color": {
-			"value": "#8DAAB8"
-		},
-		"shape": {
-			"type": "circle",
-			"stroke": {
-				"width": 0,
-				"color": "#000000"
-			},
-			"polygon": {
-				"nb_sides": 5
-			},
-			"image": {
-				"src": "img/github.svg",
-				"width": 100,
-				"height": 100
-			}
-		},
-		"opacity": {
-			"value": 0.5,
-			"random": false,
-			"anim": {
-				"enable": false,
-				"speed": 1,
-				"opacity_min": 0.1,
-				"sync": false
-			}
-		},
-		"size": {
-			"value": 8.8,
-			"random": true,
-			"anim": {
-				"enable": false,
-				"speed": 40,
-				"size_min": 0.1,
-				"sync": false
-			}
-		},
-		"line_linked": {
-			"enable": true,
-			"distance": 150,
-			"color": "#8DAAB8",
-			"opacity": 0.4,
-			"width": 2
-		},
-		"move": {
-			"enable": true,
-			"speed": 4,
-			"direction": "none",
-			"random": false,
-			"straight": false,
-			"out_mode": "out",
-			"bounce": false,
-			"attract": {
-				"enable": false,
-				"rotateX": 600,
-				"rotateY": 1200
-			}
-		}
-	},
-	"interactivity": {
-		"detect_on": "canvas",
-		"events": {
-			"onhover": {
-				"enable": false,
-				"mode": "repulse"
-			},
-			"onclick": {
-				"enable": false,
-				"mode": "push"
-			},
-			"resize": true
-		},
-		"modes": {
-			"grab": {
-				"distance": 400,
-				"line_linked": {
-					"opacity": 1
-				}
-			},
-			"bubble": {
-				"distance": 400,
-				"size": 40,
-				"duration": 2,
-				"opacity": 8,
-				"speed": 3
-			},
-			"repulse": {
-				"distance": 200,
-				"duration": 0.4
-			},
-			"push": {
-				"particles_nb": 4
-			},
-			"remove": {
-				"particles_nb": 2
-			}
-		}
-	},
-	"retina_detect": true
-});</code>
+		}										</code>
                     <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
                 </div>
                 <p>
@@ -204,93 +212,6 @@
         </div>
         <div id="foto1" class="popup">
           <div class="popup-content"><img src="img/particlesjs_generator.jpg"></div>
-        </div>
-      </section>
-      <section class="black_section">
-        <div class="black_section_wrap">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="site-descr centr">
-                  <h2 class="title-left">Результат</h2>
-                </div>
-                <p data-height="400" data-theme-id="dark" data-slug-hash="NRvLxJ" data-default-tab="result" data-user="rodan8888" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/rodan8888/pen/NRvLxJ/">
-                    Particles.js by Alexander Tsymbaluk 
-                    (<a href="http://codepen.io/rodan8888">@rodan8888</a>) on <a href="http://codepen.io">CodePen</a></a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="card-blog">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="title-left">Новое в блоге</h2>
-              <div id="da-thumbs" data-packery="{&quot;itemSelector&quot;: &quot;.blog-grid&quot;,&quot;gutter&quot;: 10}" class="grid shema-blog da-thumbs">
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/gulp.jpg" alt="Стартовая настройка Gulp"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Стартовая настройка Gulp</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/sublime.jpg" alt="Подготовка к работе!"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Подготовка к работе!</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/icomoon.jpg" alt="Векторные иконочные шрифты. Iconmoon"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Векторные иконочные шрифты. Iconmoon</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/gulp.jpg" alt="Стартовая настройка Gulp"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Стартовая настройка Gulp</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/sublime.jpg" alt="Подготовка к работе!"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Подготовка к работе!</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="blog-grid">
-                  <div class="site-screen">
-                    <div class="img_wrap"><img src="img/icomoon.jpg" alt="Векторные иконочные шрифты. Iconmoon"></div>
-                  </div>
-                  <div class="site-descr">
-                    <div class="descr-wrap"><span>tsumbaluk.in.ua || 28.12.2016</span>
-                      <h3 class="anim-title">Векторные иконочные шрифты. Iconmoon</h3><a href="inner-blog.html" class="read-more"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
@@ -410,23 +331,17 @@
       	}
       };
     </script>
-    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-    <script src="js/blog-script/jquery.hoverdir.js"></script>
-    <script src="js/blog-script/packery.min.js"></script>
     <script src="js/blog-script/clipboard.min.js"></script>
     <script src="js/blog-script/highlight.pack.js"></script>
+    <script src="js/svg-popup/jQuery-svg-popup.js"></script>
     <link rel="stylesheet" href="js/blog-script/zenburn.css">
+    <link rel="stylesheet" href="js/svg-popup/jQuery-svg-popup.css">
     <script>
       $(function(){
-      	var grid = $('.grid');
-      	grid.packery();
-      	grid.find('.blog-grid').hoverdir({hoverElem:'.site-descr'});				
-      
       	var btnClipboard = $('.btn-сlipboard'),
       			dataCopy     = btnClipboard.prev('code').attr('id'),
       			clipboard    = new Clipboard('.btn-сlipboard');
       	
-      	//- btnClipboard.attr('data-clipboard-target', dataCopy);
       	clipboard.on('success', function() {				
       		btnClipboard.addClass('active');
       		setTimeout(function() {		
@@ -435,15 +350,20 @@
       	});
       
       	hljs.configure({
-      		  tabReplace: '  '					  
+      			tabReplace: '  '					  
       		});
       	hljs.initHighlightingOnLoad();
       
-      	$('iframe.cp_embed_iframe').load(function(){
-      	console.log($(this));
-      		$(this).contents().find('body').css("border","1px solid #111");
+      	$('.svg-popup').atpopup({
+      		stepX: 8,
+      		stepY: 7,
+      		figure: 'rectangle',
+      		fill: '#fcbf02',
+      		opacity: 0.6,				
+      		visible: false,
+      		speed: 1.2,
+      		randomize: true
       	});
-      
       }());
     </script>
   </body>

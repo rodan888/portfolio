@@ -1,11 +1,13 @@
 @import bourbon
 
 /*==========  Desktop First Method  ==========*/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
+@media only screen and(max-width : 1366px)
 	/**/
 
+/* Large Devices, Wide Screens */
+@media only screen and(max-width : 1200px) 
+	#portfolio .site-item .site-descr 
+		width: 33%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -49,6 +51,60 @@
 			.site-descr
 				position: initial!important
 				width: 100%!important
+				.img_wrap
+					max-height: 335px!important
+	#about 
+		.resume-block 
+			.resume-item
+				min-width: 400px
+		.aside
+			min-height: auto!important
+
+
+	.site-item 
+		text-align: center
+		margin-bottom: 30px
+		&:nth-child(even) .wrap_prew 
+			float: none
+		
+	
+	.footLamp 
+		display: none
+	
+	.kino 
+		bottom: -150px
+	
+	footer ul 
+		margin-top: 0
+		margin-bottom: 45px
+	
+	.lamp_wrap svg 
+		height: 255px
+	
+	.open_mnu .header_wrap 		
+		transform: rotateY(35deg)
+	
+	#portfolio .site-item .site-descr 
+		width: 100%
+	
+	#blog .blog-item 
+		margin-bottom: 30px
+		&:before 
+			left: 0		
+		.site-descr 
+			padding-top: 20px		
+		> div 
+			display: block
+			width: 100%		
+		&:hover:before 
+			width: 100%
+		
+	
+	.data-block .date 
+		margin-left: -80px
+		top: -40px
+		left: 100%
+
 
 
 /* Small Devices, Tablets */
@@ -101,12 +157,25 @@
 			.toggle_but
 				display: block
 	footer
+		padding-bottom: 0px
+		.footer-wrap
+			padding-bottom: 120px
 		.copy
 			height: 120px
 			overflow: visible
+			line-height: 30px
+			text-align: center
 			.dev
 				right: 50%	
 				margin-right: -75px
+				footer 
+		ul 
+			margin-bottom: 0	
+
+	#send 
+		padding: 0 10px
+
+
 	.grid
 		.blog-grid
 			width: 100%
@@ -165,7 +234,14 @@
 		.site-descr.centr 
 			p:after
 				bottom: 0
-								
+
+	.bread
+		text-align: center
+	#about
+		z-index: -1
+
+	div#da-thumbs
+		min-height: 1290px
 
 
 /* Extra Small Devices, Phones */
@@ -209,12 +285,13 @@
 				display: block
 				margin: 10px auto	
 	footer
-		margin-top: 30px
-		&:before
-			display: none
+		padding-top: 40px
+
+		
 	section.black_section
 		margin-top: 30px!important
 		margin-bottom: 30px!important
+		padding: 40px 0
 		&:after,&:before
 			display: none
 	
@@ -305,6 +382,19 @@
 							>span
 								display: inline-block!important
 								margin: 5px 3px	
+	#about 
+		.resume-block 
+			.resume-item
+				width: 100%
+				&.portfol
+					width: 100%
+				&.skill-block
+					width: 100%
+					.progres
+						width: 60%
+						right: 60px
+	
+
 	
 			
 

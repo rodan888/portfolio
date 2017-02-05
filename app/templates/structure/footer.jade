@@ -1,42 +1,68 @@
 footer
-	div.copy
-		div.container
-			div.row
-				div.col-sm-4.col-xs-6 © 
-					a(href="http://tsumbaluk.in.ua") tsumbaluk.in.ua
-				div.col-sm-4.center.col-xs-6
-					a(href="sitemap.xml")
-						i.fa.fa-sitemap 
-						| Sitemap
-				div.col-sm-4.col-xs-12
-					div.dev
-						a(href="http://tsumbaluk.in.ua/", target="_blank", rel="nofollow") Developed by
-							span Alexander Tsymbalyuk
-	div.fixed_menu
-		div.button_logo
-			div.logo
-				a(href="/")
-					span
-					span
-					span
-			div.icon_button
-				span(class="fa fa-bars" data-menu="first-menu")
-				span(class="fa fa-link" data-menu="second-menu")
-		ul.open_fixed.first-menu
-			include ../tpl/navigation
-		ul.open_fixed.second-menu
-			-
-				var social = {
-					1:'fa fa-twitter',
-					2:'fa fa-facebook',
-					3:'fa fa-linkedin',
-					4:'fa fa-twitter',
-					5:'fa fa-facebook',
-					6:'fa fa-linkedin'					
-				};		
-			each val, index in social
-				li
-					a(href="#" target="_blank")
-						i(class=val)
-						| Soc-net
-					
+	div.footer-wrap
+		div.container.foot-info
+				div.row
+					div.col-sm-4.col-xs-12
+						h4 О себе
+						div С тех пор как впервые увидел на экране "Hello world!" понял, что это то чему хочу посвятить всего себя! С тех пор утекло немало строчек кода. Сейчас я работаю front-end азработчиком. Занимаюсь всем от Landing page до eCommerce проектов.
+					div.col-sm-4.col-xs-12
+						h4 Связаься
+						p
+							i.fa.fa-phone
+							a(href="tel:+380969391478") +380969391478
+						p
+							i.fa.fa-envelope
+							a(href="mailto:tsumbaluk888@gmail.com") tsumbaluk888@gmail.com
+						p
+							i.fa.fa-map-marker
+							| Украина Киев
+					div.col-sm-4.col-xs-12
+						h4 Поиск
+						include ../widgets/searchForm
+						a(href="Aleksandr_Tsumbaluk.pdf" class="download site-link white")
+							span
+								i.fa.fa-download 
+								|Скачать резюме в PDF
+							span
+								i.fa.fa-download 
+								|Скачать резюме в PDF
+		div.copy
+			div.container
+				div.row
+					div.col-sm-4.col-xs-6 © 
+						a(href="http://tsumbaluk.in.ua") tsumbaluk.in.ua
+					div.col-sm-4.center.col-xs-6
+						a(href="sitemap.xml")
+							i.fa.fa-sitemap 
+							| Sitemap
+					div.col-sm-4.col-xs-12
+						div.dev
+							a(href="http://tsumbaluk.in.ua/", target="_blank", rel="nofollow") Developed by
+								span Alexander Tsymbalyuk
+div.fixed_menu
+	div.button_logo
+		div.logo
+			a(href="/")
+				span
+				span
+				span
+		div.icon_button
+			span(class="fa fa-bars" data-menu="first-menu")
+			span(class="fa fa-link" data-menu="second-menu")
+	ul.open_fixed.first-menu
+		include ../tpl/navigation
+	ul.open_fixed.second-menu
+		-
+			var social = {
+				1:'fa fa-twitter',
+				2:'fa fa-facebook',
+				3:'fa fa-linkedin',
+				4:'fa fa-twitter',
+				5:'fa fa-facebook',
+				6:'fa fa-linkedin'					
+			};		
+		each val, index in social
+			li
+				a(href="#" target="_blank")
+					i(class=val)
+					| Soc-net						
