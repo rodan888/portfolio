@@ -64,16 +64,23 @@
                 <h2 class="title-plagin">Примеры</h2>
                 <div class="demo-wrap mt3 mb4">
                   <div class="demo-item"><img src="img/demo1.jpg" alt="jquery-svg-popup">
-                    <button type="button" class="demo-btn">Demo 1</button>
+                    <button type="button" data-svg-popup="demo1" class="demo-btn demo1">Demo</button>
                   </div>
                   <div class="demo-item"><img src="img/demo2.jpg" alt="jquery-svg-popup">
-                    <button type="button" class="demo-btn">Demo 2</button>
+                    <button type="button" data-svg-popup="demo2" class="demo-btn demo2">Demo</button>
                   </div>
                   <div class="demo-item"><img src="img/demo3.jpg" alt="jquery-svg-popup">
-                    <button type="button" class="demo-btn">Demo 3</button>
+                    <button type="button" data-svg-popup="demo3" class="demo-btn demo3">Demo</button>
                   </div>
-                </div>
-                <div class="svg-popup">
+                  <div class="demo-item"><img src="img/demo4.jpg" alt="jquery-svg-popup">
+                    <button type="button" data-svg-popup="demo4" class="demo-btn demo4">Demo</button>
+                  </div>
+                  <div class="demo-item"><img src="img/demo5.jpg" alt="jquery-svg-popup">
+                    <button type="button" data-svg-popup="demo5" class="demo-btn demo5">Demo</button>
+                  </div>
+                  <div class="demo-item"><img src="img/demo6.jpg" alt="jquery-svg-popup">
+                    <button type="button" data-svg-popup="demo6" class="demo-btn demo6">Demo</button>
+                  </div>
                 </div>
                 <h2 class="title-plagin">Докумментация</h2>
                 <div class="table">
@@ -162,56 +169,164 @@
                     <li> <span>Колбек функция авершения анимации фигур</span></li>
                   </ul>
                 </div>
-                <p class="label mb4 mt2"><span>tsumbaluk.in.ua</span><span>28.12.2016</span></p>
-                <p>
-                   
-                  Последнее время часто видел этот эффект на сайтах и решил на одном из landing page тоже сделать что-то подобное. Наткнулся на этот онлайн генератор <a href="http://vincentgarreau.com/particles.js/" target="_blank" rel="nofollow">Particles.js </a><img src="img/particlesjs_generator.jpg" data-show="foto1" class="btn pop">Данная библиотека обладает множеством настроек начиная от количества частиц на экране до реагирования на события браузера. Задача у меня стояла следующая нужно было на фоне сайта сделать такой эффект. Итак, первым делом скачиваем архив с самой библиотекой. В нем вы найдете множество файлов, но нас интересует непосредственно сама библиотека я взял сжатую версию particles.min.js. Также там есть демо по которому легко разобраться что к чему. Вся прелесть в том что в генераторе в режиме реального времени мы можем сконфигурировать наш particles.json как нам угодно. Так же там доступен блок статистики при добавлении частиц стоит обращать внимание на количество FPS и не переусердствовать. Вот те незначительные настройки которые использовал я.
-                </p>
-                <ul>
-                  <li>particles>number>value 60 кол-во. частиц</li>
-                  <li>particles>color>value(single string) #ccc цвет частиц</li>
-                  <li>particles>line_linked>color #ccc цвет связующи линий</li>
-                  <li>interactivity>onhover>enable убираем событие hover</li>
-                  <li>interactivity>onclick>enable убираем событие click</li>
-                  <li>→ Download current config (json) скачиваем наш конфиг и вставляем в месте инита библиотеки</li>
-                </ul>
-                <div class="code-wrap">
-                  <pre><code id="copy-clip" class="javascript">particlesJS('particles-js',{
-	"particles": {
-		"number": {
-			"value": 100,
-			"density": {
-				"enable": true,
-				"value_area": 800}	
-		}										</code>
-                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                <div id="demo1">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo1" 
+	data-svg-popup="demo1"> Demo 1 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip1" class="javascript">$('.demo1').svgpopup({
+	stepX: 12,
+	stepY: 9,
+	figure: 'rectangle',
+	fill: '#fcbf02',
+	opacity: 0.6,
+	speed: 1.2});</code>
+                        <button data-clipboard-target="#copy-clip1" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
                 </div>
-                <p>
-                  									
-                  И еще так как задачей было сделать background из частиц то нужно добавить немного CSS. Здесь устанавливаем фиксированную позицию во весь экран, делаем прозрачный фон, и добавляем z-index: -1; для того чтобы наш блок не мешал взаимодействовать с остальной страничкой.
-                </p>
-                <div class="code-wrap">
-                  <pre><code id="copy-clip" class="css">#particles-js{ 
-	position: fixed; 
-	width: 100%; 
-	height: 100%; 
-	background-color: transparent; 				
-	z-index: -1;
-	top: 0; 
-	left: 0; 
-}</code>
-                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                <div id="demo2">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip2" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo2" 
+	data-svg-popup="demo2"> Demo 2 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip2" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip3" class="javascript">$('.demo2').svgpopup({
+	stepX: 8,
+	stepY: 7,
+	figure: 'rectangle',
+	fillOdd: '#fff',
+	fillEven: '#111',
+	opacity: 0.9,	
+	speed: 1.2});</code>
+                        <button data-clipboard-target="#copy-clip3" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
                 </div>
-                <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
+                <div id="demo3">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip4" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo3" 
+	data-svg-popup="demo3"> Demo 3 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip4" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip5" class="javascript">$('.demo3').svgpopup({			
+	figure: 'rectangle',
+	fill: '#fcbf02',
+	randomize: false
+});</code>
+                        <button data-clipboard-target="#copy-clip5" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
+                </div>
+                <div id="demo4">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip6" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo4" 
+	data-svg-popup="demo4"> Demo 4 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip6" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip7" class="javascript">$('.demo4').svgpopup({
+	stepX: 10,	
+	stepY: 8,
+	figure: 'triangle',
+	fill: '#111',
+	speed: 1.2,
+	opacity: 0.8,
+});</code>
+                        <button data-clipboard-target="#copy-clip7" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
+                </div>
+                <div id="demo5">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip8" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo5" 
+	data-svg-popup="demo5"> Demo 5 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip8" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip9" class="javascript">$('.demo5').svgpopup({
+	stepX: 6,	
+	stepY: 4,
+	figure: 'triangle',
+	fill: '#fcbf02',
+	strokeFill: 'rgba(255,255,255, .2)',
+	opacity: 0.8,	
+	visible: false,
+	speed: 1,
+	randomize: false
+});</code>
+                        <button data-clipboard-target="#copy-clip9" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
+                </div>
+                <div id="demo6">
+                  <div class="svg-popup-content">
+                    <h3 class="title-plagin">HTML разметка</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip10" class="html">&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+&lt;button type="button" 
+	class="demo-btn demo6" 
+	data-svg-popup="demo6"> Demo 6 &lt;/button></code>
+                        <button data-clipboard-target="#copy-clip10" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                    <h3 class="title-plagin">JavaScript Инициализация плагина</h3>
+                    <div class="code-wrap">
+                      <pre><code id="copy-clip11" class="javascript">$('.demo6').svgpopup({
+	stepX: 8,	
+	stepY: 6,
+	figure: 'triangle',
+	fillOdd: '#fcbf02',
+	fillEven: '#111',
+	opacity: 0.9,	
+	visible: false,
+	speed: 1
+});</code>
+                        <button data-clipboard-target="#copy-clip11" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
+                    </div>
+                  </div>
+                </div>
+                <div class="share-block left mt4"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
                   <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
-                  <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
+                  <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk">				</i></button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id="foto1" class="popup">
-          <div class="popup-content"><img src="img/particlesjs_generator.jpg"></div>
         </div>
       </section>
     </main>
@@ -335,7 +450,6 @@
     <script src="js/blog-script/highlight.pack.js"></script>
     <script src="js/svg-popup/jQuery-svg-popup.js"></script>
     <link rel="stylesheet" href="js/blog-script/zenburn.css">
-    <link rel="stylesheet" href="js/svg-popup/jQuery-svg-popup.css">
     <script>
       $(function(){
       	var btnClipboard = $('.btn-сlipboard'),
@@ -354,15 +468,56 @@
       		});
       	hljs.initHighlightingOnLoad();
       
-      	$('.svg-popup').atpopup({
-      		stepX: 8,
-      		stepY: 7,
+      	$('.demo1').svgpopup({
+      		stepX: 12,
+      		stepY: 9,
       		figure: 'rectangle',
       		fill: '#fcbf02',
       		opacity: 0.6,				
-      		visible: false,
+      		speed: 1.2
+      	});
+      	$('.demo2').svgpopup({
+      		stepX: 8,
+      		stepY: 7,
+      		figure: 'rectangle',
+      		fillOdd: '#fff',
+      		fillEven: '#111',
+      		opacity: 0.9,	
+      		speed: 1.2
+      	});
+      	$('.demo3').svgpopup({			
+      		figure: 'rectangle',
+      		fill: '#fcbf02',
+      		randomize: false
+      	});
+      	$('.demo4').svgpopup({
+      		stepX: 10,	
+      		stepY: 8,
+      		figure: 'triangle',
+      		fill: '#111',
       		speed: 1.2,
-      		randomize: true
+      		opacity: 0.8,			
+      	});
+      	$('.demo5').svgpopup({
+      		stepX: 6,	
+      		stepY: 4,
+      		figure: 'triangle',
+      		fill: '#fcbf02',
+      		strokeFill: 'rgba(255,255,255, .2)',
+      		opacity: 0.8,	
+      		visible: false,
+      		speed: 1,
+      		randomize: false
+      	});
+      	$('.demo6').svgpopup({
+      		stepX: 8,	
+      		stepY: 6,
+      		figure: 'triangle',
+      		fillOdd: '#fcbf02',
+      		fillEven: '#111',
+      		opacity: 0.9,	
+      		visible: false,
+      		speed: 1
       	});
       }());
     </script>

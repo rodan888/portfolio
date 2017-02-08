@@ -1486,6 +1486,7 @@ section.black_section
 		padding: 5px
 		position: relative
 		margin-left: 6px
+		margin-bottom: 6px
 		&:nth-child(3n+1)
 			margin-left: 0
 		&:before
@@ -1515,6 +1516,26 @@ section.black_section
 			@include transform(translate(-50%,-50%))
 			&:hover
 				box-shadow: none
+
+.svg-popup-content
+	min-width: 700px
+	padding: 30px 15px
+	background-color: $white
+	box-shadow: 1px 1px 3px $grey
+	@include border-radius(5px)
+	.svg-popup-close
+		cursor: pointer
+		position: absolute
+		top: -20px
+		right: -20px
+		width: 40px
+		height: 40px
+		background-color: $black
+		font-size: 16px
+		color: $white
+		line-height: 41px
+		text-align: center
+		border-radius: 50%
 
 // Plagin page-------------
 
