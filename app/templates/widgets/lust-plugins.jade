@@ -1,0 +1,37 @@
+section.last-plugins
+	div.container
+		div.row
+			div.col-md-12
+				h3.title-left Еще jQuery плагины для сайта
+				div#sli-block
+					div#sli-wrap
+						-
+							var portfolio = [
+								{
+									image: "img/jQuery-svg-popup.jpg",
+									title: "jQuery-svg-popup",
+									description: "Надоели типичные модальные окна?! Есть решение - jQuery-svg-popup. Быстрый, легкий (всего 5kb), прост в использовании. Ето решение разнообразит дизайн вашего сайта, а также придаст уникальности и стиля!"
+								},{
+									image: "img/jQuery-svg-progress.jpg",
+									title: "jQuery-svg-progress",
+									description: "Верстка шаблона из PSD макета, адаптация под мобильные устройства, SEO-оптимизация, кроссбраузерность."
+								}
+							];
+						for site,index in portfolio
+							div.sli-item
+								div.container-fluid.site-item
+									div.row
+										div.col-md-4
+											div.site-descr
+												h3.anim_title= site.title
+												h4 lorem ipsum dolor
+												p= site.description
+												div.link_button
+													a(href="inner-plagin.html" class="site-link")
+														span Подробнее
+															i.fa.fa-caret-right
+														span Подробнее
+															i.fa.fa-caret-right
+										div.col-md-8
+											div.img-wrap
+												img(src= site.image alt=site.title)
