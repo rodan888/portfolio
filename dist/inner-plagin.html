@@ -61,6 +61,19 @@
           <div class="row">
             <div class="col-md-12">
               <div class="blog-content">
+                <h2 class="title-plagin mb2">Надоели типичные модальные окна?!</h2>
+                <ul>
+                  <li>Есть решение - <strong>jQuery-svg-popup .</strong></li>
+                  <li>Быстрый - формирование частиц основано на базе SVG.</li>
+                  <li>Легкий - вес плагина всего 5kb.</li>
+                  <li>Прост в использовании - имеет документацию на русском языке.</li>
+                  <li>Ето решение разнообразит дизайн вашего сайта, а также придаст уникальности и стиля!</li>
+                </ul>
+                <h2 class="title-plagin mt4">Скачать / установить</h2>
+                <ul class="mb4">
+                  <li> <strong>npm:</strong>npm i jquery-svg-popup</li>
+                  <li> <strong>github:</strong><a href="https://github.com/rodan888/jQuery-svg-popup" target="_blank" rel="nofollow">https://github.com/rodan888/jQuery-svg-popup</a></li>
+                </ul>
                 <h2 class="title-plagin">Примеры</h2>
                 <div class="demo-wrap mt3 mb4">
                   <div class="demo-item"><img src="img/demo1.jpg" alt="jquery-svg-popup">
@@ -72,8 +85,6 @@
                   <div class="demo-item"><img src="img/demo3.jpg" alt="jquery-svg-popup">
                     <button type="button" class="demo-btn">Demo 3</button>
                   </div>
-                </div>
-                <div class="svg-popup">
                 </div>
                 <h2 class="title-plagin">Докумментация</h2>
                 <div class="table">
@@ -162,46 +173,6 @@
                     <li> <span>Колбек функция авершения анимации фигур</span></li>
                   </ul>
                 </div>
-                <p class="label mb4 mt2"><span>tsumbaluk.in.ua</span><span>28.12.2016</span></p>
-                <p>
-                   
-                  Последнее время часто видел этот эффект на сайтах и решил на одном из landing page тоже сделать что-то подобное. Наткнулся на этот онлайн генератор <a href="http://vincentgarreau.com/particles.js/" target="_blank" rel="nofollow">Particles.js </a><img src="img/particlesjs_generator.jpg" data-show="foto1" class="btn pop">Данная библиотека обладает множеством настроек начиная от количества частиц на экране до реагирования на события браузера. Задача у меня стояла следующая нужно было на фоне сайта сделать такой эффект. Итак, первым делом скачиваем архив с самой библиотекой. В нем вы найдете множество файлов, но нас интересует непосредственно сама библиотека я взял сжатую версию particles.min.js. Также там есть демо по которому легко разобраться что к чему. Вся прелесть в том что в генераторе в режиме реального времени мы можем сконфигурировать наш particles.json как нам угодно. Так же там доступен блок статистики при добавлении частиц стоит обращать внимание на количество FPS и не переусердствовать. Вот те незначительные настройки которые использовал я.
-                </p>
-                <ul>
-                  <li>particles>number>value 60 кол-во. частиц</li>
-                  <li>particles>color>value(single string) #ccc цвет частиц</li>
-                  <li>particles>line_linked>color #ccc цвет связующи линий</li>
-                  <li>interactivity>onhover>enable убираем событие hover</li>
-                  <li>interactivity>onclick>enable убираем событие click</li>
-                  <li>→ Download current config (json) скачиваем наш конфиг и вставляем в месте инита библиотеки</li>
-                </ul>
-                <div class="code-wrap">
-                  <pre><code id="copy-clip" class="javascript">particlesJS('particles-js',{
-	"particles": {
-		"number": {
-			"value": 100,
-			"density": {
-				"enable": true,
-				"value_area": 800}	
-		}										</code>
-                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
-                </div>
-                <p>
-                  									
-                  И еще так как задачей было сделать background из частиц то нужно добавить немного CSS. Здесь устанавливаем фиксированную позицию во весь экран, делаем прозрачный фон, и добавляем z-index: -1; для того чтобы наш блок не мешал взаимодействовать с остальной страничкой.
-                </p>
-                <div class="code-wrap">
-                  <pre><code id="copy-clip" class="css">#particles-js{ 
-	position: fixed; 
-	width: 100%; 
-	height: 100%; 
-	background-color: transparent; 				
-	z-index: -1;
-	top: 0; 
-	left: 0; 
-}</code>
-                    <button data-clipboard-target="#copy-clip" class="btn-сlipboard"><i class="fa fa-files-o"></i></button></pre>
-                </div>
                 <div class="share-block left mt1"><span class="label">Поделиться:</span><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
                   <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
                   <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button>
@@ -210,8 +181,50 @@
             </div>
           </div>
         </div>
-        <div id="foto1" class="popup">
-          <div class="popup-content"><img src="img/particlesjs_generator.jpg"></div>
+      </section>
+      <section class="last-plugins">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="title-left">Еще jQuery плагины для сайта</h3>
+              <div id="sli-block">
+                <div id="sli-wrap">
+                  <div class="sli-item">
+                    <div class="container-fluid-site-item">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="site-descr">
+                            <h3 class="anim_title">jQuery-svg-progress</h3>
+                            <p>Это уникальный и единственный в своем роде jQuery plugin позволяющий отображать инфографику на вашем веб ресурсе, используя его вы сможете разнообразить свой сайт одной из шести фигур, а также есть возможность добавить кастомный контур из графического редактора.</p>
+                            <div class="link_button"><a href="plugins/jquery-svg-progress" class="site-link"><span>Подробнее <i class="fa fa-caret-right"></i></span><span>Подробнее <i class="fa fa-caret-right"></i></span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="img-wrap"><img src="img/jQuery-svg-progress.jpg" alt="jQuery-svg-progress"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sli-item">
+                    <div class="container-fluid-site-item">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="site-descr">
+                            <h3 class="anim_title">jQuery-svg-popup</h3>
+                            <p>Это уникальный и единственный в своем роде jQuery plugin позволяющий отображать инфографику на вашем веб ресурсе, используя его вы сможете разнообразить свой сайт одной из шести фигур, а также есть возможность добавить кастомный контур из графического редактора.</p>
+                            <div class="link_button"><a href="plugins/jquery-svg-progress" class="site-link"><span>Подробнее <i class="fa fa-caret-right"></i></span><span>Подробнее <i class="fa fa-caret-right"></i></span></a></div>
+                          </div>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="img-wrap"><img src="img/jQuery-svg-popup.jpg" alt="jQuery-svg-popup"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

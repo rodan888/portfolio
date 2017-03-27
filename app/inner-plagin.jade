@@ -15,6 +15,22 @@ html.no-js(lang="ru")
 					div.row
 						div.col-md-12
 							div.blog-content
+								h2.title-plagin.mb2 Надоели типичные модальные окна?!
+								ul
+									li Есть решение - 
+										strong jQuery-svg-popup .
+									li Быстрый - формирование частиц основано на базе SVG.
+									li Легкий - вес плагина всего 5kb.
+									li Прост в использовании - имеет документацию на русском языке.
+									li Ето решение разнообразит дизайн вашего сайта, а также придаст уникальности и стиля!
+								h2.title-plagin.mt4 Скачать / установить
+								ul.mb4
+									li 
+										strong npm:
+										| npm i jquery-svg-popup
+									li 
+										strong github:
+										a(href="https://github.com/rodan888/jQuery-svg-popup" target="_blank" rel="nofollow") https://github.com/rodan888/jQuery-svg-popup
 								h2.title-plagin Примеры
 								div.demo-wrap.mt3.mb4
 									div.demo-item
@@ -26,27 +42,6 @@ html.no-js(lang="ru")
 									div.demo-item
 										img(src="img/demo3.jpg" alt="jquery-svg-popup")
 										button(type="button" class="demo-btn") Demo 3
-
-
-
-
-								div.svg-popup
-									//- button(type="button" class="at-button download site-link mt3")
-									//- 	span
-									//- 		i.fa.fa-download
-									//- 		| Demo 1
-									//- 	span
-									//- 		i.fa.fa-download
-									//- 		| Demo 1
-									//- .at-content
-									//- 	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, corporis? Corrupti eligendi, unde libero inventore! Aliquid sequi cumque error iure. Odio id eveniet sapiente repellat sint laborum totam soluta dolore illum qui molestiae labore perspiciatis possimus, tenetur adipisci quisquam accusantium.
-									//- 	a(href="inner-plagin.html" class="download site-link white mt3")
-									//- 		span
-									//- 			i.fa.fa-download
-									//- 			| Скачать
-									//- 		span
-									//- 			i.fa.fa-download
-									//- 			| Скачать
 								h2.title-plagin Докумментация
 								div.table
 									ul.table-head
@@ -137,51 +132,7 @@ html.no-js(lang="ru")
 												span= table.type
 											li 
 												span= table.description
-										
-								p.label.mb4.mt2
-									span tsumbaluk.in.ua
-									span 28.12.2016
-								p 
-									|Последнее время часто видел этот эффект на сайтах и решил на одном из landing page тоже сделать что-то подобное. Наткнулся на этот онлайн генератор 
-									a(href="http://vincentgarreau.com/particles.js/" target="_blank" rel="nofollow") Particles.js 
-									img(src="img/particlesjs_generator.jpg" class="btn pop" data-show="foto1")
-									| Данная библиотека обладает множеством настроек начиная от количества частиц на экране до реагирования на события браузера. Задача у меня стояла следующая нужно было на фоне сайта сделать такой эффект. Итак, первым делом скачиваем архив с самой библиотекой. В нем вы найдете множество файлов, но нас интересует непосредственно сама библиотека я взял сжатую версию particles.min.js. Также там есть демо по которому легко разобраться что к чему. Вся прелесть в том что в генераторе в режиме реального времени мы можем сконфигурировать наш particles.json как нам угодно. Так же там доступен блок статистики при добавлении частиц стоит обращать внимание на количество FPS и не переусердствовать. Вот те незначительные настройки которые использовал я.
-								ul
-									li particles>number>value 60 кол-во. частиц
-									li particles>color>value(single string) #ccc цвет частиц
-									li particles>line_linked>color #ccc цвет связующи линий
-									li interactivity>onhover>enable убираем событие hover
-									li interactivity>onclick>enable убираем событие click
-									li → Download current config (json) скачиваем наш конфиг и вставляем в месте инита библиотеки
-								div.code-wrap
-									pre
-										code#copy-clip.javascript.
-											particlesJS('particles-js',{
-												"particles": {
-													"number": {
-														"value": 100,
-														"density": {
-															"enable": true,
-															"value_area": 800}	
-													}										
-										button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
-											i.fa.fa-files-o
-								p 									
-									|И еще так как задачей было сделать background из частиц то нужно добавить немного CSS. Здесь устанавливаем фиксированную позицию во весь экран, делаем прозрачный фон, и добавляем z-index: -1; для того чтобы наш блок не мешал взаимодействовать с остальной страничкой.
-								.code-wrap
-									pre
-										code#copy-clip.css.
-											#particles-js{ 
-												position: fixed; 
-												width: 100%; 
-												height: 100%; 
-												background-color: transparent; 				
-												z-index: -1;
-												top: 0; 
-												left: 0; 
-											}
-										button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
-											i.fa.fa-files-o
+								
 								div.share-block.left.mt1
 									span.label Поделиться:
 									a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
@@ -190,11 +141,10 @@ html.no-js(lang="ru")
 										i.fa.fa-facebook
 									button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
 										i.fa.fa-vk
-				div.popup#foto1
-					div.popup-content
-						img(src="img/particlesjs_generator.jpg")			
+
+			include templates/widgets/lust-plugins				
 			
-		include templates/structure/footer	
+		include templates/structure/footer
 		include templates/structure/scripts		
 		include templates/structure/sharescripts
 		script(src="js/blog-script/clipboard.min.js")

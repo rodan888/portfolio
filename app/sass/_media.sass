@@ -39,8 +39,16 @@
 		.monitor
 			.monitor
 				height: 240px
-
-
+	
+	#plagins 
+		.black_section_wrap 
+			.container
+				text-align: center
+				margin-bottom: 0
+				margin-top: 10px
+				.buttons-wrap 
+					.buttons
+						text-align: center
 	#blog
 		padding-bottom: 30px
 		.blog-item
@@ -249,7 +257,7 @@
 	/**/
 	header 
 		&.open_mnu .header_wrap
-			@include transform(rotateY(65deg))
+			transform: rotateY(65deg)
 		h1 
 			width: 300px
 			margin-left: -150px
@@ -394,10 +402,69 @@
 						width: 60%
 						right: 60px
 	
+	.main-title 
+		h1
+			font-size: 24px
+			min-height: 100px
+			line-height: 100px
+
+	.table 
+		.table-head 
+			li
+				font-size: 12px
+				word-break: initial
+		.table-body 
+			li
+				font-size: 10px
+				line-height: 12px
+				word-break: initial
+	.blog-inner
+		word-break: break-all
+	
+	.title-left
+		font-size: 22px
+
+
+			
+	.last-plugins
+		.col-md-4
+			min-height: 275px
+			.site-descr
+				top: 0
+		.sli-next, 
+		.sli-prew
+			top: 100%
+			line-height: 21px
+			font-size: 35px
+			width: 30px
+			height: 30px
+
+
+	//Inner plugin content	
+	.title-plagin
+		font-size: 22px
+	.demo-wrap
+		margin-top: 10px
+		.demo-item
+			// width: 100%
+			// min-width: 225px
+			margin-left: 0
+			margin-top: 10px
+	
+
+	.demo-wrap.svg-progress
+		.container-fluid,
+		.col-md-8,
+		.col-md-4
+			padding: 0
+			.demo-btn
+				padding: 5px 11px
+		.col-md-8
+			text-align: center
+
+
 
 	
-			
-
 
 
 

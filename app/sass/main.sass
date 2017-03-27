@@ -1516,7 +1516,72 @@ section.black_section
 			&:hover
 				box-shadow: none
 
+.demo-btn
+	padding: 5px 15px
+	background-color: $main
+	color: $white			
+	box-shadow: 3px 3px 15px $color_storm_dust_approx
+	@include border-radius(8px)
+	@include transition(box-shadow 0.3s)
+	&:hover
+		box-shadow: none
+
+
+.last-plugins
+	min-height: 400px
+	.site-item
+		min-height: 375px
+	.img-wrap 
+		text-align: right
+		img 
+			max-width: 500px
+			border-radius: 8px
+			box-shadow: 2px 2px 4px $grey
+	.col-md-4
+		position: relative
+		min-height: 300px
+		.site-descr 
+			position: absolute
+			top: 60px
+			left: 0
+			width: 100%
+			p
+				margin-top: 20px
+	.sli-next,
+	.sli-prew 
+		top: 84%
 // Plagin page-------------
+
+
+// Plagin list-------------
+#plagins
+	&.inner
+		padding-top: 0
+		.black_section_wrap
+			.container
+				&:before
+					display: none
+	.black_section_wrap
+		.container
+			position: relative
+			padding-top: 65px
+			margin-bottom: 65px
+			&:nth-child(2)
+				&:before
+					display: none
+			&:last-child
+				margin-bottom: 0
+			&:before
+				position: absolute
+				content: ''
+				width: 100%
+				height: 1px
+				top: 10px
+				z-index: 1000
+				left: 0
+				background: $grey
+				transform: rotate(-3.2deg)
+// Plagin list-------------
 
 
 

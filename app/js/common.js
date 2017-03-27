@@ -516,7 +516,9 @@ var mySlider = {
 		for(var i = 0; i<this.item.length; i++ ){
 			this.pagination.push('<span></span>');
 		};
-		this.Mblock.append(this.navNext, this.navPrev, '<div class="sli-pagination">'+this.pagination.join('')+'</div>');
+		if(this.item.length > 1){
+			this.Mblock.append(this.navNext, this.navPrev, '<div class="sli-pagination">'+this.pagination.join('')+'</div>');
+		};
 
 		this.main.on('click','.sli-next', function(){	
 			main.randPosition();					
