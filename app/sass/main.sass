@@ -1365,6 +1365,26 @@ section.black_section
 		top: 90%
 // Last-portfolio slider end
 
+.last-plugins
+	.site-item
+		min-height: 375px
+	.img-wrap
+		text-align: right
+		img
+			max-width: 500px
+			border-radius: 8px
+			box-shadow: 2px 2px 4px $grey
+	.col-md-4
+		position: relative
+		min-height: 300px
+		.site-descr
+			position: absolute
+			top: 60px
+			left: 0
+			width: 100%
+	.sli-next, 
+	.sli-prew
+		top: 84%
 //No result start
 .search-no-result 
 	.col-md-12 
@@ -1486,6 +1506,7 @@ section.black_section
 		padding: 5px
 		position: relative
 		margin-left: 6px
+		margin-bottom: 6px
 		&:nth-child(3n+1)
 			margin-left: 0
 		&:before
@@ -1499,22 +1520,34 @@ section.black_section
 			box-shadow: 1px 1px 6px $greyLight
 			z-index: -1
 			@include border-radius(8px)
-		img
-			width: 100%
-			height: auto
 		.demo-btn
 			position: absolute
 			top: 50%
 			left: 50%
-			padding: 5px 15px
-			background-color: $main
-			color: $white			
-			box-shadow: 3px 3px 15px $color_storm_dust_approx
-			@include border-radius(8px)
-			@include transition(box-shadow 0.3s)
 			@include transform(translate(-50%,-50%))
-			&:hover
-				box-shadow: none
+		img
+			width: 100%
+			height: auto
+
+.svg-popup-content
+	min-width: 700px
+	padding: 30px 15px
+	background-color: $white
+	box-shadow: 1px 1px 3px $grey
+	@include border-radius(5px)
+	.svg-popup-close
+		cursor: pointer
+		position: absolute
+		top: -20px
+		right: -20px
+		width: 40px
+		height: 40px
+		background-color: $black
+		font-size: 16px
+		color: $white
+		line-height: 41px
+		text-align: center
+		border-radius: 50%
 
 .demo-btn
 	padding: 5px 15px

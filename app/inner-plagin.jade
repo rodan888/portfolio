@@ -32,16 +32,12 @@ html.no-js(lang="ru")
 										strong github:
 										a(href="https://github.com/rodan888/jQuery-svg-popup" target="_blank" rel="nofollow") https://github.com/rodan888/jQuery-svg-popup
 								h2.title-plagin Примеры
-								div.demo-wrap.mt3.mb4
-									div.demo-item
-										img(src="img/demo1.jpg" alt="jquery-svg-popup")
-										button(type="button" class="demo-btn") Demo 1
-									div.demo-item
-										img(src="img/demo2.jpg" alt="jquery-svg-popup")
-										button(type="button" class="demo-btn") Demo 2
-									div.demo-item
-										img(src="img/demo3.jpg" alt="jquery-svg-popup")
-										button(type="button" class="demo-btn") Demo 3
+								div.demo-wrap.mt3.mb4									
+									- var n = 0
+									while n < 6
+										div(class="demo-item")
+											img(src="img/demo"+ ++n +".jpg" alt="jquery-svg-popup")
+											button(type="button" class="demo-btn demo"+n data-svg-popup="demo"+n) Demo
 								h2.title-plagin Докумментация
 								div.table
 									ul.table-head
@@ -132,8 +128,176 @@ html.no-js(lang="ru")
 												span= table.type
 											li 
 												span= table.description
+								div#demo1
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo1" 
+														data-svg-popup="demo1"> Demo 1 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip1" class="javascript").
+													$('.demo1').svgpopup({
+														stepX: 12,
+														stepY: 9,
+														figure: 'rectangle',
+														fill: '#fcbf02',
+														opacity: 0.6,
+														speed: 1.2});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip1")
+													i.fa.fa-files-o
+
+								div#demo2
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip2" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo2" 
+														data-svg-popup="demo2"> Demo 2 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip2")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip3" class="javascript").
+													$('.demo2').svgpopup({
+														stepX: 8,
+														stepY: 7,
+														figure: 'rectangle',
+														fillOdd: '#fff',
+														fillEven: '#111',
+														opacity: 0.9,	
+														speed: 1.2});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip3")
+													i.fa.fa-files-o
+
+								div#demo3
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip4" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo3" 
+														data-svg-popup="demo3"> Demo 3 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip4")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip5" class="javascript").
+													$('.demo3').svgpopup({			
+														figure: 'rectangle',
+														fill: '#fcbf02',
+														randomize: false
+													});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip5")
+													i.fa.fa-files-o
+										
+								div#demo4
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip6" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo4" 
+														data-svg-popup="demo4"> Demo 4 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip6")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip7" class="javascript").
+													$('.demo4').svgpopup({
+														stepX: 10,	
+														stepY: 8,
+														figure: 'triangle',
+														fill: '#111',
+														speed: 1.2,
+														opacity: 0.8,
+													});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip7")
+													i.fa.fa-files-o
+
+								div#demo5
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip8" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo5" 
+														data-svg-popup="demo5"> Demo 5 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip8")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip9" class="javascript").
+													$('.demo5').svgpopup({
+														stepX: 6,	
+														stepY: 4,
+														figure: 'triangle',
+														fill: '#fcbf02',
+														strokeFill: 'rgba(255,255,255, .2)',
+														opacity: 0.8,	
+														visible: false,
+														speed: 1,
+														randomize: false
+													});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip9")
+													i.fa.fa-files-o
+
+								div#demo6
+									div.svg-popup-content
+										h3.title-plagin HTML разметка
+										div.code-wrap
+											pre
+												code(id="copy-clip10" class="html").
+													&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+													&lt;script src="js/jQuery-svg-popup.js"&gt;&lt;/script&gt;
+													&lt;button type="button" 
+														class="demo-btn demo6" 
+														data-svg-popup="demo6"> Demo 6 &lt;/button>
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip10")
+													i.fa.fa-files-o
+										h3.title-plagin JavaScript Инициализация плагина
+										div.code-wrap
+											pre
+												code(id="copy-clip11" class="javascript").
+													$('.demo6').svgpopup({
+														stepX: 8,	
+														stepY: 6,
+														figure: 'triangle',
+														fillOdd: '#fcbf02',
+														fillEven: '#111',
+														opacity: 0.9,	
+														visible: false,
+														speed: 1
+													});
+												button(class="btn-сlipboard" data-clipboard-target="#copy-clip11")
+													i.fa.fa-files-o
 								
-								div.share-block.left.mt1
+								div.share-block.left.mt4
 									span.label Поделиться:
 									a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
 										i.fa.fa-pinterest
@@ -144,14 +308,13 @@ html.no-js(lang="ru")
 
 			include templates/widgets/lust-plugins				
 			
-		include templates/structure/footer
+		include templates/structure/footer	
 		include templates/structure/scripts		
 		include templates/structure/sharescripts
 		script(src="js/blog-script/clipboard.min.js")
 		script(src="js/blog-script/highlight.pack.js")
 		script(src="js/svg-popup/jQuery-svg-popup.js")
 		link(rel="stylesheet", href="js/blog-script/zenburn.css")
-		link(rel="stylesheet", href="js/svg-popup/jQuery-svg-popup.css")
 		script.
 			$(function(){
 				var btnClipboard = $('.btn-сlipboard'),
@@ -170,14 +333,55 @@ html.no-js(lang="ru")
 					});
 				hljs.initHighlightingOnLoad();
 
-				$('.svg-popup').atpopup({
-					stepX: 8,
-					stepY: 7,
+				$('.demo1').svgpopup({
+					stepX: 12,
+					stepY: 9,
 					figure: 'rectangle',
 					fill: '#fcbf02',
 					opacity: 0.6,				
-					visible: false,
+					speed: 1.2
+				});
+				$('.demo2').svgpopup({
+					stepX: 8,
+					stepY: 7,
+					figure: 'rectangle',
+					fillOdd: '#fff',
+					fillEven: '#111',
+					opacity: 0.9,	
+					speed: 1.2
+				});
+				$('.demo3').svgpopup({			
+					figure: 'rectangle',
+					fill: '#fcbf02',
+					randomize: false
+				});
+				$('.demo4').svgpopup({
+					stepX: 10,	
+					stepY: 8,
+					figure: 'triangle',
+					fill: '#111',
 					speed: 1.2,
-					randomize: true
+					opacity: 0.8,			
+				});
+				$('.demo5').svgpopup({
+					stepX: 6,	
+					stepY: 4,
+					figure: 'triangle',
+					fill: '#fcbf02',
+					strokeFill: 'rgba(255,255,255, .2)',
+					opacity: 0.8,	
+					visible: false,
+					speed: 1,
+					randomize: false
+				});
+				$('.demo6').svgpopup({
+					stepX: 8,	
+					stepY: 6,
+					figure: 'triangle',
+					fillOdd: '#fcbf02',
+					fillEven: '#111',
+					opacity: 0.9,	
+					visible: false,
+					speed: 1
 				});
 			}());
