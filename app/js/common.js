@@ -638,8 +638,8 @@ $(document).ready(function() {
 
 	$(window).on('load', function(){
 		if($('#hellopreloader_preload').length){
-			preloader();	
-		}		
+			preloader();
+		}
 	});
 
 function animTitle(el,effect,speed){
