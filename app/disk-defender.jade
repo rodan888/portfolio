@@ -1,0 +1,32 @@
+doctype html
+html.no-js(lang="ru")
+	include templates/structure/head
+	body
+		header
+			h1 Disk 
+				br 
+				| defender
+			h2 Mobile game 
+				br
+				| for all people
+
+			.core
+				.image-wrap
+					img(src="img/game/normal.png")
+				.borders
+				.shatle
+					img(src="img/game/raketa.png")
+
+
+			.hexagon-list
+				img(src="img/game/hexagon1.png" class="small")
+				img(src="img/game/hexagon2.png" class="small")
+				img(src="img/game/hexagon3.png" class="big")
+				img(src="img/game/hexagon4.png" class="small")
+				img(src="img/game/hexagon5.png" class="normal")
+				img(src="img/game/hexagon6.png" class="small")
+	
+		include templates/structure/footer
+
+		link(rel="stylesheet", href="css/game.min.css")		
+		include templates/structure/scripts
