@@ -5,6 +5,10 @@
 $yelow: #ffce55
 $green: #48cfae
 
+$darkBlue: #7282a4
+
+.big-font
+
 header
 	height: 100vh
 	background: #1a3b99
@@ -12,16 +16,56 @@ header
 	background: -webkit-radial-gradient(center, ellipse cover, #1a3b99 19%,#090b24 100%)
 	background: radial-gradient(ellipse at center, #1a3b99 19%,#090b24 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a3b99', endColorstr='#090b24',GradientType=1 )
-	
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-image: url("../img/game/top_bg.png")
+		background-repeat: no-repeat
+		background-position: center center
+		background-attachment: fixed
 	h1
 		font-family: 'OpenSansLight'
 		color: $white
-		line-height: 55px
+		line-height: 45px
 		text-shadow: none
 		margin: 0
 		padding: 0
 		top: 20%
 		left: 20%
+		letter-spacing: 0
+		width: auto
+		span
+			font-family: 'fantasy'
+			font-size: 60px
+			letter-spacing: 40px
+		p
+			display: inline-block
+			margin-top: 15px
+			padding-top: 5px
+			border-top: 1px solid $darkBlue
+			color: $darkBlue
+			font-size: 20px
+			line-height: 30px
+			min-width: 245px
+			i
+				margin-right: 15px
+	
+	h2
+		position: absolute
+		bottom: 85px
+		right: 7%
+		font-size: 30px
+		line-height: 30px
+		text-transform: uppercase
+		color: $white
+		span
+			font-family: 'fantasy'
+			letter-spacing: 6px
+
 
 
 	.core
@@ -123,11 +167,61 @@ header
 				top: 80%
 				left: 65%
 
+.base-title
+	font-family: 'OpenSansLight'
+	text-transform: uppercase
+	color: $white
+
+section
+	background: #090c26
+	background: -moz-linear-gradient(left, #090c26 0%, #101d4f 50%, #090c26 100%)
+	background: -webkit-linear-gradient(left, #090c26 0%,#101d4f 50%,#090c26 100%)
+	background: linear-gradient(to right, #090c26 0%,#101d4f 50%,#090c26 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090c26', endColorstr='#090c26',GradientType=1 )
+	
+
+	.difficulty
+		color: $white
+		text-align: center
+		margin-top: 40px
+		li
+			position: relative
+			display: inline-block
+			min-width: 155px
+			vertical-align: top
+			margin: 20px 40px
+			box-shadow: 0px 0px 5px $darkBlue
+			border-radius: 5px
+			padding-bottom: 15px
+			transition: box-shadow 0.3s
+			&:hover
+				box-shadow: 0px 0px 10px $darkBlue
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: -83px
+				width: 80px
+				height: 1px
+				border-bottom: 1px dashed $yelow
+			&:nth-child(1)
+				&:before
+					border-bottom: none
+			&:nth-child(2)
+				min-width: 185px
+				min-height: 200px
+				margin-top: 5px	
+				img
+					max-width: 150px
+			img
+				display: block
+				max-width: 120px
+				margin: 10px auto
 
 
 @keyframes rotationsFirst
 	0%
-		transform: rotate(0deg)	
+		transform: rotate(0deg)
 	100%
 		transform: rotate(360deg)
 

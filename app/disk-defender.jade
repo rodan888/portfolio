@@ -3,10 +3,20 @@ html.no-js(lang="ru")
 	include templates/structure/head
 	body
 		header
-			h1 Disk 
+			h1 
+				span Disk 
 				br 
 				| defender
-			h2 Mobile game 
+				br
+				P
+					i.fa.fa-check-circle-o
+					| iOS & ANDROID
+					br
+					i.fa.fa-check-circle-o
+					| PHONE & TABLET
+
+			h2 
+				span Mobile game 
 				br
 				| for all people
 
@@ -17,14 +27,29 @@ html.no-js(lang="ru")
 				.shatle
 					img(src="img/game/raketa.png")
 
-
-			.hexagon-list
-				img(src="img/game/hexagon1.png" class="small")
-				img(src="img/game/hexagon2.png" class="small")
-				img(src="img/game/hexagon3.png" class="big")
-				img(src="img/game/hexagon4.png" class="small")
-				img(src="img/game/hexagon5.png" class="normal")
-				img(src="img/game/hexagon6.png" class="small")
+			
+			//- .hexagon-list
+			//- 	img(src="img/game/hexagon1.png" class="small")
+			//- 	img(src="img/game/hexagon2.png" class="small")
+			//- 	img(src="img/game/hexagon3.png" class="big")
+			//- 	img(src="img/game/hexagon4.png" class="small")
+			//- 	img(src="img/game/hexagon5.png" class="normal")
+			//- 	img(src="img/game/hexagon6.png" class="small")
+		section
+			h2.base-title.center.mt4 3 levels of difficulty
+			div.container
+				div.row
+					div.col-md-12
+						ul.difficulty
+							li
+								img(src="img/game/normal.png")
+								| Normal
+							li
+								img(src="img/game/normal.png")
+								| Medium
+							li
+								img(src="img/game/normal.png")
+								| Hard
 	
 		include templates/structure/footer
 
