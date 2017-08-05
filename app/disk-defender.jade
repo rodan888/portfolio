@@ -4,7 +4,7 @@ html.no-js(lang="ru")
 	body
 		header
 			h1 
-				span Disk 
+				span Disc
 				br 
 				| defender
 				br
@@ -14,9 +14,14 @@ html.no-js(lang="ru")
 					br
 					i.fa.fa-check-circle-o
 					| PHONE & TABLET
+				div.market-link.mt2
+					a(href="#")
+						img(src="img/game/google-play-badge.png")
+					a(href="#")
+						img(src="img/game/app-store-badge.png")
 
 			h2 
-				span Mobile game 
+				span Mobile game
 				br
 				| for all people
 
@@ -27,31 +32,213 @@ html.no-js(lang="ru")
 				.shatle
 					img(src="img/game/raketa.png")
 
-			
-			//- .hexagon-list
-			//- 	img(src="img/game/hexagon1.png" class="small")
-			//- 	img(src="img/game/hexagon2.png" class="small")
-			//- 	img(src="img/game/hexagon3.png" class="big")
-			//- 	img(src="img/game/hexagon4.png" class="small")
-			//- 	img(src="img/game/hexagon5.png" class="normal")
-			//- 	img(src="img/game/hexagon6.png" class="small")
-		section
-			h2.base-title.center.mt4 3 levels of difficulty
+		section.difficulty
+			h2.base-title.center.mt4 
+				span Three levels of difficulty
 			div.container
 				div.row
-					div.col-md-12
-						ul.difficulty
-							li
-								img(src="img/game/normal.png")
-								| Normal
-							li
-								img(src="img/game/normal.png")
-								| Medium
-							li
-								img(src="img/game/normal.png")
-								| Hard
-	
-		include templates/structure/footer
+					div.col-sm-6
+						div.img-wrap.center
+							img(src="img/game/normal3d.jpg")
+					div.col-sm-6
+						div.card-gradient
+							h4.title-big.black.description Level
+								span Normal
+								| difficulty
+							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
 
-		link(rel="stylesheet", href="css/game.min.css")		
+			div.container
+				div.row
+					div.col-sm-6
+						div.card-gradient
+							h4.title-big.black.description Level
+								span Medium
+								| difficulty
+							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
+					div.col-sm-6
+						div.img-wrap.center
+							img(src="img/game/medium3d.jpg")
+
+			div.container
+				div.row
+					div.col-sm-6
+						div.img-wrap.center
+							img(src="img/game/hard3d.jpg")
+					div.col-sm-6
+						div.card-gradient
+							h4.title-big.black.description Level
+								span Hard
+								| difficulty
+							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
+
+		section.fast-order.mt4.mb4
+			div.container
+				div.row
+					div.col-sm-8
+						div.img-wrap
+							img(src="img/game/multiple-screen.png")
+					div.col-sm-4
+						h3.title-big.mt6 Download
+							span Disc defender
+							| today!
+						div.market-link.mt2.center
+							a(href="#")
+								img(src="img/game/google-play-badge.png")
+							a(href="#")
+								img(src="img/game/app-store-badge.png")
+		
+		section.control-mode.mb4
+			h2.base-title.center.mt4 
+				span How to play Disc defender
+			div.container
+				div.row
+					div.col-sm-4
+						div.description
+							h3.mb2 How to protect a disc!
+							p Disc defender in the settings menu you have two tabs available. The first "DIFFICULTIES" is responsible for the current difficulty level. The second "CONTROL MODE" allows you to select one of the three control modes. By default, the button control mode is enabled.
+					div.col-sm-8
+						div.card-gradient
+							div.img-wrap
+								img(src="img/game/controlMode1.png")
+							h3.mb2.center Gyroscope control
+							p.article Rotate and control the disc via waving your device
+						div.card-gradient
+							div.img-wrap
+								img(src="img/game/controlMode2.png")
+							h3.mb2.center Buttons control
+							p.article Rotate and control the disc via tapping on the buttons
+						div.card-gradient
+							div.img-wrap
+								img(src="img/game/controlMode3.png")
+							h3.mb2.center Draggable control
+							p.article Rotate and control the disc on finger move (drag)
+		
+		section.screenshots.mt6
+			div.container.clrp
+				div.row
+					div.col-md-12
+						div#showcase.noselect
+							img.cloud9-item(src="img/game/screenshot1.png" alt="Disc defender")
+							img.cloud9-item(src="img/game/screenshot2.png" alt="Disc defender")
+							img.cloud9-item(src="img/game/screenshot3.png" alt="Disc defender")
+							img.cloud9-item(src="img/game/screenshot4.png" alt="Disc defender")
+
+		section.send-developer.mt4
+			h2.base-title.center.mt4 
+				span Get In Touch Say Hello!
+			div.container
+				div.row
+					div.col-sm-4
+						div.description
+							h3.mb2 Write to the developer!
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam rerum minus cupiditate, voluptates atque consequuntur vitae eum iure, magnam.
+						div.share-block.left.mt1
+							span.label Поделиться:
+							button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
+								i.fa.fa-facebook									
+							button(type="button" onclick="Share.twitter('URL','TITLE','IMG_PATH','DESC')" class="facebook")
+								i.fa.fa-twitter
+							button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
+								i.fa.fa-vk
+							a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
+								i.fa.fa-pinterest
+					div.col-sm-8.right
+						form#send							
+							label(for="name")
+								i.fa.fa-user
+								| Введите имя:
+							input(type="text" id="name" name="name" requaired)
+							label(for="mail")
+								i.fa.fa-envelope
+								| Введите E-mail:
+							input(type="email" id="mail" name="mail" requaired)
+							label(for="text")
+								i.fa.fa-file-text
+								| Введите сообщение:
+							textarea(name="text" id="text" requaired)
+							button(type="submit" class="download site-link white")
+								span
+									i.fa.fa-paper-plane
+									|Отправить
+								span
+									i.fa.fa-paper-plane
+									|Отправить
+
+		
+		footer
+			div.copy
+				div.container
+					div.row
+						div.col-sm-4
+							a(href="http://tsumbaluk.in.ua/")
+								i.fa.fa-copyright
+								| tsumbaluk.in.ua
+						div.col-sm-4.center
+							a(href="sitemap.xml")
+								i.fa.fa-sitemap 
+								| Sitemap
+						div.col-sm-4
+							div.dev
+								a(href="http://tsumbaluk.in.ua/" target="_blank" rel="nofollow")
+									| Developed by
+									span Alexander Tsymbalyuk
+
+		link(rel="stylesheet", href="css/game.min.css")
 		include templates/structure/scripts
+		include templates/structure/sharescripts
+		script(src="js/blog-script/jquery.reflection.js")
+		script(src="js/blog-script/jquery.cloud9carousel.js")
+		script.
+			$(function() {
+				var showcase = $("#showcase"), 
+						title    = $('#item-title');
+
+				showcase.Cloud9Carousel( {
+					yOrigin: 42,
+					yRadius: 48,
+					mirror: {
+						gap: 12,
+						height: 0.2
+					},
+					buttonLeft: $("#nav > .left"),
+					buttonRight: $("#nav > .right"),
+					autoPlay: 1,
+					speed: 7,
+					bringToFront: true,
+					onRendered: rendered,
+					onLoaded: function() {
+						showcase.css( 'visibility', 'visible' )
+						showcase.css( 'display', 'none' )
+						showcase.fadeIn( 1500 )
+					}
+				});
+
+				function rendered( carousel ) {
+					title.text( carousel.nearestItem().element.alt )
+					// Fade in based on proximity of the item
+					var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+					title.css('opacity', 0.5 + (0.5 * c))
+				};
+
+				//
+				// Simulate physical button click effect
+				//
+				$('#nav > button').click( function( e ) {
+					var b = $(e.target).addClass( 'down' )
+					setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+				});
+
+				$(document).keydown( function( e ) {				
+					switch( e.keyCode ) {
+						/* left arrow */
+						case 37:
+							$('#nav > .left').click()
+							break
+
+						/* right arrow */
+						case 39:
+							$('#nav > .right').click()
+					}
+				});
+			})
+	

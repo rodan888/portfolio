@@ -363,7 +363,7 @@ var main = {
 		this.toggleMnu();
 		this.formSearch();
 		//slider
-		mySlider.init(600,1);
+		mySlider.init(600,3);
 		//generate section position
 		main.createPosition(main.opt.elements);
 		//generate portfolio item position

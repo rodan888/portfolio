@@ -7,15 +7,27 @@ $green: #48cfae
 
 $darkBlue: #7282a4
 
-.big-font
-
-header
-	height: 100vh
+%gradient
 	background: #1a3b99
 	background: -moz-radial-gradient(center, ellipse cover, #1a3b99 19%, #090b24 100%)
 	background: -webkit-radial-gradient(center, ellipse cover, #1a3b99 19%,#090b24 100%)
 	background: radial-gradient(ellipse at center, #1a3b99 19%,#090b24 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a3b99', endColorstr='#090b24',GradientType=1 )
+
+%card-gradient
+	background: rgb(16,29,79)
+	background: -moz-linear-gradient(45deg, rgba(16,29,79,1) 0%, rgba(72,207,174,1) 100%)
+	background: -webkit-linear-gradient(45deg, rgba(16,29,79,1) 0%,rgba(72,207,174,1) 100%)
+	background: linear-gradient(45deg, rgba(16,29,79,1) 0%,rgba(72,207,174,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#101d4f', endColorstr='#48cfae',GradientType=1 )
+
+
+// body
+// 	color: $white!important
+
+header
+	height: 100vh
+	@extend %gradient
 	&:before
 		position: absolute
 		content: ''
@@ -65,9 +77,6 @@ header
 		span
 			font-family: 'fantasy'
 			letter-spacing: 6px
-
-
-
 	.core
 		position: absolute
 		top: 50%
@@ -167,56 +176,281 @@ header
 				top: 80%
 				left: 65%
 
+.market-link
+	a
+		display: inline-block
+		padding-right: 5px
+		img
+			max-width: 135px
+
+
 .base-title
 	font-family: 'OpenSansLight'
 	text-transform: uppercase
-	color: $white
+	color: #666
+	font-weight: 100
+	letter-spacing: 4px
+	font-size: 25px
+	margin-bottom: 65px
+	span
+		display: inline-block
+		position: relative
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			width: 50px
+			height: 55px
+			background-image: url("../img/game/asteroid.png")
+			background-repeat: no-repeat
+		&:after
+			background-position: -170px -40px
+			top: -20px
+			right: -48px
+		&:before
+			top: 16px
+			left: -65px
+
 
 section
-	background: #090c26
-	background: -moz-linear-gradient(left, #090c26 0%, #101d4f 50%, #090c26 100%)
-	background: -webkit-linear-gradient(left, #090c26 0%,#101d4f 50%,#090c26 100%)
-	background: linear-gradient(to right, #090c26 0%,#101d4f 50%,#090c26 100%)
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090c26', endColorstr='#090c26',GradientType=1 )
-	
+	min-height: auto
+	// background: #090c26
+	// background: -moz-linear-gradient(left, #090c26 0%, #101d4f 50%, #090c26 100%)
+	// background: -webkit-linear-gradient(left, #090c26 0%,#101d4f 50%,#090c26 100%)
+	// background: linear-gradient(to right, #090c26 0%,#101d4f 50%,#090c26 100%)
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#090c26', endColorstr='#090c26',GradientType=1 )
 
-	.difficulty
-		color: $white
-		text-align: center
-		margin-top: 40px
-		li
-			position: relative
-			display: inline-block
-			min-width: 155px
-			vertical-align: top
-			margin: 20px 40px
-			box-shadow: 0px 0px 5px $darkBlue
-			border-radius: 5px
-			padding-bottom: 15px
-			transition: box-shadow 0.3s
-			&:hover
-				box-shadow: 0px 0px 10px $darkBlue
-			&:before
+.fast-order	
+	padding: 50px 0 15px 0
+	@extend %card-gradient
+	div.img-wrap
+		img
+			width: 100%
+			max-width: 700px
+
+section.difficulty
+	.container
+		margin-bottom: 60px
+		&:nth-child(odd)
+			.img-wrap
+				&:before,
+				&:after
+					right: initial
+					left: 0
+				&:after
+					transform: rotate(-50deg)
+					margin-top: -35px			
+	.img-wrap
+		min-height: 250px
+		position: relative
+		padding-top: 10px
+		&:before
+			position: absolute
+			content: ''
+			top: 50%
+			right: 0
+			width: 50%
+			height: 1px
+			margin-top: -13px
+			border-bottom: 2px dashed $yelow
+			z-index: -1
+		&:after
+			position: absolute
+			content: ''
+			top: 50%
+			right: 0
+			width: 40px
+			height: 40px
+			margin-top: -30px
+			background-image: url("../img/game/raketa.png")
+			background-repeat: no-repeat
+			transform: rotate(128deg)
+		img
+			max-width: 210px
+	.card-gradient		
+		.description
+			top: 38%
+		p.article
+			position: absolute
+			bottom: 15px
+			left: 50%
+			width: 100%									
+			transform: translateX(-50%)
+			&:before,
+			&:after
 				position: absolute
-				content: ''
-				top: 50%
-				left: -83px
-				width: 80px
-				height: 1px
-				border-bottom: 1px dashed $yelow
-			&:nth-child(1)
-				&:before
-					border-bottom: none
-			&:nth-child(2)
-				min-width: 185px
-				min-height: 200px
-				margin-top: 5px	
-				img
-					max-width: 150px
-			img
+				font-family: 'FontAwesome'
+				color: #999
+				font-size: 15px
+			&:before
+				content: '\f10e'
+				top: 0
+				left: 0
+			&:after
+				content: '\f10d'
+				bottom: 0
+				right: 0px
+
+.screenshots
+	padding: 50px 0px 0px
+	@extend %card-gradient
+	#showcase
+		height: 500px
+		overflow: visible!important
+
+.control-mode
+	.col-sm-4
+		background-image: url("../img/game/top_bg.png")
+		background-repeat: no-repeat
+		background-position: center right		
+		min-height: 800px
+		.description
+			left: 50%
+	.col-sm-8
+		min-height: 800px
+	.card-gradient
+		position: absolute	
+		width: 400px
+		color: $white
+		@extend %card-gradient
+		&:nth-child(1)
+			right: 30%
+			top: 0
+		&:nth-child(2)
+			right: 0%
+			top: 275px
+		&:nth-child(3)
+			right: 30%
+			bottom: 0
+		.img-wrap
+			text-align: center
+			min-height: 80px
+			padding-top: 20px
+			margin-bottom: 20px
+		p
+			margin: 0 auto
+			&:before,
+			&:after
+				color: $white
+
+
+
+.card-gradient
+	border-radius: 10px
+	box-shadow: 1px 1px 6px #ccc
+	min-height: 250px	
+
+.title-big
+	font-family: 'fantasy'
+	font-size: 25px
+	font-weight: 100
+	text-transform: uppercase
+	letter-spacing: 8px
+	text-align: center
+	color: $white
+	&.black
+		color: #555!important
+		span
+			border-color: #555
+	span
+		max-width: 360px
+		display: block		
+		font-family: 'OpenSansLight'
+		display: block
+		font-size: 40px
+		letter-spacing: 0px
+		border: 1px solid $white
+		border-left: none
+		border-right: none
+		line-height: 48px
+		margin: 15px auto
+
+p.article
+	position: relative	
+	max-width: 315px	
+	font-style: italic
+	text-align: center
+	padding: 0 15px	
+	&:before,
+	&:after
+		position: absolute
+		font-family: 'FontAwesome'
+		color: #999
+		font-size: 15px
+	&:before
+		content: '\f10e'
+		top: 0
+		left: 0
+	&:after
+		content: '\f10d'
+		bottom: 0
+		right: 0px
+
+
+.description
+	position: absolute
+	top: 50%
+	width: 100%
+	transform: translateY(-50%)
+
+.send-developer
+	.col-sm-4
+		min-height: 420px
+	#send
+		display: inline-block
+		width: 100%
+		margin: 0
+		padding: 40px 20px
+		text-align: left
+		border-radius: 10px
+		@extend %card-gradient
+		input,textarea
+			border-radius: 5px
+		button
+			margin: 30px auto -10px
+	.share-block
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		
+
+footer
+	position: relative
+	min-height: 50px
+	padding: 0
+	margin: 0
+	margin-top: 60px	
+	@extend %card-gradient
+	.copy 
+		position: absolute
+		min-height: 50px
+		bottom: 0
+		left: 0
+		width: 100%
+		line-height: 50px		
+		a
+			color: $white
+			&:hover
+				text-decoration: underline
+			i
+				margin-right: 5px
+		.dev 
+			position: absolute
+			right: 0
+			bottom: -45px
+			width: 150px
+			height: 40px
+			padding-left: 24px
+			background-image: url(../img/copy.png)
+			background-repeat: no-repeat
+			background-position: center left
+			line-height: 14px!important
+			background-size: 20px
+			font-size: 10px
+			padding-top: 5px
+			span 
 				display: block
-				max-width: 120px
-				margin: 10px auto
 
 
 @keyframes rotationsFirst
