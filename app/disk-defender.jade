@@ -2,7 +2,7 @@ doctype html
 html.no-js(lang="ru")
 	include templates/structure/head
 	body
-		header
+		header#main
 			h1 
 				span Disc
 				br 
@@ -32,7 +32,42 @@ html.no-js(lang="ru")
 				.shatle
 					img(src="img/game/raketa.png")
 
-		section.difficulty
+		menu
+				span.raketa
+					img(src="img/game/raketa.png")
+				ul
+					-
+						var nav = [
+							{
+								title:'Main',
+								page_url: '#main'
+							},
+							{
+								title:'Difficulty',
+								page_url: '#difficulty'
+							},
+							{
+								title:'How to play',
+								page_url: '#control'
+							},
+							{
+								title:'Портфолио',
+								page_url: 'portfolio-list.html'
+							},
+							{
+								title:'Блог',
+								page_url: 'blog-list.html'
+							},
+							{
+								title:'Contact',
+								page_url: '#contact'
+							}
+						];
+					for val, index in nav
+						li
+							a(href=val.page_url)= val.title
+
+		section.difficulty#difficulty
 			h2.base-title.center.mt4 
 				span Three levels of difficulty
 			div.container
@@ -87,7 +122,7 @@ html.no-js(lang="ru")
 							a(href="#")
 								img(src="img/game/app-store-badge.png")
 		
-		section.control-mode.mb4
+		section#control.control-mode.mb4
 			h2.base-title.center.mt4 
 				span How to play Disc defender
 			div.container
@@ -123,7 +158,7 @@ html.no-js(lang="ru")
 							img.cloud9-item(src="img/game/screenshot3.png" alt="Disc defender")
 							img.cloud9-item(src="img/game/screenshot4.png" alt="Disc defender")
 
-		section.send-developer.mt4
+		section#contact.send-developer.mt4
 			h2.base-title.center.mt4 
 				span Get In Touch Say Hello!
 			div.container
@@ -132,18 +167,23 @@ html.no-js(lang="ru")
 						div.description
 							h3.mb2 Write to the developer!
 							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam rerum minus cupiditate, voluptates atque consequuntur vitae eum iure, magnam.
+							div.market-link.mt1
+								a(href="#")
+									img(src="img/game/google-play-badge.png")
+								a(href="#")
+									img(src="img/game/app-store-badge.png")
 						div.share-block.left.mt1
 							span.label Поделиться:
 							button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
-								i.fa.fa-facebook									
+								i.fa.fa-facebook
 							button(type="button" onclick="Share.twitter('URL','TITLE','IMG_PATH','DESC')" class="facebook")
 								i.fa.fa-twitter
 							button(type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk")
 								i.fa.fa-vk
 							a(data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest")
-								i.fa.fa-pinterest
+								i.fa.fa-pinterest							
 					div.col-sm-8.right
-						form#send							
+						form#send
 							label(for="name")
 								i.fa.fa-user
 								| Введите имя:
@@ -185,11 +225,60 @@ html.no-js(lang="ru")
 
 		link(rel="stylesheet", href="css/game.min.css")
 		include templates/structure/scripts
-		include templates/structure/sharescripts
+		include templates/structure/sharescripts		
 		script(src="js/blog-script/jquery.reflection.js")
 		script(src="js/blog-script/jquery.cloud9carousel.js")
+		script(src="js/blog-script/jquery.scrollTo-1.4.2-min.js")
+		script(src="js/blog-script/waypoints.min.js")
 		script.
 			$(function() {
+				var shatl = $('menu span.raketa'),
+						cacheShatlPos = 0;
+				$('menu ul li').hover(function(){
+					var w = $(this).width(),
+							l = $(this).offset().left,					
+							newShatlPos = l + w;
+
+					if(newShatlPos < cacheShatlPos){
+						shatl.css({
+							'left': $(this).offset().left + 'px',
+							'transform': 'rotate(-180deg)'
+						}).addClass('active');
+					}else{
+						shatl.css({
+							'left': $(this).offset().left + 'px',
+							'transform': 'rotate(0deg)'
+						}).addClass('active');
+					};
+					setTimeout( function(){
+						shatl.removeClass('active');
+					}, 700);
+					cacheShatlPos = newShatlPos;
+				});
+
+				// smoof-scroll
+				var navigation_links = jQuery("menu a");
+				navigation_links.click( function(event) {
+					event.preventDefault();
+					jQuery.scrollTo(
+						jQuery(this).attr("href"),
+						{
+							duration: 600,
+							offset: { 'left':0, 'top':-0*jQuery(window).height() }
+						}
+					);
+				});		
+				jQuery('section').waypoint({
+					handler: function(event, direction) {
+						var active_section = jQuery(this);			
+						if (direction === "up") active_section = active_section.prev();
+						var active_link = jQuery('nav a[href="#' + active_section.attr("id") + '"]');
+						navigation_links.removeClass("active");
+						active_link.addClass("active");
+					},
+					offset: '5%'
+				});
+
 				var showcase = $("#showcase"), 
 						title    = $('#item-title');
 

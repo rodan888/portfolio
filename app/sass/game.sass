@@ -24,6 +24,42 @@ $darkBlue: #7282a4
 
 // body
 // 	color: $white!important
+menu
+	margin: 0
+	padding: 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	text-align: center
+	z-index: 1000
+	ul
+		li
+			display: inline-block			
+			vertical-align: top
+			padding: 5px 10px
+	span.raketa
+		position: absolute
+		bottom: -33px
+		left: 0px
+		transition: all 0.5s
+		&:before
+			position: absolute
+			content: ''
+			bottom: 3px
+			left: -32px
+			width: 40px
+			height: 40px
+			background-repeat: no-repeat
+			transform: rotate(-90deg)
+		&.active
+			&:before
+				background-size: 35px
+				background-image: url("../img/game/burnin.gif")
+		img
+			transform: rotate(130deg)
+
+	
 
 header
 	height: 100vh

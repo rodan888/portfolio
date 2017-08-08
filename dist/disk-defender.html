@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <header>
+    <header id="main">
       <h1> <span>Disc</span><br>defender<br>
         <P><i class="fa fa-check-circle-o"></i>iOS & ANDROID<br><i class="fa fa-check-circle-o"></i>PHONE & TABLET</P>
         <div class="market-link mt2"><a href="#"><img src="img/game/google-play-badge.png"></a><a href="#"><img src="img/game/app-store-badge.png"></a></div>
@@ -24,7 +24,17 @@
         <div class="shatle"><img src="img/game/raketa.png"></div>
       </div>
     </header>
-    <section class="difficulty">
+    <menu><span class="raketa"><img src="img/game/raketa.png"></span>
+      <ul>
+        <li><a href="#main">Main</a></li>
+        <li><a href="#difficulty">Difficulty</a></li>
+        <li><a href="#control">How to play</a></li>
+        <li><a href="portfolio-list.html">Портфолио</a></li>
+        <li><a href="blog-list.html">Блог</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </menu>
+    <section id="difficulty" class="difficulty">
       <h2 class="base-title center mt4"> <span>Three levels of difficulty</span></h2>
       <div class="container">
         <div class="row">
@@ -79,7 +89,7 @@
         </div>
       </div>
     </section>
-    <section class="control-mode mb4">
+    <section id="control" class="control-mode mb4">
       <h2 class="base-title center mt4"> <span>How to play Disc defender</span></h2>
       <div class="container">
         <div class="row">
@@ -118,7 +128,7 @@
         </div>
       </div>
     </section>
-    <section class="send-developer mt4">
+    <section id="contact" class="send-developer mt4">
       <h2 class="base-title center mt4"> <span>Get In Touch Say Hello!</span></h2>
       <div class="container">
         <div class="row">
@@ -126,15 +136,16 @@
             <div class="description">
               <h3 class="mb2">Write to the developer!</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam rerum minus cupiditate, voluptates atque consequuntur vitae eum iure, magnam.</p>
+              <div class="market-link mt1"><a href="#"><img src="img/game/google-play-badge.png"></a><a href="#"><img src="img/game/app-store-badge.png"></a></div>
             </div>
             <div class="share-block left mt1"><span class="label">Поделиться:</span>
-              <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook">									</i></button>
+              <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
               <button type="button" onclick="Share.twitter('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-twitter"></i></button>
-              <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest"></i></a>
+              <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest">							</i></a>
             </div>
           </div>
           <div class="col-sm-8 right">
-            <form id="send">							
+            <form id="send">
               <label for="name"><i class="fa fa-user"></i>Введите имя:</label>
               <input type="text" id="name" name="name" requaired>
               <label for="mail"><i class="fa fa-envelope"></i>Введите E-mail:</label>
@@ -218,8 +229,57 @@
     </script>
     <script src="js/blog-script/jquery.reflection.js"></script>
     <script src="js/blog-script/jquery.cloud9carousel.js"></script>
+    <script src="js/blog-script/jquery.scrollTo-1.4.2-min.js"></script>
+    <script src="js/blog-script/waypoints.min.js"></script>
     <script>
       $(function() {
+      	var shatl = $('menu span.raketa'),
+      			cacheShatlPos = 0;
+      	$('menu ul li').hover(function(){
+      		var w = $(this).width(),
+      				l = $(this).offset().left,					
+      				newShatlPos = l + w;
+      
+      		if(newShatlPos < cacheShatlPos){
+      			shatl.css({
+      				'left': $(this).offset().left + 'px',
+      				'transform': 'rotate(-180deg)'
+      			}).addClass('active');
+      		}else{
+      			shatl.css({
+      				'left': $(this).offset().left + 'px',
+      				'transform': 'rotate(0deg)'
+      			}).addClass('active');
+      		};
+      		setTimeout( function(){
+      			shatl.removeClass('active');
+      		}, 700);
+      		cacheShatlPos = newShatlPos;
+      	});
+      
+      	// smoof-scroll
+      	var navigation_links = jQuery("menu a");
+      	navigation_links.click( function(event) {
+      		event.preventDefault();
+      		jQuery.scrollTo(
+      			jQuery(this).attr("href"),
+      			{
+      				duration: 600,
+      				offset: { 'left':0, 'top':-0*jQuery(window).height() }
+      			}
+      		);
+      	});		
+      	jQuery('section').waypoint({
+      		handler: function(event, direction) {
+      			var active_section = jQuery(this);			
+      			if (direction === "up") active_section = active_section.prev();
+      			var active_link = jQuery('nav a[href="#' + active_section.attr("id") + '"]');
+      			navigation_links.removeClass("active");
+      			active_link.addClass("active");
+      		},
+      		offset: '5%'
+      	});
+      
       	var showcase = $("#showcase"), 
       			title    = $('#item-title');
       
