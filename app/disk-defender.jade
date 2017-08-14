@@ -51,12 +51,8 @@ html.no-js(lang="ru")
 								page_url: '#control'
 							},
 							{
-								title:'Портфолио',
-								page_url: 'portfolio-list.html'
-							},
-							{
-								title:'Блог',
-								page_url: 'blog-list.html'
+								title:'Screenshots',
+								page_url: '#screenshots'
 							},
 							{
 								title:'Contact',
@@ -80,7 +76,7 @@ html.no-js(lang="ru")
 							h4.title-big.black.description Level
 								span Normal
 								| difficulty
-							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
+							p.article Go through the levels, collect the stars and open the next difficulty mode!
 
 			div.container
 				div.row
@@ -89,7 +85,7 @@ html.no-js(lang="ru")
 							h4.title-big.black.description Level
 								span Medium
 								| difficulty
-							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
+							p.article If you want to reach this level, you should collect 120 stars.
 					div.col-sm-6
 						div.img-wrap.center
 							img(src="img/game/medium3d.jpg")
@@ -104,7 +100,7 @@ html.no-js(lang="ru")
 							h4.title-big.black.description Level
 								span Hard
 								| difficulty
-							p.article Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.
+							p.article If you want to reach this level, you should collect 300 stars.
 
 		section.fast-order.mt4.mb4
 			div.container
@@ -130,7 +126,7 @@ html.no-js(lang="ru")
 					div.col-sm-4
 						div.description
 							h3.mb2 How to protect a disc!
-							p Disc defender in the settings menu you have two tabs available. The first "DIFFICULTIES" is responsible for the current difficulty level. The second "CONTROL MODE" allows you to select one of the three control modes. By default, the button control mode is enabled.
+							p Disc defender has four buttons in the main menu. The first one-"EVALUATE" can help you find a link to the web-site of the game and link on google play page. The second button-"LEVEL" is a list of current mode and levels complexity. The third button-"CONTROL MODE" allows selecting one of three mode controls. By default, the mode 'control buttons' is enabled. And the last button is available "DIFFICULTY" and complexity modes.
 					div.col-sm-8
 						div.card-gradient
 							div.img-wrap
@@ -148,7 +144,7 @@ html.no-js(lang="ru")
 							h3.mb2.center Draggable control
 							p.article Rotate and control the disc on finger move (drag)
 		
-		section.screenshots.mt6
+		section#screenshots.screenshots.mt6
 			div.container.clrp
 				div.row
 					div.col-md-12
@@ -166,14 +162,14 @@ html.no-js(lang="ru")
 					div.col-sm-4
 						div.description
 							h3.mb2 Write to the developer!
-							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam rerum minus cupiditate, voluptates atque consequuntur vitae eum iure, magnam.
+							p Hi there! Let me introduce myself. My name is Alexander and I'm Front-end developer. I would like to welcome you to my game - Disc defender, that is totally written with JavaScript and trendy web technologies like AngularJS, Fabric.js, Canvas(HTML5) and Sass. If you have an idea or proposal for me, please send an message or visit my web site 
 							div.market-link.mt1
 								a(href="#")
 									img(src="img/game/google-play-badge.png")
 								a(href="#")
 									img(src="img/game/app-store-badge.png")
 						div.share-block.left.mt1
-							span.label Поделиться:
+							span.label Share:
 							button(type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook")
 								i.fa.fa-facebook
 							button(type="button" onclick="Share.twitter('URL','TITLE','IMG_PATH','DESC')" class="facebook")
@@ -186,23 +182,23 @@ html.no-js(lang="ru")
 						form#send
 							label(for="name")
 								i.fa.fa-user
-								| Введите имя:
+								| Enter your name:
 							input(type="text" id="name" name="name" requaired)
 							label(for="mail")
 								i.fa.fa-envelope
-								| Введите E-mail:
+								| Enter E-mail:
 							input(type="email" id="mail" name="mail" requaired)
 							label(for="text")
 								i.fa.fa-file-text
-								| Введите сообщение:
+								| Enter message:
 							textarea(name="text" id="text" requaired)
 							button(type="submit" class="download site-link white")
 								span
 									i.fa.fa-paper-plane
-									|Отправить
+									| Send
 								span
 									i.fa.fa-paper-plane
-									|Отправить
+									| Send
 
 		
 		footer
@@ -242,11 +238,13 @@ html.no-js(lang="ru")
 					if(newShatlPos < cacheShatlPos){
 						shatl.css({
 							'left': $(this).offset().left + 'px',
+							'bottom': '-33px',
 							'transform': 'rotate(-180deg)'
 						}).addClass('active');
 					}else{
 						shatl.css({
 							'left': $(this).offset().left + 'px',
+							'bottom': '-33px',
 							'transform': 'rotate(0deg)'
 						}).addClass('active');
 					};
@@ -308,6 +306,17 @@ html.no-js(lang="ru")
 					var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
 					title.css('opacity', 0.5 + (0.5 * c))
 				};
+				
+				var headerH = $('header').height() - $('menu').height();
+				$(document).scroll(function(){	
+					var scrl = $(document).scrollTop();
+					if(scrl > headerH){
+						$('menu').addClass('active');
+					}else{
+						$('menu').removeClass('active');					
+					};
+					shatl.attr('style','');
+				});	
 
 				//
 				// Simulate physical button click effect
@@ -316,8 +325,8 @@ html.no-js(lang="ru")
 					var b = $(e.target).addClass( 'down' )
 					setTimeout( function() { b.removeClass( 'down' ) }, 80 )
 				});
-
-				$(document).keydown( function( e ) {				
+				
+				$(document).keydown( function( e ) {		
 					switch( e.keyCode ) {
 						/* left arrow */
 						case 37:

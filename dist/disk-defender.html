@@ -29,8 +29,7 @@
         <li><a href="#main">Main</a></li>
         <li><a href="#difficulty">Difficulty</a></li>
         <li><a href="#control">How to play</a></li>
-        <li><a href="portfolio-list.html">Портфолио</a></li>
-        <li><a href="blog-list.html">Блог</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </menu>
@@ -44,7 +43,7 @@
           <div class="col-sm-6">
             <div class="card-gradient">
               <h4 class="title-big black description">Level<span>Normal</span>difficulty</h4>
-              <p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.</p>
+              <p class="article">Go through the levels, collect the stars and open the next difficulty mode!</p>
             </div>
           </div>
         </div>
@@ -54,7 +53,7 @@
           <div class="col-sm-6">
             <div class="card-gradient">
               <h4 class="title-big black description">Level<span>Medium</span>difficulty</h4>
-              <p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.</p>
+              <p class="article">If you want to reach this level, you should collect 120 stars.</p>
             </div>
           </div>
           <div class="col-sm-6">
@@ -70,7 +69,7 @@
           <div class="col-sm-6">
             <div class="card-gradient">
               <h4 class="title-big black description">Level<span>Hard</span>difficulty</h4>
-              <p class="article">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, molestias.</p>
+              <p class="article">If you want to reach this level, you should collect 300 stars.</p>
             </div>
           </div>
         </div>
@@ -96,7 +95,7 @@
           <div class="col-sm-4">
             <div class="description">
               <h3 class="mb2">How to protect a disc!</h3>
-              <p>Disc defender in the settings menu you have two tabs available. The first "DIFFICULTIES" is responsible for the current difficulty level. The second "CONTROL MODE" allows you to select one of the three control modes. By default, the button control mode is enabled.</p>
+              <p>Disc defender has four buttons in the main menu. The first one-"EVALUATE" can help you find a link to the web-site of the game and link on google play page. The second button-"LEVEL" is a list of current mode and levels complexity. The third button-"CONTROL MODE" allows selecting one of three mode controls. By default, the mode 'control buttons' is enabled. And the last button is available "DIFFICULTY" and complexity modes.</p>
             </div>
           </div>
           <div class="col-sm-8">
@@ -119,7 +118,7 @@
         </div>
       </div>
     </section>
-    <section class="screenshots mt6">
+    <section id="screenshots" class="screenshots mt6">
       <div class="container clrp">
         <div class="row">
           <div class="col-md-12">
@@ -135,10 +134,10 @@
           <div class="col-sm-4">
             <div class="description">
               <h3 class="mb2">Write to the developer!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt numquam rerum minus cupiditate, voluptates atque consequuntur vitae eum iure, magnam.</p>
+              <p>Hi there! Let me introduce myself. My name is Alexander and I'm Front-end developer. I would like to welcome you to my game - Disc defender, that is totally written with JavaScript and trendy web technologies like AngularJS, Fabric.js, Canvas(HTML5) and Sass. If you have an idea or proposal for me, please send an message or visit my web site </p>
               <div class="market-link mt1"><a href="#"><img src="img/game/google-play-badge.png"></a><a href="#"><img src="img/game/app-store-badge.png"></a></div>
             </div>
-            <div class="share-block left mt1"><span class="label">Поделиться:</span>
+            <div class="share-block left mt1"><span class="label">Share:</span>
               <button type="button" onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-facebook"></i></button>
               <button type="button" onclick="Share.twitter('URL','TITLE','IMG_PATH','DESC')" class="facebook"><i class="fa fa-twitter"></i></button>
               <button type="button" onclick="Share.vkontakte('http://tsumbaluk.in.ua/','TITLE','http://tsumbaluk.in.ua/wp-content/uploads/2016/01/maket2.jpg','DESC')" class="vk"><i class="fa fa-vk"></i></button><a data-pin-do="buttonBookmark" data-pin-lang="ru" data-pin-save="true" href="https://ru.pinterest.com/pin/create/button/" class="pinterest"><i class="fa fa-pinterest">							</i></a>
@@ -146,13 +145,13 @@
           </div>
           <div class="col-sm-8 right">
             <form id="send">
-              <label for="name"><i class="fa fa-user"></i>Введите имя:</label>
+              <label for="name"><i class="fa fa-user"></i>Enter your name:</label>
               <input type="text" id="name" name="name" requaired>
-              <label for="mail"><i class="fa fa-envelope"></i>Введите E-mail:</label>
+              <label for="mail"><i class="fa fa-envelope"></i>Enter E-mail:</label>
               <input type="email" id="mail" name="mail" requaired>
-              <label for="text"><i class="fa fa-file-text"></i>Введите сообщение:</label>
+              <label for="text"><i class="fa fa-file-text"></i>Enter message:</label>
               <textarea name="text" id="text" requaired></textarea>
-              <button type="submit" class="download site-link white"><span><i class="fa fa-paper-plane"></i>Отправить</span><span><i class="fa fa-paper-plane"></i>Отправить</span></button>
+              <button type="submit" class="download site-link white"><span><i class="fa fa-paper-plane"></i>Send</span><span><i class="fa fa-paper-plane"></i>Send</span></button>
             </form>
           </div>
         </div>
@@ -243,11 +242,13 @@
       		if(newShatlPos < cacheShatlPos){
       			shatl.css({
       				'left': $(this).offset().left + 'px',
+      				'bottom': '-33px',
       				'transform': 'rotate(-180deg)'
       			}).addClass('active');
       		}else{
       			shatl.css({
       				'left': $(this).offset().left + 'px',
+      				'bottom': '-33px',
       				'transform': 'rotate(0deg)'
       			}).addClass('active');
       		};
@@ -309,6 +310,17 @@
       		var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
       		title.css('opacity', 0.5 + (0.5 * c))
       	};
+      	
+      	var headerH = $('header').height() - $('menu').height();
+      	$(document).scroll(function(){	
+      		var scrl = $(document).scrollTop();
+      		if(scrl > headerH){
+      			$('menu').addClass('active');
+      		}else{
+      			$('menu').removeClass('active');					
+      		};
+      		shatl.attr('style','');
+      	});	
       
       	//
       	// Simulate physical button click effect
@@ -317,8 +329,8 @@
       		var b = $(e.target).addClass( 'down' )
       		setTimeout( function() { b.removeClass( 'down' ) }, 80 )
       	});
-      
-      	$(document).keydown( function( e ) {				
+      	
+      	$(document).keydown( function( e ) {		
       		switch( e.keyCode ) {
       			/* left arrow */
       			case 37:
