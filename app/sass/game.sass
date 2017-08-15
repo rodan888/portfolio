@@ -509,3 +509,155 @@ footer
 		transform: rotate(0deg)
 	100%
 		transform: rotate(-360deg)
+
+
+@media only screen and (max-width : 1260px)
+	header
+		h1
+			top: 80px
+			left: 50%
+			transform: translateX(-50%)
+
+@media only screen and (max-width : 992px)
+	.screenshots
+		padding-bottom: 50px
+		#showcase
+			height: auto
+			text-align: center
+			img
+				width: 49%
+				margin: 2px
+
+
+@media only screen and (max-width : 768px)
+	body
+		overflow-x: hidden
+	header
+		h1
+			span
+				font-size: 40px
+				text-align: center
+	// .screenshots #showcase
+	// 	height: 200px
+
+
+@media only screen and (max-width : 480px)
+	header
+		&:before
+			background-attachment: inherit
+			background-size: 115%
+		h1
+			width: 100%
+			top: 50px
+			p
+				display: none
+			span
+				font-size: 40px
+				text-align: center
+				letter-spacing: 35px
+				margin-right: -35px
+		h2
+			bottom: 30px
+			right: 0%
+			width: 100%
+			text-align: center
+		.core
+			top: 60%
+	menu 
+		span.raketa
+			display: none
+		ul 
+			li 
+				a
+					padding: 5px 4px
+					font-size: 13px
+	section.difficulty
+		.container
+			&:nth-child(odd) 
+				.img-wrap
+					padding-top: 60px
+					&:after
+						transform: rotate(39deg)
+						top: 50px
+						right: 50%
+						left: initial
+						bottom: initial
+						margin-right: -22px
+		.card-gradient
+			position: relative
+			.title-big span
+				max-width: 94%
+			p.article
+				padding: 0 18px
+				&:after
+					right: 8px
+				&:before
+					left: 4px
+		.img-wrap
+			&:before
+				display: none
+			&:after
+				top: 90%
+				right: 50%
+				margin-right: -15px
+				transform: rotate(218deg)
+			img
+				max-width: 180px
+
+	.base-title
+		margin-bottom: 35px
+		span
+			&:before
+				top: 50px
+				left: 0
+			&:after
+				right: 0
+				top: -40px
+
+	.fast-order
+		margin-top: 0
+		.title-big
+			margin-top: 5px
+
+	#contact
+		margin-top: 0
+		.share-block
+			position: initial
+			margin-top: 30px
+			text-align: center
+	#control,
+	#contact
+		.description,
+		.card-gradient
+			position: initial
+			transform: none
+		.card-gradient
+			max-width: 100%
+			margin-bottom: 20px
+			min-height: 215px
+			p.article
+				padding: 0 18px
+				&:after
+					right: 8px
+				&:before
+					left: 4px
+		.col-sm-4,
+		.col-sm-8
+			min-height: auto
+			margin-bottom: 20px
+	footer 
+		margin-top: 20px
+		.copy
+			position: initial
+			height: auto
+			.dev
+				position: initial
+				display: inline-block
+				margin-right: 0
+	.screenshots
+		.clrp
+			padding: 0 15px		
+		#showcase
+			img
+				width: 90%
+				margin: 5px 0

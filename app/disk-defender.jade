@@ -163,6 +163,7 @@ html.no-js(lang="ru")
 						div.description
 							h3.mb2 Write to the developer!
 							p Hi there! Let me introduce myself. My name is Alexander and I'm Front-end developer. I would like to welcome you to my game - Disc defender, that is totally written with JavaScript and trendy web technologies like AngularJS, Fabric.js, Canvas(HTML5) and Sass. If you have an idea or proposal for me, please send an message or visit my web site 
+							a(href="http://tsumbaluk.in.ua/" target="_blank") tsumbaluk.in.ua
 							div.market-link.mt1
 								a(href="#")
 									img(src="img/game/google-play-badge.png")
@@ -206,7 +207,7 @@ html.no-js(lang="ru")
 				div.container
 					div.row
 						div.col-sm-4
-							a(href="http://tsumbaluk.in.ua/")
+							a(href="http://tsumbaluk.in.ua/" target="_blank")
 								i.fa.fa-copyright
 								| tsumbaluk.in.ua
 						div.col-sm-4.center
@@ -280,25 +281,27 @@ html.no-js(lang="ru")
 				var showcase = $("#showcase"), 
 						title    = $('#item-title');
 
-				showcase.Cloud9Carousel( {
-					yOrigin: 42,
-					yRadius: 48,
-					mirror: {
-						gap: 12,
-						height: 0.2
-					},
-					buttonLeft: $("#nav > .left"),
-					buttonRight: $("#nav > .right"),
-					autoPlay: 1,
-					speed: 7,
-					bringToFront: true,
-					onRendered: rendered,
-					onLoaded: function() {
-						showcase.css( 'visibility', 'visible' )
-						showcase.css( 'display', 'none' )
-						showcase.fadeIn( 1500 )
-					}
-				});
+				if($(window).width() > 992){
+					showcase.Cloud9Carousel( {
+						yOrigin: 42,
+						yRadius: 48,
+						mirror: {
+							gap: 12,
+							height: 0.2
+						},
+						buttonLeft: $("#nav > .left"),
+						buttonRight: $("#nav > .right"),
+						autoPlay: 1,
+						speed: 7,
+						bringToFront: true,
+						onRendered: rendered,
+						onLoaded: function() {
+							showcase.css( 'visibility', 'visible' )
+							showcase.css( 'display', 'none' )
+							showcase.fadeIn( 1500 )
+						}
+					});				
+				};
 
 				function rendered( carousel ) {
 					title.text( carousel.nearestItem().element.alt )

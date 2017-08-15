@@ -134,7 +134,7 @@
           <div class="col-sm-4">
             <div class="description">
               <h3 class="mb2">Write to the developer!</h3>
-              <p>Hi there! Let me introduce myself. My name is Alexander and I'm Front-end developer. I would like to welcome you to my game - Disc defender, that is totally written with JavaScript and trendy web technologies like AngularJS, Fabric.js, Canvas(HTML5) and Sass. If you have an idea or proposal for me, please send an message or visit my web site </p>
+              <p>Hi there! Let me introduce myself. My name is Alexander and I'm Front-end developer. I would like to welcome you to my game - Disc defender, that is totally written with JavaScript and trendy web technologies like AngularJS, Fabric.js, Canvas(HTML5) and Sass. If you have an idea or proposal for me, please send an message or visit my web site </p><a href="http://tsumbaluk.in.ua/" target="_blank">tsumbaluk.in.ua</a>
               <div class="market-link mt1"><a href="#"><img src="img/game/google-play-badge.png"></a><a href="#"><img src="img/game/app-store-badge.png"></a></div>
             </div>
             <div class="share-block left mt1"><span class="label">Share:</span>
@@ -161,7 +161,7 @@
       <div class="copy">
         <div class="container">
           <div class="row">
-            <div class="col-sm-4"><a href="http://tsumbaluk.in.ua/"><i class="fa fa-copyright"></i>tsumbaluk.in.ua</a></div>
+            <div class="col-sm-4"><a href="http://tsumbaluk.in.ua/" target="_blank"><i class="fa fa-copyright"></i>tsumbaluk.in.ua</a></div>
             <div class="col-sm-4 center"><a href="sitemap.xml"><i class="fa fa-sitemap"> </i>Sitemap</a></div>
             <div class="col-sm-4">
               <div class="dev"><a href="http://tsumbaluk.in.ua/" target="_blank" rel="nofollow">Developed by<span>Alexander Tsymbalyuk</span></a></div>
@@ -284,25 +284,27 @@
       	var showcase = $("#showcase"), 
       			title    = $('#item-title');
       
-      	showcase.Cloud9Carousel( {
-      		yOrigin: 42,
-      		yRadius: 48,
-      		mirror: {
-      			gap: 12,
-      			height: 0.2
-      		},
-      		buttonLeft: $("#nav > .left"),
-      		buttonRight: $("#nav > .right"),
-      		autoPlay: 1,
-      		speed: 7,
-      		bringToFront: true,
-      		onRendered: rendered,
-      		onLoaded: function() {
-      			showcase.css( 'visibility', 'visible' )
-      			showcase.css( 'display', 'none' )
-      			showcase.fadeIn( 1500 )
-      		}
-      	});
+      	if($(window).width() > 992){
+      		showcase.Cloud9Carousel( {
+      			yOrigin: 42,
+      			yRadius: 48,
+      			mirror: {
+      				gap: 12,
+      				height: 0.2
+      			},
+      			buttonLeft: $("#nav > .left"),
+      			buttonRight: $("#nav > .right"),
+      			autoPlay: 1,
+      			speed: 7,
+      			bringToFront: true,
+      			onRendered: rendered,
+      			onLoaded: function() {
+      				showcase.css( 'visibility', 'visible' )
+      				showcase.css( 'display', 'none' )
+      				showcase.fadeIn( 1500 )
+      			}
+      		});				
+      	};
       
       	function rendered( carousel ) {
       		title.text( carousel.nearestItem().element.alt )
